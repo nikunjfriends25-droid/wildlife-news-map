@@ -1,18 +1,44 @@
+// ── Constants ─────────────────────────────────────────────────────────────────
+const INDIA_BOUNDS = [[6, 68], [37, 98]];
+const INDIA_CENTER = [22, 83];
+const INDIA_ZOOM   = 5;
+
 const CATEGORY_COLORS = {
-  poaching: '#e74c3c',
-  sighting: '#27ae60',
+  poaching:     '#e74c3c',
+  sighting:     '#27ae60',
   conservation: '#2980b9',
-  other: '#7f8c8d',
+  other:        '#7f8c8d',
 };
 
 const CATEGORY_KEYWORDS = {
-  poaching: ['poach', 'snare', 'trap', 'kill', 'hunt', 'traffick', 'smuggl', 'ivory', 'skin'],
-  sighting: ['sight', 'spot', 'seen', 'found', 'camera trap', 'photograph', 'recorded'],
-  conservation: ['conserv', 'protect', 'rescue', 'rehabilitat', 'restor', 'reserve', 'sanctuary', 'corridor'],
+  poaching:     ['poach', 'snare', 'trap', 'traffick', 'smuggl', 'ivory', 'kill', 'hunt'],
+  sighting:     ['sight', 'spot', 'seen', 'found', 'camera trap', 'photograph', 'recorded', 'survey'],
+  conservation: ['conserv', 'protect', 'rescue', 'rehabilitat', 'restor', 'reserve', 'sanctuary', 'corridor', 'national park'],
 };
 
+// ── Map setup ─────────────────────────────────────────────────────────────────
+const map = L.map('map', {
+  center: INDIA_CENTER,
+  zoom: INDIA_ZOOM,
+  minZoom: 4,
+  maxZoom: 14,
+  maxBounds: INDIA_BOUNDS,
+  maxBoundsViscosity: 1.0,   // hard lock — cannot pan outside India
+});
+
+// Restrict initial view tightly to India
+map.fitBounds(INDIA_BOUNDS);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  subdomains: 'abcd',
+  maxZoom: 19,
+  bounds: INDIA_BOUNDS,
+}).addTo(map);
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
 function categorize(headline) {
-  const lower = headline.toLowerCase();
+  const lower = (headline || '').toLowerCase();
   for (const [cat, words] of Object.entries(CATEGORY_KEYWORDS)) {
     if (words.some(w => lower.includes(w))) return cat;
   }
@@ -21,67 +47,144 @@ function categorize(headline) {
 
 function markerRadius(published) {
   const days = (Date.now() - new Date(published).getTime()) / 86400000;
-  return Math.max(5, 10 - days * 0.25);
+  return Math.max(5, 10 - days * 0.2);
 }
 
-const map = L.map('map', {
-  center: [22, 83],
-  zoom: 5,
-  minZoom: 4,
-  maxBounds: [[4, 64], [40, 100]],
-});
-
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  subdomains: 'abcd',
-  maxZoom: 19,
-}).addTo(map);
-
+// ── Cluster layer ─────────────────────────────────────────────────────────────
 const clusters = L.markerClusterGroup({
   maxClusterRadius: 40,
   iconCreateFunction(cluster) {
-    const count = cluster.getChildCount();
     return L.divIcon({
-      html: `<div class="cluster-icon">${count}</div>`,
+      html: `<div class="cluster-icon">${cluster.getChildCount()}</div>`,
       className: '',
       iconSize: [36, 36],
     });
   },
 });
+map.addLayer(clusters);
 
+// ── State ─────────────────────────────────────────────────────────────────────
+let allArticles = [];
+let allMarkers  = [];   // [{article, marker}]
+
+// ── Render markers from filtered list ────────────────────────────────────────
+function renderMarkers(filtered) {
+  clusters.clearLayers();
+  filtered.forEach(({ article: a, marker }) => {
+    clusters.addLayer(marker);
+  });
+  document.getElementById('stats').textContent =
+    `Showing ${filtered.length} of ${allArticles.length} articles`;
+}
+
+// ── Apply all filters ─────────────────────────────────────────────────────────
+function applyFilters() {
+  const query      = document.getElementById('search').value.toLowerCase().trim();
+  const dateFrom   = document.getElementById('date-from').value;
+  const dateTo     = document.getElementById('date-to').value;
+  const activeCats = new Set(
+    [...document.querySelectorAll('#cat-filters input:checked')].map(i => i.dataset.cat)
+  );
+  const activeSrcs = new Set(
+    [...document.querySelectorAll('#source-filters input:checked')].map(i => i.dataset.src)
+  );
+
+  const filtered = allMarkers.filter(({ article: a }) => {
+    if (!activeCats.has(categorize(a.headline))) return false;
+    if (!activeSrcs.has(a.source)) return false;
+    if (dateFrom && a.published < dateFrom) return false;
+    if (dateTo   && a.published > dateTo)   return false;
+    if (query && !(
+      a.headline.toLowerCase().includes(query) ||
+      a.place_name.toLowerCase().includes(query) ||
+      a.source.toLowerCase().includes(query)
+    )) return false;
+    return true;
+  });
+
+  renderMarkers(filtered);
+}
+
+// ── Build source checkboxes ───────────────────────────────────────────────────
+function buildSourceFilters(articles) {
+  const sources = [...new Set(articles.map(a => a.source))].sort();
+  const container = document.getElementById('source-filters');
+  container.innerHTML = '';
+  sources.forEach(src => {
+    const label = document.createElement('label');
+    label.innerHTML = `<input type="checkbox" data-src="${src}" checked /> ${src}`;
+    container.appendChild(label);
+  });
+  container.querySelectorAll('input').forEach(i => i.addEventListener('change', applyFilters));
+}
+
+// ── Set default date range ────────────────────────────────────────────────────
+function setDefaultDates(articles) {
+  const dates = articles.map(a => a.published).sort();
+  document.getElementById('date-from').value = dates[0] || '';
+  document.getElementById('date-to').value   = dates[dates.length - 1] || '';
+}
+
+// ── Reset ────────────────────────────────────────────────────────────────────
+document.getElementById('reset-btn').addEventListener('click', () => {
+  document.getElementById('search').value = '';
+  document.querySelectorAll('#cat-filters input').forEach(i => i.checked = true);
+  document.querySelectorAll('#source-filters input').forEach(i => i.checked = true);
+  setDefaultDates(allArticles);
+  applyFilters();
+});
+
+// ── Panel collapse/expand ─────────────────────────────────────────────────────
+const panel  = document.getElementById('panel');
+const toggle = document.getElementById('panel-toggle');
+toggle.addEventListener('click', () => {
+  panel.classList.toggle('collapsed');
+  toggle.textContent = panel.classList.contains('collapsed') ? '›' : '‹';
+  setTimeout(() => map.invalidateSize(), 300);
+});
+
+// ── Wire up filter inputs ─────────────────────────────────────────────────────
+document.getElementById('search').addEventListener('input', applyFilters);
+document.getElementById('date-from').addEventListener('change', applyFilters);
+document.getElementById('date-to').addEventListener('change', applyFilters);
+document.querySelectorAll('#cat-filters input').forEach(i => i.addEventListener('change', applyFilters));
+
+// ── Load data ────────────────────────────────────────────────────────────────
 fetch('news.json')
   .then(r => r.json())
   .then(articles => {
-    document.getElementById('counter').textContent = `${articles.length} articles`;
+    allArticles = articles;
 
-    articles.forEach(a => {
-      const cat = categorize(a.headline);
-      const color = CATEGORY_COLORS[cat];
+    allMarkers = articles.map(a => {
+      const cat    = categorize(a.headline);
+      const color  = CATEGORY_COLORS[cat];
       const radius = markerRadius(a.published);
 
       const marker = L.circleMarker([a.lat, a.lon], {
         radius,
         color,
         fillColor: color,
-        fillOpacity: 0.8,
+        fillOpacity: 0.85,
         weight: 1,
       });
 
       marker.bindPopup(`
         <div class="popup">
-          <div class="popup-source">${a.source} &middot; ${a.published}</div>
+          <div class="popup-meta">${a.source} &middot; ${a.published}</div>
           <div class="popup-headline">${a.headline}</div>
           <div class="popup-place">📍 ${a.place_name}</div>
           <a class="popup-link" href="${a.url}" target="_blank" rel="noopener">Read article →</a>
         </div>
       `, { maxWidth: 280 });
 
-      clusters.addLayer(marker);
+      return { article: a, marker };
     });
 
-    map.addLayer(clusters);
+    buildSourceFilters(articles);
+    setDefaultDates(articles);
+    applyFilters();
   })
   .catch(err => {
     console.error('Failed to load news.json:', err);
-    document.getElementById('counter').textContent = 'No data loaded';
+    document.getElementById('stats').textContent = 'Failed to load articles.';
   });

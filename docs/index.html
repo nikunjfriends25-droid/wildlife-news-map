@@ -10,8 +10,50 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Left panel -->
+  <div id="panel">
+    <div id="panel-header">
+      <span id="panel-title">🦁 Wildlife News</span>
+      <button id="panel-toggle" title="Collapse">‹</button>
+    </div>
+
+    <div id="panel-body">
+
+      <!-- Search -->
+      <div class="section-label">Search</div>
+      <input id="search" type="text" placeholder="Headline, place, source…" />
+
+      <!-- Category filter -->
+      <div class="section-label">Category</div>
+      <div id="cat-filters">
+        <label><input type="checkbox" data-cat="poaching"     checked /> <span class="dot" style="background:#e74c3c"></span> Poaching</label>
+        <label><input type="checkbox" data-cat="sighting"     checked /> <span class="dot" style="background:#27ae60"></span> Sighting</label>
+        <label><input type="checkbox" data-cat="conservation" checked /> <span class="dot" style="background:#2980b9"></span> Conservation</label>
+        <label><input type="checkbox" data-cat="other"        checked /> <span class="dot" style="background:#7f8c8d"></span> Other</label>
+      </div>
+
+      <!-- Source filter -->
+      <div class="section-label">Source</div>
+      <div id="source-filters"></div>
+
+      <!-- Date range -->
+      <div class="section-label">Date range</div>
+      <div id="date-row">
+        <input type="date" id="date-from" title="From" />
+        <span>–</span>
+        <input type="date" id="date-to" title="To" />
+      </div>
+
+      <button id="reset-btn">Reset filters</button>
+
+      <!-- Stats -->
+      <div id="stats"></div>
+    </div>
+  </div>
+
   <div id="map"></div>
-  <div id="counter"></div>
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="map.js"></script>
