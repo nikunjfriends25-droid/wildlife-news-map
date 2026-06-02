@@ -1,7 +1,7 @@
 // ── Constants ─────────────────────────────────────────────────────────────────
 const INDIA_BOUNDS = [[6, 68], [37, 98]];
 const INDIA_CENTER = [22, 83];
-const INDIA_ZOOM   = 5;
+const INDIA_ZOOM   = 6;
 
 const CATEGORY_COLORS = {
   poaching:     '#e74c3c',
@@ -26,8 +26,8 @@ const map = L.map('map', {
   maxBoundsViscosity: 1.0,   // hard lock — cannot pan outside India
 });
 
-// Restrict initial view tightly to India
-map.fitBounds(INDIA_BOUNDS);
+// Fit India snugly with small padding
+map.fitBounds(INDIA_BOUNDS, { padding: [30, 30] });
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
