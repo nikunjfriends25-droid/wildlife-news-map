@@ -1,0 +1,259 @@
+name,lat,lon,type
+Jim Corbett National Park,29.5300,78.7747,national_park
+Corbett National Park,29.5300,78.7747,national_park
+Corbett Tiger Reserve,29.5300,78.7747,tiger_reserve
+Ranthambore National Park,26.0173,76.5026,national_park
+Ranthambore Tiger Reserve,26.0173,76.5026,tiger_reserve
+Kanha National Park,22.3370,80.6115,national_park
+Kanha Tiger Reserve,22.3370,80.6115,tiger_reserve
+Bandhavgarh National Park,23.7167,81.0167,national_park
+Bandhavgarh Tiger Reserve,23.7167,81.0167,tiger_reserve
+Pench National Park,21.6833,79.3167,national_park
+Pench Tiger Reserve,21.6833,79.3167,tiger_reserve
+Tadoba National Park,20.2167,79.3167,national_park
+Tadoba Andhari Tiger Reserve,20.2167,79.3167,tiger_reserve
+Melghat Tiger Reserve,21.4000,77.0000,tiger_reserve
+Nagarhole National Park,12.0833,76.1667,national_park
+Rajiv Gandhi National Park,12.0833,76.1667,national_park
+Nagarhole Tiger Reserve,12.0833,76.1667,tiger_reserve
+Bandipur National Park,11.6667,76.6333,national_park
+Bandipur Tiger Reserve,11.6667,76.6333,tiger_reserve
+Mudumalai National Park,11.5500,76.6167,national_park
+Mudumalai Tiger Reserve,11.5500,76.6167,tiger_reserve
+Anamalai Tiger Reserve,10.3667,77.0000,tiger_reserve
+Anamalai Hills,10.3667,77.0000,wildlife_sanctuary
+Kalakkad Mundanthurai Tiger Reserve,8.4167,77.4167,tiger_reserve
+Periyar National Park,9.4667,77.1500,national_park
+Periyar Tiger Reserve,9.4667,77.1500,tiger_reserve
+Eravikulam National Park,10.1667,77.0667,national_park
+Wayanad Wildlife Sanctuary,11.6333,76.2000,wildlife_sanctuary
+Parambikulam Tiger Reserve,10.4167,76.7667,tiger_reserve
+Sathyamangalam Tiger Reserve,11.5000,77.2333,tiger_reserve
+Bhadra Tiger Reserve,13.6667,75.6333,tiger_reserve
+Biligiri Rangaswamy Temple Tiger Reserve,11.9667,77.1667,tiger_reserve
+BRT Tiger Reserve,11.9667,77.1667,tiger_reserve
+Dandeli Anshi Tiger Reserve,15.1667,74.3667,tiger_reserve
+Kali Tiger Reserve,15.1667,74.3667,tiger_reserve
+Sundarban National Park,21.9497,88.8806,national_park
+Sundarbans Tiger Reserve,21.9497,88.8806,tiger_reserve
+Kaziranga National Park,26.5775,93.1711,national_park
+Kaziranga Tiger Reserve,26.5775,93.1711,tiger_reserve
+Manas National Park,26.6500,91.0000,national_park
+Manas Tiger Reserve,26.6500,91.0000,tiger_reserve
+Orang National Park,26.5833,92.2500,national_park
+Nameri National Park,26.9667,92.7667,national_park
+Dibru-Saikhowa National Park,27.7167,95.1333,national_park
+Dehing Patkai National Park,27.3500,95.5500,national_park
+Pobitora Wildlife Sanctuary,26.2333,91.9500,wildlife_sanctuary
+Buxa Tiger Reserve,26.7500,89.6500,tiger_reserve
+Sariska National Park,27.2500,76.3333,national_park
+Sariska Tiger Reserve,27.2500,76.3333,tiger_reserve
+Mukundra Hills Tiger Reserve,24.7667,76.0667,tiger_reserve
+Ramgarh Vishdhari Tiger Reserve,25.5167,75.8500,tiger_reserve
+Kumbhalgarh Wildlife Sanctuary,25.1500,73.6000,wildlife_sanctuary
+Desert National Park,26.9333,70.8667,national_park
+Gir National Park,21.1239,70.7980,national_park
+Gir Forest National Park,21.1239,70.7980,national_park
+Asiatic Lion Reserve,21.1239,70.7980,wildlife_sanctuary
+Blackbuck National Park,21.1833,70.4667,national_park
+Velavadar National Park,22.0167,72.1500,national_park
+Marine National Park Gulf of Kutch,22.6000,70.0000,national_park
+Wild Ass Wildlife Sanctuary,23.7167,71.2000,wildlife_sanctuary
+Panna National Park,24.7333,80.0000,national_park
+Panna Tiger Reserve,24.7333,80.0000,tiger_reserve
+Satpura National Park,22.5167,78.2167,national_park
+Satpura Tiger Reserve,22.5167,78.2167,tiger_reserve
+Sanjay Tiger Reserve,23.3167,82.9833,tiger_reserve
+Nauradehi Wildlife Sanctuary,23.8167,78.9667,wildlife_sanctuary
+Veerangana Durgavati Tiger Reserve,23.9000,79.6500,tiger_reserve
+Achanakmar Tiger Reserve,22.3333,81.7000,tiger_reserve
+Udanti Sitanadi Tiger Reserve,20.5333,83.0667,tiger_reserve
+Indravati Tiger Reserve,19.0667,81.2167,tiger_reserve
+Rajaji National Park,30.0167,78.2667,national_park
+Rajaji Tiger Reserve,30.0167,78.2667,tiger_reserve
+Valley of Flowers National Park,30.7333,79.6000,national_park
+Nanda Devi National Park,30.7167,79.8333,national_park
+Gangotri National Park,30.9167,79.0333,national_park
+Govind Pashu Vihar,31.1000,78.4167,wildlife_sanctuary
+Kedarnath Wildlife Sanctuary,30.6667,79.1667,wildlife_sanctuary
+Askot Musk Deer Sanctuary,29.9167,80.2667,wildlife_sanctuary
+Dudhwa National Park,28.5333,80.6667,national_park
+Dudhwa Tiger Reserve,28.5333,80.6667,tiger_reserve
+Pilibhit Tiger Reserve,28.6333,80.1667,tiger_reserve
+Katerniaghat Wildlife Sanctuary,28.3333,81.2667,wildlife_sanctuary
+Kishanpur Wildlife Sanctuary,28.6500,80.7167,wildlife_sanctuary
+Chambal Wildlife Sanctuary,26.4167,78.1333,wildlife_sanctuary
+Hastinapur Wildlife Sanctuary,29.1667,78.0000,wildlife_sanctuary
+Sohagi Barwa Wildlife Sanctuary,27.3500,83.8167,wildlife_sanctuary
+Okhla Bird Sanctuary,28.5333,77.3167,wildlife_sanctuary
+Soor Sarovar Bird Sanctuary,27.1833,77.9667,wildlife_sanctuary
+Namdapha National Park,27.5333,96.3833,national_park
+Namdapha Tiger Reserve,27.5333,96.3833,tiger_reserve
+Pakke Tiger Reserve,27.0000,93.7500,tiger_reserve
+Pakke Wildlife Sanctuary,27.0000,93.7500,wildlife_sanctuary
+Kamlang Tiger Reserve,27.7500,95.8500,tiger_reserve
+Eaglenest Wildlife Sanctuary,27.0833,92.2333,wildlife_sanctuary
+Mouling National Park,28.4500,95.0000,national_park
+Kane Wildlife Sanctuary,27.5833,92.4000,wildlife_sanctuary
+Dampa Tiger Reserve,23.5000,92.5667,tiger_reserve
+Phawngpui National Park,22.4833,93.0167,national_park
+Murlen National Park,23.0833,93.3500,national_park
+Keibul Lamjao National Park,24.5000,93.7833,national_park
+Khangchendzonga National Park,27.6000,88.2000,national_park
+Barsey Rhododendron Sanctuary,27.2167,88.2500,wildlife_sanctuary
+Fambong Lho Wildlife Sanctuary,27.3667,88.5833,wildlife_sanctuary
+Shingba Rhododendron Sanctuary,27.8500,88.4167,wildlife_sanctuary
+Kyongnosla Alpine Sanctuary,27.3500,88.7167,wildlife_sanctuary
+Singalila National Park,27.0000,88.0000,national_park
+Neora Valley National Park,27.0167,88.7500,national_park
+Buxa Wildlife Sanctuary,26.7500,89.6500,wildlife_sanctuary
+Jaldapara National Park,26.7000,89.4000,national_park
+Gorumara National Park,26.7500,88.8000,national_park
+Chapramari Wildlife Sanctuary,26.6667,88.9833,wildlife_sanctuary
+Mahananda Wildlife Sanctuary,26.8333,88.2333,wildlife_sanctuary
+Betla National Park,23.9167,84.0000,national_park
+Palamu Tiger Reserve,23.9167,84.0000,tiger_reserve
+Hazaribag National Park,23.9833,85.3333,national_park
+Lawalong Wildlife Sanctuary,23.9667,84.4833,wildlife_sanctuary
+Simlipal National Park,21.8333,86.4500,national_park
+Simlipal Tiger Reserve,21.8333,86.4500,tiger_reserve
+Satkosia Tiger Reserve,20.7333,85.0833,tiger_reserve
+Satkosia Gorge Wildlife Sanctuary,20.7333,85.0833,wildlife_sanctuary
+Bhitarkanika National Park,20.7333,86.9000,national_park
+Chilika Lake Bird Sanctuary,19.7833,85.3333,wildlife_sanctuary
+Gahirmatha Marine Sanctuary,20.6000,87.0333,wildlife_sanctuary
+Nalabana Bird Sanctuary,19.7500,85.1333,wildlife_sanctuary
+Nandankanan Zoological Park,20.3833,85.8167,wildlife_sanctuary
+Nagarjunasagar Srisailam Tiger Reserve,16.5000,79.3167,tiger_reserve
+Amrabad Tiger Reserve,16.5000,78.8333,tiger_reserve
+Papikonda National Park,17.1833,81.6667,national_park
+Coringa Wildlife Sanctuary,16.8000,82.2667,wildlife_sanctuary
+Krishna Wildlife Sanctuary,15.6667,80.9167,wildlife_sanctuary
+Kolleru Lake Bird Sanctuary,16.6000,81.2333,wildlife_sanctuary
+Rollapadu Wildlife Sanctuary,15.8333,78.9167,wildlife_sanctuary
+Kaundinya Wildlife Sanctuary,14.0000,78.5333,wildlife_sanctuary
+Indira Gandhi Wildlife Sanctuary,10.3667,77.0000,wildlife_sanctuary
+Mudumalai Wildlife Sanctuary,11.5500,76.6167,wildlife_sanctuary
+Vettangudi Bird Sanctuary,10.1667,78.9000,wildlife_sanctuary
+Point Calimere Wildlife Sanctuary,10.2333,79.8500,wildlife_sanctuary
+Gulf of Mannar Marine National Park,9.1667,79.0000,national_park
+Guindy National Park,13.0000,80.2333,national_park
+Mukurthi National Park,11.3333,76.5333,national_park
+Keoladeo National Park,27.1667,77.5167,national_park
+Bharatpur Bird Sanctuary,27.1667,77.5167,wildlife_sanctuary
+Sariska Wildlife Sanctuary,27.2500,76.3333,wildlife_sanctuary
+Tal Chhapar Wildlife Sanctuary,27.8167,74.4333,wildlife_sanctuary
+Sitamata Wildlife Sanctuary,24.0167,74.2833,wildlife_sanctuary
+Jawai Bandh Leopard Reserve,25.1833,72.5667,wildlife_sanctuary
+Mount Abu Wildlife Sanctuary,24.6000,72.7333,wildlife_sanctuary
+Phulwari ki Nal Wildlife Sanctuary,24.2333,73.5667,wildlife_sanctuary
+Shahgarh Bulge Landscape,24.7000,79.0000,wildlife_sanctuary
+Karera Wildlife Sanctuary,25.4667,78.1333,wildlife_sanctuary
+Ratapani Tiger Reserve,22.9333,77.6167,tiger_reserve
+Bori Wildlife Sanctuary,22.4667,78.0667,wildlife_sanctuary
+Pachmarhi Biosphere Reserve,22.4833,78.4333,biosphere_reserve
+Kanger Valley National Park,18.8333,82.0000,national_park
+Barnawapara Wildlife Sanctuary,21.3000,82.3833,wildlife_sanctuary
+Sitanadi Wildlife Sanctuary,20.5000,83.3167,wildlife_sanctuary
+Gomarda Wildlife Sanctuary,22.0667,83.6167,wildlife_sanctuary
+Badalkhol Wildlife Sanctuary,22.5167,83.4500,wildlife_sanctuary
+Guru Ghasidas National Park,23.6167,83.7500,national_park
+Tamor Pingla Wildlife Sanctuary,22.5667,83.5333,wildlife_sanctuary
+Palamau Biosphere Reserve,23.9167,84.0000,biosphere_reserve
+Nokrek National Park,25.5000,90.2000,national_park
+Nokrek Biosphere Reserve,25.5000,90.2000,biosphere_reserve
+Balpakram National Park,25.0833,90.8500,national_park
+Siju Wildlife Sanctuary,25.3000,90.7333,wildlife_sanctuary
+Baghmara Pitcher Plant Sanctuary,25.1667,90.6333,wildlife_sanctuary
+Nongkhyllem Wildlife Sanctuary,25.8333,91.8500,wildlife_sanctuary
+Keibul Lamjao Wildlife Sanctuary,24.5000,93.7833,wildlife_sanctuary
+Dzukou Valley,25.5833,94.0000,wildlife_sanctuary
+Shilloi Lake National Park,25.9167,94.5833,national_park
+Pukzing Wildlife Sanctuary,23.5167,94.0000,wildlife_sanctuary
+Fakim Wildlife Sanctuary,25.8833,95.0167,wildlife_sanctuary
+Puliebadze Wildlife Sanctuary,25.6833,94.0833,wildlife_sanctuary
+Intanki National Park,25.9000,93.8167,national_park
+Ntangki National Park,25.9000,93.8167,national_park
+Dampa Wildlife Sanctuary,23.5000,92.5667,wildlife_sanctuary
+Ngengpui Wildlife Sanctuary,22.5833,92.8667,wildlife_sanctuary
+Tawi Wildlife Sanctuary,33.0000,74.8833,wildlife_sanctuary
+Jasrota Wildlife Sanctuary,32.6667,75.5000,wildlife_sanctuary
+Surinsar Mansar Wildlife Sanctuary,32.7333,75.1333,wildlife_sanctuary
+Nandini Wildlife Sanctuary,32.5667,74.7500,wildlife_sanctuary
+Hirpora Wildlife Sanctuary,33.4833,74.5667,wildlife_sanctuary
+Overa Aru Wildlife Sanctuary,34.2167,75.3167,wildlife_sanctuary
+Dachigam National Park,34.1667,74.9833,national_park
+Kazinag National Park,34.2500,74.1500,national_park
+Hemis National Park,33.7000,77.7000,national_park
+Kibber Wildlife Sanctuary,32.0667,78.0167,wildlife_sanctuary
+Kugti Wildlife Sanctuary,32.4500,76.7333,wildlife_sanctuary
+Chail Wildlife Sanctuary,30.9667,77.2000,wildlife_sanctuary
+Great Himalayan National Park,31.7500,77.5833,national_park
+Pin Valley National Park,31.9833,77.9000,national_park
+Nargu Wildlife Sanctuary,31.5833,77.1833,wildlife_sanctuary
+Shikari Devi Wildlife Sanctuary,31.6000,77.1833,wildlife_sanctuary
+Lippa Asrang Wildlife Sanctuary,31.5167,78.2833,wildlife_sanctuary
+Kalatop Wildlife Sanctuary,32.5500,76.0667,wildlife_sanctuary
+Dhauladhar Wildlife Sanctuary,32.2833,76.2000,wildlife_sanctuary
+Manali Wildlife Sanctuary,32.3167,77.1833,wildlife_sanctuary
+Rupi Bhaba Wildlife Sanctuary,31.6167,77.9333,wildlife_sanctuary
+Kullu Wildlife Sanctuary,31.9833,77.2000,wildlife_sanctuary
+Sechu Tuan Nala Wildlife Sanctuary,33.0833,76.5667,wildlife_sanctuary
+Talra Wildlife Sanctuary,31.2333,77.8500,wildlife_sanctuary
+Simbalbara Wildlife Sanctuary,30.5167,77.5167,wildlife_sanctuary
+Renuka Wildlife Sanctuary,30.6500,77.4500,wildlife_sanctuary
+Majathal Wildlife Sanctuary,31.3833,76.5500,wildlife_sanctuary
+Govind Wildlife Sanctuary,31.1000,78.4167,wildlife_sanctuary
+Kedarnath Musk Deer Sanctuary,30.6667,79.1667,wildlife_sanctuary
+Corbett Landscape,29.5300,78.7747,forest_range
+Kalagarh,29.5000,78.7500,forest_range
+Sonanadi Wildlife Sanctuary,29.6333,78.9833,wildlife_sanctuary
+Rajaji Wildlife Sanctuary,30.0167,78.2667,wildlife_sanctuary
+Motichur Range,29.9333,78.1500,forest_range
+Chilla Range,29.9667,78.2167,forest_range
+Lansdowne Forest Division,29.8000,78.6833,forest_range
+Kabini,11.9833,76.4000,forest_range
+Bannerghatta National Park,12.8000,77.5833,national_park
+Cauvery Wildlife Sanctuary,12.1500,77.2500,wildlife_sanctuary
+MM Hills Wildlife Sanctuary,11.9667,77.1667,wildlife_sanctuary
+Pushpagiri Wildlife Sanctuary,12.5667,75.7833,wildlife_sanctuary
+Brahmagiri Wildlife Sanctuary,11.9667,75.9167,wildlife_sanctuary
+Sharavathi Wildlife Sanctuary,14.2167,74.7667,wildlife_sanctuary
+Kudremukh National Park,13.2167,75.2167,national_park
+Kudremukh Tiger Reserve,13.2167,75.2167,tiger_reserve
+Someshwara Wildlife Sanctuary,13.5500,74.9333,wildlife_sanctuary
+Mhadei Wildlife Sanctuary,15.5500,74.1500,wildlife_sanctuary
+Bhimgad Wildlife Sanctuary,15.4667,74.3833,wildlife_sanctuary
+Koyna Wildlife Sanctuary,17.4000,73.7500,wildlife_sanctuary
+Navegaon National Park,21.0167,79.9167,national_park
+Bor Tiger Reserve,20.9000,78.6833,tiger_reserve
+Umred Karhandla Wildlife Sanctuary,20.8833,79.3000,wildlife_sanctuary
+Tipeshwar Wildlife Sanctuary,19.5833,78.2167,wildlife_sanctuary
+Nagzira Wildlife Sanctuary,21.3000,80.1167,wildlife_sanctuary
+Painganga Wildlife Sanctuary,19.9833,77.5833,wildlife_sanctuary
+Yana Wildlife Sanctuary,14.8167,74.7833,wildlife_sanctuary
+Nugu Wildlife Sanctuary,11.8667,76.5167,wildlife_sanctuary
+Attappady Wildlife Sanctuary,10.8333,76.5333,wildlife_sanctuary
+Chinnar Wildlife Sanctuary,10.3167,77.2167,wildlife_sanctuary
+Aralam Wildlife Sanctuary,11.8667,75.9500,wildlife_sanctuary
+Malabar Wildlife Sanctuary,11.5167,75.7833,wildlife_sanctuary
+Silent Valley National Park,11.0833,76.4667,national_park
+Peechi Vazhani Wildlife Sanctuary,10.5333,76.3667,wildlife_sanctuary
+Shendurney Wildlife Sanctuary,8.9667,77.2167,wildlife_sanctuary
+Neyyar Wildlife Sanctuary,8.5500,77.1333,wildlife_sanctuary
+Peppara Wildlife Sanctuary,8.5667,77.0667,wildlife_sanctuary
+Kumarakom Bird Sanctuary,9.6167,76.4167,wildlife_sanctuary
+Thattekkad Bird Sanctuary,10.0833,76.7833,wildlife_sanctuary
+Mangalavanam Bird Sanctuary,9.9667,76.2833,wildlife_sanctuary
+Vedanthangal Bird Sanctuary,12.5167,79.8833,wildlife_sanctuary
+Karikili Bird Sanctuary,12.5500,79.9500,wildlife_sanctuary
+Ranganathittu Bird Sanctuary,12.4167,76.6833,wildlife_sanctuary
+Kokrebellur Bird Sanctuary,12.9167,77.2000,wildlife_sanctuary
+Attigundi Elephant Camp,11.9833,76.4833,forest_range
+BR Hills,11.9667,77.1667,wildlife_sanctuary
+Masinagudi,11.5667,76.6333,forest_range
+Anamalai,10.3667,77.0000,forest_range
+Valparai,10.3667,76.9667,forest_range
+Topslip,10.4167,76.9000,forest_range
+Mudumalai,11.5500,76.6167,forest_range
+Sigur Plateau,11.6167,76.7167,forest_range
