@@ -114,7 +114,10 @@ map.addLayer(clusters);
 
 // ── State ─────────────────────────────────────────────────────────────────────
 let allArticles = [];
-let allMarkers  = [];   // [{article, marker}]
+let allMarkers  = [];
+// JS-managed filter state — never read from DOM checkbox.checked
+const activeCats = new Set(['poaching','sighting','conservation','other']);
+const activeSrcs = new Set();
 
 // ── Render markers from filtered list ────────────────────────────────────────
 function renderMarkers(filtered) {
@@ -128,15 +131,9 @@ function renderMarkers(filtered) {
 
 // ── Apply all filters ─────────────────────────────────────────────────────────
 function applyFilters() {
-  const query      = document.getElementById('search').value.toLowerCase().trim();
-  const dateFrom   = document.getElementById('date-from').value;
-  const dateTo     = document.getElementById('date-to').value;
-  const activeCats = new Set(
-    [...document.querySelectorAll('#cat-filters input:checked')].map(i => i.dataset.cat)
-  );
-  const activeSrcs = new Set(
-    [...document.querySelectorAll('#source-filters input:checked')].map(i => i.dataset.src)
-  );
+  const query    = document.getElementById('search').value.toLowerCase().trim();
+  const dateFrom = document.getElementById('date-from').value;
+  const dateTo   = document.getElementById('date-to').value;
 
   const filtered = allMarkers.filter(({ article: a }) => {
     if (!activeCats.has(categorize(a.headline))) return false;
@@ -157,14 +154,24 @@ function applyFilters() {
 // ── Build source checkboxes ───────────────────────────────────────────────────
 function buildSourceFilters(articles) {
   const sources = [...new Set(articles.map(a => a.source))].sort();
+  sources.forEach(s => activeSrcs.add(s));  // all on by default in JS state
   const container = document.getElementById('source-filters');
   container.innerHTML = '';
   sources.forEach(src => {
     const label = document.createElement('label');
-    label.innerHTML = `<input type="checkbox" data-src="${src}" checked /> ${src}`;
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.dataset.src = src;
+    cb.checked = true;
+    cb.autocomplete = 'off';
+    cb.addEventListener('change', () => {
+      cb.checked ? activeSrcs.add(src) : activeSrcs.delete(src);
+      applyFilters();
+    });
+    label.appendChild(cb);
+    label.append(' ' + src);
     container.appendChild(label);
   });
-  container.querySelectorAll('input').forEach(i => i.addEventListener('change', applyFilters));
 }
 
 // ── Set default date range ────────────────────────────────────────────────────
@@ -174,10 +181,12 @@ function setDefaultDates(articles) {
   document.getElementById('date-to').value   = dates[dates.length - 1] || '';
 }
 
-// ── Reset ────────────────────────────────────────────────────────────────────
+// ── Reset ─────────────────────────────────────────────────────────────────────
 document.getElementById('reset-btn').addEventListener('click', () => {
   document.getElementById('search').value = '';
+  ['poaching','sighting','conservation','other'].forEach(c => activeCats.add(c));
   document.querySelectorAll('#cat-filters input').forEach(i => i.checked = true);
+  allArticles.map(a => a.source).forEach(s => activeSrcs.add(s));
   document.querySelectorAll('#source-filters input').forEach(i => i.checked = true);
   setDefaultDates(allArticles);
   applyFilters();
@@ -192,11 +201,14 @@ toggle.addEventListener('click', () => {
   setTimeout(() => map.invalidateSize(), 300);
 });
 
-// ── Wire up filter inputs ─────────────────────────────────────────────────────
-// Force-check all category boxes on load (browser may restore unchecked state)
+// ── Wire up category filters (JS state driven) ────────────────────────────────
 document.querySelectorAll('#cat-filters input').forEach(i => {
-  i.checked = true;
-  i.addEventListener('change', applyFilters);
+  i.checked = true;  // visual default
+  i.autocomplete = 'off';
+  i.addEventListener('change', () => {
+    i.checked ? activeCats.add(i.dataset.cat) : activeCats.delete(i.dataset.cat);
+    applyFilters();
+  });
 });
 document.getElementById('search').addEventListener('input', applyFilters);
 document.getElementById('date-from').addEventListener('change', applyFilters);
