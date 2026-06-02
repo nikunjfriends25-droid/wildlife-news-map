@@ -1,5 +1,59 @@
 [
   {
+    "headline": "After eight lions die from Babesia infection, treatment and isolation controls spread",
+    "url": "https://india.mongabay.com/short-article/2026/06/after-eight-lions-die-from-babesia-infection-treatment-and-isolation-controls-spread/",
+    "source": "Mongabay India",
+    "published": "2026-06-02",
+    "place_name": "Asiatic lion",
+    "lat": 21.1239,
+    "lon": 70.798
+  },
+  {
+    "headline": "Decoding Heat",
+    "url": "https://india.mongabay.com/specials/2026/06/decoding-heat/",
+    "source": "Mongabay India",
+    "published": "2026-06-02",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "Cub deaths prompt preventive measures for Asiatic lions in Bhavnagar",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/cub-deaths-prompt-preventive-measures-for-asiatic-lions-in-bhavnagar/article71049594.ece",
+    "source": "The Hindu",
+    "published": "2026-06-02",
+    "place_name": "Asiatic lion",
+    "lat": 21.1239,
+    "lon": 70.798
+  },
+  {
+    "headline": "'15 lakh hits within 2 minutes': CBSE re-evaluation portal faces cyberattacks; over 1 lakh attempts for unauthorised access",
+    "url": "https://timesofindia.indiatimes.com/india/1-5-million-hits-within-2-minutes-cbse-re-evaluation-portal-faces-cyberattacks-over-1-lakh-attempts-for-unauthorised-access/articleshow/131462198.cms",
+    "source": "Times of India",
+    "published": "2026-06-02",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "Gram Sabha consent fabricated to divert forest for mining bauxite, say villagers in Odisha’s Koraput",
+    "url": "https://www.thehindu.com/news/national/odisha/gram-sabha-consent-fabricated-to-divert-forest-for-mining-bauxite-say-villagers-in-odishas-koraput/article71048380.ece",
+    "source": "The Hindu",
+    "published": "2026-06-01",
+    "place_name": "Odisha",
+    "lat": 20.9517,
+    "lon": 85.0985
+  },
+  {
+    "headline": "Nagaland yields a new-to-science cascade frog species",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/nagaland-yields-a-new-to-science-cascade-frog-species/article71040301.ece",
+    "source": "The Hindu",
+    "published": "2026-05-30",
+    "place_name": "Nagaland",
+    "lat": 26.1584,
+    "lon": 94.5624
+  },
+  {
     "headline": "Tuskers form all-male groups in the wild, finds study",
     "url": "https://india.mongabay.com/2026/05/tuskers-form-all-male-groups-in-the-wild-finds-study/",
     "source": "Mongabay India",
@@ -9,6 +63,24 @@
     "lon": 78.2667
   },
   {
+    "headline": "Western Ghats has high odonate endemism, reveals survey",
+    "url": "https://india.mongabay.com/short-article/2026/05/western-ghats-has-high-odonate-endemism-reveals-survey/",
+    "source": "Mongabay India",
+    "published": "2026-05-28",
+    "place_name": "Western Ghats",
+    "lat": 13.0,
+    "lon": 75.5
+  },
+  {
+    "headline": "4 lion cubs die in Gujarat's Gir forest region, 17 isolated amid viral infection scare",
+    "url": "https://www.thehindu.com/news/national/gujarat/4-lion-cubs-die-in-gujarats-gir-forest-region-17-isolated-amid-viral-infection-scare/article71031878.ece",
+    "source": "The Hindu",
+    "published": "2026-05-28",
+    "place_name": "Gujarat",
+    "lat": 22.2587,
+    "lon": 71.1924
+  },
+  {
     "headline": "Predator-prey relationships and habitat quality shape a tiger reserve",
     "url": "https://india.mongabay.com/2026/05/predator-prey-relationships-and-habitat-quality-shape-a-tiger-reserve/",
     "source": "Mongabay India",
@@ -16,5 +88,131 @@
     "place_name": "Panna Tiger Reserve",
     "lat": 24.7333,
     "lon": 80.0
+  },
+  {
+    "headline": "A low flyer of the grasslands",
+    "url": "https://india.mongabay.com/short-article/2026/05/a-low-flyer-of-the-grasslands/",
+    "source": "Mongabay India",
+    "published": "2026-05-27",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "The importance and exploitation of Indian forests down the ages [Book Review]",
+    "url": "https://india.mongabay.com/2026/05/the-importance-and-exploitation-of-indian-forests-down-the-ages-book-review/",
+    "source": "Mongabay India",
+    "published": "2026-05-27",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "Indian Army, IAF contain major forest fire in Himachal’s Kasauli slopes",
+    "url": "https://www.thehindu.com/news/national/himachal-pradesh/indian-army-iaf-contain-major-forest-fire-in-himachals-kasauli-slopes/article71029584.ece",
+    "source": "The Hindu",
+    "published": "2026-05-27",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "New toad species recorded in Meghalaya named after Khasi women’s attire",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/new-toad-species-recorded-in-meghalaya-named-after-khasi-womens-attire/article71027776.ece",
+    "source": "The Hindu",
+    "published": "2026-05-27",
+    "place_name": "Meghalaya",
+    "lat": 25.467,
+    "lon": 91.3662
+  },
+  {
+    "headline": "India home to 191 species of cockroaches, 60% of them are endemic, says ZSI study",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/india-home-to-191-species-of-cockroaches-60-of-them-are-endemic-says-zsi-study/article71025748.ece",
+    "source": "The Hindu",
+    "published": "2026-05-27",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "How are degraded coral reefs restored in India? [Explainer]",
+    "url": "https://india.mongabay.com/2026/05/how-are-degraded-coral-reefs-restored-in-india-explainer/",
+    "source": "Mongabay India",
+    "published": "2026-05-26",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "Uttarakhand recorded 375 forest fires in past three months; Chamoli worst hit",
+    "url": "https://www.thehindu.com/news/national/uttarakhand/uttarakhand-recorded-375-forest-fires-in-past-three-months-chamoli-worst-hit/article71025443.ece",
+    "source": "The Hindu",
+    "published": "2026-05-26",
+    "place_name": "Uttarakhand",
+    "lat": 30.0668,
+    "lon": 79.0193
+  },
+  {
+    "headline": "Kerala’s iconic wild elephant ‘Chillikomban’ dies after being washed away in Parambikulam Aliyar Project contour canal",
+    "url": "https://www.thehindu.com/news/national/tamil-nadu/kerala-nelliampathi-wild-elephant-chillikomban-dies-after-being-washed-away-in-parambikulam-aliyar-project-contour-canal/article71017516.ece",
+    "source": "The Hindu",
+    "published": "2026-05-24",
+    "place_name": "Tamil Nadu",
+    "lat": 11.1271,
+    "lon": 78.6569
+  },
+  {
+    "headline": "Study maps Assam’s grim human-elephant conflict",
+    "url": "https://www.thehindu.com/news/national/assam/study-maps-assams-grim-human-elephant-conflict/article71014574.ece",
+    "source": "The Hindu",
+    "published": "2026-05-23",
+    "place_name": "Assam",
+    "lat": 26.2006,
+    "lon": 92.9376
+  },
+  {
+    "headline": "From weed to wealth: Assam women turn water hyacinth into livelihoods near rhino habitat",
+    "url": "https://www.thehindu.com/news/national/assam/from-weed-to-wealth-assam-women-turn-water-hyacinth-into-livelihoods-near-rhino-habitat/article71013957.ece",
+    "source": "The Hindu",
+    "published": "2026-05-23",
+    "place_name": "Assam",
+    "lat": 26.2006,
+    "lon": 92.9376
+  },
+  {
+    "headline": "Apis cerana and Malabar Tree Toad to be declared State insect and amphibian",
+    "url": "https://www.thehindu.com/news/national/karnataka/apis-cerana-and-malabar-tree-toad-to-be-declared-state-insect-and-amphibian/article71011341.ece",
+    "source": "The Hindu",
+    "published": "2026-05-23",
+    "place_name": "Karnataka",
+    "lat": 15.3173,
+    "lon": 75.7139
+  },
+  {
+    "headline": "How India’s divers turned ocean encounters into conservation action with the help of PADI’s Go Eco Month",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/how-indias-divers-turned-ocean-encounters-into-conservation-action-with-the-help-of-padis-go-eco-month/article70887057.ece",
+    "source": "The Hindu",
+    "published": "2026-05-23",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "How NGOs are bringing India’s informal waste collectors into the system",
+    "url": "https://india.mongabay.com/2026/05/how-ngos-are-bringing-indias-informal-waste-collectors-into-the-system/",
+    "source": "Mongabay India",
+    "published": "2026-05-22",
+    "place_name": "Maharashtra",
+    "lat": 19.7515,
+    "lon": 75.7139
+  },
+  {
+    "headline": "A new field guide spotlights Delhi’s marvellous bat diversity",
+    "url": "https://www.thehindu.com/life-and-style/a-new-field-guide-spotlights-delhis-marvellous-bat-diversity/article71001380.ece",
+    "source": "The Hindu",
+    "published": "2026-05-21",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
   }
 ]
