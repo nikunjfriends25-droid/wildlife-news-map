@@ -33,8 +33,57 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   subdomains: 'abcd',
   maxZoom: 19,
-  bounds: INDIA_BOUNDS,
 }).addTo(map);
+
+// ── India boundary mask ───────────────────────────────────────────────────────
+// Fetch India's GeoJSON, then overlay a world-minus-India dark polygon
+fetch('https://raw.githubusercontent.com/geohacker/india/master/country/india.geojson')
+  .then(r => r.json())
+  .then(data => {
+    const geom = data.features[0].geometry;
+
+    // World outer ring in GeoJSON [lng, lat] order
+    const worldRing = [[-180,-90],[180,-90],[180,90],[-180,90],[-180,-90]];
+
+    // Collect all India rings (handles both Polygon and MultiPolygon)
+    let indiaRings = [];
+    if (geom.type === 'Polygon') {
+      indiaRings = geom.coordinates;
+    } else if (geom.type === 'MultiPolygon') {
+      geom.coordinates.forEach(poly => indiaRings.push(...poly));
+    }
+
+    // Build mask: world as outer ring + India rings as holes
+    const maskGeoJSON = {
+      type: 'Feature',
+      geometry: {
+        type: 'Polygon',
+        coordinates: [worldRing, ...indiaRings],
+      },
+    };
+
+    // Dark mask overlay
+    L.geoJSON(maskGeoJSON, {
+      style: {
+        fillColor: '#1a1a2e',
+        fillOpacity: 1,
+        color: 'none',
+        weight: 0,
+        interactive: false,
+      },
+    }).addTo(map);
+
+    // India border outline
+    L.geoJSON(data, {
+      style: {
+        color: '#4a7a9b',
+        weight: 1.5,
+        fillOpacity: 0,
+        interactive: false,
+      },
+    }).addTo(map);
+  })
+  .catch(err => console.warn('Could not load India boundary:', err));
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function categorize(headline) {
