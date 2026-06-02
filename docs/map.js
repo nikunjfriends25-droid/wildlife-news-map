@@ -193,10 +193,14 @@ toggle.addEventListener('click', () => {
 });
 
 // ── Wire up filter inputs ─────────────────────────────────────────────────────
+// Force-check all category boxes on load (browser may restore unchecked state)
+document.querySelectorAll('#cat-filters input').forEach(i => {
+  i.checked = true;
+  i.addEventListener('change', applyFilters);
+});
 document.getElementById('search').addEventListener('input', applyFilters);
 document.getElementById('date-from').addEventListener('change', applyFilters);
 document.getElementById('date-to').addEventListener('change', applyFilters);
-document.querySelectorAll('#cat-filters input').forEach(i => i.addEventListener('change', applyFilters));
 
 // ── Load data ────────────────────────────────────────────────────────────────
 fetch('news.json')
