@@ -36,41 +36,30 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 // ── India boundary mask ───────────────────────────────────────────────────────
-// Fetch India's GeoJSON, then overlay a world-minus-India dark polygon
-fetch('https://raw.githubusercontent.com/geohacker/india/master/country/india.geojson')
+// Uses L.polygon (Leaflet [lat,lng]) to avoid GeoJSON winding-order issues.
+fetch('india.geojson')
   .then(r => r.json())
   .then(data => {
     const geom = data.features[0].geometry;
 
-    // World outer ring in GeoJSON [lng, lat] order
-    const worldRing = [[-180,-90],[180,-90],[180,90],[-180,90],[-180,-90]];
+    // World outer ring in Leaflet [lat, lng] — large enough to cover everything
+    const world = [[90, -180], [90, 180], [-90, 180], [-90, -180]];
 
-    // Collect all India rings (handles both Polygon and MultiPolygon)
+    // Convert India GeoJSON rings [lng,lat] → Leaflet [lat,lng]
+    const toLatLng = ring => ring.map(([lng, lat]) => [lat, lng]);
     let indiaRings = [];
     if (geom.type === 'Polygon') {
-      indiaRings = geom.coordinates;
+      indiaRings = geom.coordinates.map(toLatLng);
     } else if (geom.type === 'MultiPolygon') {
-      geom.coordinates.forEach(poly => indiaRings.push(...poly));
+      geom.coordinates.forEach(poly => poly.forEach(ring => indiaRings.push(toLatLng(ring))));
     }
 
-    // Build mask: world as outer ring + India rings as holes
-    const maskGeoJSON = {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [worldRing, ...indiaRings],
-      },
-    };
-
-    // Dark mask overlay
-    L.geoJSON(maskGeoJSON, {
-      style: {
-        fillColor: '#1a1a2e',
-        fillOpacity: 1,
-        color: 'none',
-        weight: 0,
-        interactive: false,
-      },
+    // Dark overlay: world with India cut out as holes
+    L.polygon([world, ...indiaRings], {
+      color: 'none',
+      fillColor: '#1a1a2e',
+      fillOpacity: 1,
+      interactive: false,
     }).addTo(map);
 
     // India border outline

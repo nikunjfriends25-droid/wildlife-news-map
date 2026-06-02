@@ -15,6 +15,11 @@ html, body {
   transition: left 0.3s ease;
 }
 
+/* Leaflet background matches mask colour — no grey gaps */
+.leaflet-container {
+  background: #1a1a2e !important;
+}
+
 /* ── Left panel ──────────────────────────────────────────────────────────── */
 #panel {
   position: absolute;
