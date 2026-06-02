@@ -11,9 +11,9 @@ const CATEGORY_COLORS = {
 };
 
 const CATEGORY_KEYWORDS = {
-  poaching:     ['poach', 'snare', 'trap', 'traffick', 'smuggl', 'ivory', 'kill', 'hunt'],
-  sighting:     ['sight', 'spot', 'seen', 'found', 'camera trap', 'photograph', 'recorded', 'survey'],
-  conservation: ['conserv', 'protect', 'rescue', 'rehabilitat', 'restor', 'reserve', 'sanctuary', 'corridor', 'national park'],
+  poaching:     ['poach', 'snare', 'trap', 'traffick', 'smuggl', 'ivory', 'illegal', 'hunt', 'kill', 'seized', 'arrested', 'wildlife crime'],
+  sighting:     ['sight', 'spot', 'seen', 'found', 'camera trap', 'photograph', 'recorded', 'survey', 'new species', 'discovered', 'endemic', 'diversity', 'guide'],
+  conservation: ['conserv', 'protect', 'rescue', 'rehabilitat', 'restor', 'reserve', 'sanctuary', 'corridor', 'national park', 'habitat', 'conflict', 'forest fire', 'encroach', 'deforest', 'extinct', 'endangered', 'dies', 'death', 'infection', 'mining', 'degraded'],
 };
 
 // ── Map setup ─────────────────────────────────────────────────────────────────
@@ -35,44 +35,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   maxZoom: 19,
 }).addTo(map);
 
-// ── India boundary mask ───────────────────────────────────────────────────────
-// Uses L.polygon (Leaflet [lat,lng]) to avoid GeoJSON winding-order issues.
-fetch('india.geojson')
-  .then(r => r.json())
-  .then(data => {
-    const geom = data.features[0].geometry;
-
-    // World outer ring in Leaflet [lat, lng] — large enough to cover everything
-    const world = [[90, -180], [90, 180], [-90, 180], [-90, -180]];
-
-    // Convert India GeoJSON rings [lng,lat] → Leaflet [lat,lng]
-    const toLatLng = ring => ring.map(([lng, lat]) => [lat, lng]);
-    let indiaRings = [];
-    if (geom.type === 'Polygon') {
-      indiaRings = geom.coordinates.map(toLatLng);
-    } else if (geom.type === 'MultiPolygon') {
-      geom.coordinates.forEach(poly => poly.forEach(ring => indiaRings.push(toLatLng(ring))));
-    }
-
-    // Dark overlay: world with India cut out as holes
-    L.polygon([world, ...indiaRings], {
-      color: 'none',
-      fillColor: '#1a1a2e',
-      fillOpacity: 1,
-      interactive: false,
-    }).addTo(map);
-
-    // India border outline
-    L.geoJSON(data, {
-      style: {
-        color: '#4a7a9b',
-        weight: 1.5,
-        fillOpacity: 0,
-        interactive: false,
-      },
-    }).addTo(map);
-  })
-  .catch(err => console.warn('Could not load India boundary:', err));
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function categorize(headline) {
