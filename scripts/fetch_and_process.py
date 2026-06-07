@@ -16,7 +16,9 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s %(message)s')
 logger = logging.getLogger(__name__)
 
 SOURCES = [
-    # The Wire — science / environment
+    # NOTE: Down to Earth (downtoearth.org) blocks all RSS with HTTP 403 — excluded.
+
+    # The Wire — science / environment (requires browser User-Agent)
     'https://science.thewire.in/feed/',
     # Mongabay India — wildlife / forests
     'https://india.mongabay.com/feed/',
@@ -85,12 +87,20 @@ def parse_date(entry) -> str:
     return datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
 
+USER_AGENT = (
+    'Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0 '
+    'wildlife-news-map/1.0 (+https://github.com/nikunjfriends25-droid/wildlife-news-map)'
+)
+
 def fetch_feed(url: str) -> list:
     try:
-        feed = feedparser.parse(url)
+        # Pass a browser-like User-Agent — some feeds (e.g. The Wire) block
+        # feedparser's default "python-feedparser/..." agent.
+        feed = feedparser.parse(url, agent=USER_AGENT)
         if feed.bozo and not feed.entries:
             logger.warning(f"Feed error ({url}): {feed.bozo_exception}")
             return []
+        logger.info(f"  Got {len(feed.entries)} entries")
         return feed.entries
     except Exception as e:
         logger.warning(f"Failed to fetch {url}: {e}")
@@ -125,7 +135,6 @@ def main():
     for feed_url in SOURCES:
         logger.info(f"Fetching {feed_url}")
         entries = fetch_feed(feed_url)
-        logger.info(f"  Got {len(entries)} entries")
 
         for entry in entries:
             url = getattr(entry, 'link', None)
