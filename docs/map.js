@@ -1,40 +1,76 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   Wildlife News Map — India
+   ══════════════════════════════════════════════════════════════════════════════ */
+
 // ── Constants ─────────────────────────────────────────────────────────────────
 const INDIA_BOUNDS = [[6, 68], [37, 98]];
-const INDIA_CENTER = [22, 83];
-const INDIA_ZOOM   = 6;
 
 const CATEGORY_COLORS = {
-  poaching:     '#e74c3c',
-  sighting:     '#27ae60',
-  conservation: '#2980b9',
-  other:        '#7f8c8d',
+  poaching:     '#ef4444',
+  sighting:     '#22c55e',
+  conservation: '#818cf8',
+  other:        '#64748b',
+};
+
+const CATEGORY_LABELS = {
+  poaching:     'Poaching',
+  sighting:     'Sighting',
+  conservation: 'Conservation',
+  other:        'Other',
 };
 
 const CATEGORY_KEYWORDS = {
-  poaching:     ['poach', 'snare', 'trap', 'traffick', 'smuggl', 'ivory', 'illegal', 'hunt', 'kill', 'seized', 'arrested', 'wildlife crime'],
-  sighting:     ['sight', 'spot', 'seen', 'found', 'camera trap', 'photograph', 'recorded', 'survey', 'new species', 'discovered', 'endemic', 'diversity', 'guide'],
-  conservation: ['conserv', 'protect', 'rescue', 'rehabilitat', 'restor', 'reserve', 'sanctuary', 'corridor', 'national park', 'habitat', 'conflict', 'forest fire', 'encroach', 'deforest', 'extinct', 'endangered', 'dies', 'death', 'infection', 'mining', 'degraded'],
+  poaching:     ['poach', 'snare', 'trap', 'traffick', 'smuggl', 'ivory', 'illegal hunt', 'kill', 'seized', 'arrested', 'wildlife crime', 'confiscat'],
+  sighting:     ['sight', 'spot', 'seen', 'found', 'camera trap', 'photograph', 'recorded', 'survey', 'new species', 'discover', 'endemic', 'rare species'],
+  conservation: ['conserv', 'protect', 'rescue', 'rehabilitat', 'restor', 'reserve', 'sanctuary', 'corridor', 'national park', 'habitat', 'conflict', 'forest fire', 'encroach', 'deforest', 'afforest', 'extinct', 'endanger', 'dies', 'death', 'infection', 'mining', 'degrad', 'biodiversity', 'mangrove', 'wetland'],
 };
 
-// ── Map setup ─────────────────────────────────────────────────────────────────
+// ── Map init ──────────────────────────────────────────────────────────────────
 const map = L.map('map', {
-  center: INDIA_CENTER,
-  zoom: INDIA_ZOOM,
+  center: [22, 82],
+  zoom: 5,
   minZoom: 4,
-  maxZoom: 14,
+  maxZoom: 15,
   maxBounds: INDIA_BOUNDS,
-  maxBoundsViscosity: 1.0,   // hard lock — cannot pan outside India
+  maxBoundsViscosity: 0.9,
+  zoomControl: false,
 });
 
-// Fit India snugly with small padding
-map.fitBounds(INDIA_BOUNDS, { padding: [30, 30] });
+// Zoom control — top right
+L.control.zoom({ position: 'topright' }).addTo(map);
 
+// Tile layer
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  attribution: '&copy; <a href="https://carto.com/" target="_blank">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
   subdomains: 'abcd',
   maxZoom: 19,
 }).addTo(map);
 
+// Fit India snugly
+map.fitBounds(INDIA_BOUNDS, { padding: [24, 24] });
+
+// ── Cluster group ─────────────────────────────────────────────────────────────
+const clusters = L.markerClusterGroup({
+  maxClusterRadius: 50,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  iconCreateFunction(cluster) {
+    const count = cluster.getChildCount();
+    const large = count >= 10 ? ' large' : '';
+    return L.divIcon({
+      html: `<div class="cluster-icon${large}">${count}</div>`,
+      className: '',
+      iconSize: large ? [44, 44] : [38, 38],
+    });
+  },
+});
+map.addLayer(clusters);
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let allArticles = [];
+let allMarkers  = [];
+const activeCats = new Set(['poaching', 'sighting', 'conservation', 'other']);
+const activeSrcs = new Set();
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function categorize(headline) {
@@ -47,54 +83,95 @@ function categorize(headline) {
 
 function markerRadius(published) {
   const days = (Date.now() - new Date(published).getTime()) / 86400000;
-  return Math.max(5, 10 - days * 0.2);
+  return Math.max(5, 10 - days * 0.12);
 }
 
-// ── Cluster layer ─────────────────────────────────────────────────────────────
-const clusters = L.markerClusterGroup({
-  maxClusterRadius: 40,
-  iconCreateFunction(cluster) {
-    return L.divIcon({
-      html: `<div class="cluster-icon">${cluster.getChildCount()}</div>`,
-      className: '',
-      iconSize: [36, 36],
-    });
-  },
-});
-map.addLayer(clusters);
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  try {
+    return new Date(dateStr).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  } catch { return dateStr; }
+}
 
-// ── State ─────────────────────────────────────────────────────────────────────
-let allArticles = [];
-let allMarkers  = [];
-// JS-managed filter state — never read from DOM checkbox.checked
-const activeCats = new Set(['poaching','sighting','conservation','other']);
-const activeSrcs = new Set();
+function popupBadgeStyle(cat) {
+  const colors = {
+    poaching:     { bg: 'rgba(239,68,68,0.15)',   border: 'rgba(239,68,68,0.35)',   text: '#fca5a5', dot: '#ef4444' },
+    sighting:     { bg: 'rgba(34,197,94,0.15)',    border: 'rgba(34,197,94,0.35)',   text: '#86efac', dot: '#22c55e' },
+    conservation: { bg: 'rgba(129,140,248,0.15)',  border: 'rgba(129,140,248,0.35)', text: '#a5b4fc', dot: '#818cf8' },
+    other:        { bg: 'rgba(100,116,139,0.15)',  border: 'rgba(100,116,139,0.35)', text: '#94a3b8', dot: '#64748b' },
+  };
+  return colors[cat] || colors.other;
+}
 
-// ── Render markers from filtered list ────────────────────────────────────────
+function buildPopup(a) {
+  const cat    = categorize(a.headline);
+  const color  = CATEGORY_COLORS[cat];
+  const badge  = popupBadgeStyle(cat);
+  const label  = CATEGORY_LABELS[cat];
+
+  return `
+    <div class="popup">
+      <div class="popup-header">
+        <div class="popup-cat-badge" style="background:${badge.bg};border:1px solid ${badge.border};color:${badge.text}">
+          <span class="popup-cat-dot" style="background:${badge.dot}"></span>
+          ${label}
+        </div>
+        <div class="popup-headline">${escapeHtml(a.headline)}</div>
+      </div>
+      <div class="popup-meta">
+        <div class="popup-meta-row">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="popup-meta-text">${escapeHtml(a.place_name)}</span>
+        </div>
+        <div class="popup-meta-row">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="popup-meta-text">${escapeHtml(a.source)} · ${formatDate(a.published)}</span>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <a class="popup-link" href="${a.url}" target="_blank" rel="noopener noreferrer">
+          Read article
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+    </div>`;
+}
+
+function escapeHtml(str) {
+  return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Render markers ────────────────────────────────────────────────────────────
 function renderMarkers(filtered) {
   clusters.clearLayers();
-  filtered.forEach(({ article: a, marker }) => {
-    clusters.addLayer(marker);
-  });
+  filtered.forEach(({ marker }) => clusters.addLayer(marker));
+  const total = allArticles.length;
+  const shown = filtered.length;
   document.getElementById('stats').textContent =
-    `Showing ${filtered.length} of ${allArticles.length} articles`;
+    shown === total
+      ? `${total} article${total !== 1 ? 's' : ''} on map`
+      : `${shown} of ${total} articles`;
+
+  // Empty state
+  const empty = document.getElementById('empty-state');
+  if (empty) empty.classList.toggle('visible', shown === 0);
 }
 
-// ── Apply all filters ─────────────────────────────────────────────────────────
+// ── Apply filters ─────────────────────────────────────────────────────────────
 function applyFilters() {
-  const query    = document.getElementById('search').value.toLowerCase().trim();
+  const query    = (document.getElementById('search').value || '').toLowerCase().trim();
   const dateFrom = document.getElementById('date-from').value;
   const dateTo   = document.getElementById('date-to').value;
 
   const filtered = allMarkers.filter(({ article: a }) => {
     if (!activeCats.has(categorize(a.headline))) return false;
-    if (!activeSrcs.has(a.source)) return false;
+    if (activeSrcs.size && !activeSrcs.has(a.source)) return false;
     if (dateFrom && a.published < dateFrom) return false;
     if (dateTo   && a.published > dateTo)   return false;
     if (query && !(
-      a.headline.toLowerCase().includes(query) ||
-      a.place_name.toLowerCase().includes(query) ||
-      a.source.toLowerCase().includes(query)
+      (a.headline || '').toLowerCase().includes(query) ||
+      (a.place_name || '').toLowerCase().includes(query) ||
+      (a.source || '').toLowerCase().includes(query)
     )) return false;
     return true;
   });
@@ -102,72 +179,131 @@ function applyFilters() {
   renderMarkers(filtered);
 }
 
-// ── Build source checkboxes ───────────────────────────────────────────────────
+// ── Build source filters ──────────────────────────────────────────────────────
 function buildSourceFilters(articles) {
   const sources = [...new Set(articles.map(a => a.source))].sort();
-  sources.forEach(s => activeSrcs.add(s));  // all on by default in JS state
+  sources.forEach(s => activeSrcs.add(s));
+
   const container = document.getElementById('source-filters');
   container.innerHTML = '';
+
   sources.forEach(src => {
-    const label = document.createElement('label');
-    const cb = document.createElement('input');
-    cb.type = 'checkbox';
-    cb.dataset.src = src;
-    cb.checked = true;
-    cb.autocomplete = 'off';
-    cb.addEventListener('change', () => {
-      cb.checked ? activeSrcs.add(src) : activeSrcs.delete(src);
+    const chip = document.createElement('div');
+    chip.className = 'filter-chip source-chip active';
+    chip.setAttribute('role', 'checkbox');
+    chip.setAttribute('aria-checked', 'true');
+    chip.setAttribute('tabindex', '0');
+    chip.dataset.src = src;
+
+    chip.innerHTML = `
+      <span class="chip-label">${escapeHtml(src)}</span>
+      <span class="chip-check">
+        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      </span>`;
+
+    const toggle = () => {
+      const active = activeSrcs.has(src);
+      if (active) { activeSrcs.delete(src); chip.classList.remove('active'); chip.setAttribute('aria-checked','false'); }
+      else        { activeSrcs.add(src);    chip.classList.add('active');    chip.setAttribute('aria-checked','true'); }
       applyFilters();
-    });
-    label.appendChild(cb);
-    label.append(' ' + src);
-    container.appendChild(label);
+    };
+
+    chip.addEventListener('click', toggle);
+    chip.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); } });
+    container.appendChild(chip);
   });
 }
 
-// ── Set default date range ────────────────────────────────────────────────────
+// ── Date defaults ─────────────────────────────────────────────────────────────
 function setDefaultDates(articles) {
-  const dates = articles.map(a => a.published).sort();
-  document.getElementById('date-from').value = dates[0] || '';
-  document.getElementById('date-to').value   = dates[dates.length - 1] || '';
+  const dates = articles.map(a => a.published).filter(Boolean).sort();
+  if (dates.length) {
+    document.getElementById('date-from').value = dates[0];
+    document.getElementById('date-to').value   = dates[dates.length - 1];
+  }
 }
+
+// ── Category chip wiring ──────────────────────────────────────────────────────
+document.querySelectorAll('#cat-filters .filter-chip').forEach(chip => {
+  const cat = chip.dataset.cat;
+
+  const toggle = () => {
+    const active = activeCats.has(cat);
+    if (active) { activeCats.delete(cat); chip.classList.remove('active'); chip.setAttribute('aria-checked','false'); }
+    else        { activeCats.add(cat);    chip.classList.add('active');    chip.setAttribute('aria-checked','true'); }
+    applyFilters();
+  };
+
+  chip.addEventListener('click', toggle);
+  chip.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); } });
+});
+
+// ── Section collapse wiring ───────────────────────────────────────────────────
+document.querySelectorAll('.section-header').forEach(header => {
+  const bodyId = header.dataset.target;
+  const body   = document.getElementById(bodyId);
+  if (!body) return;
+
+  header.addEventListener('click', () => {
+    const open = header.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    body.classList.toggle('collapsed', !open);
+  });
+});
+
+// ── Search wiring ─────────────────────────────────────────────────────────────
+const searchEl = document.getElementById('search');
+const clearBtn = document.getElementById('search-clear');
+
+searchEl.addEventListener('input', () => {
+  clearBtn.style.display = searchEl.value ? 'flex' : 'none';
+  applyFilters();
+});
+
+clearBtn.addEventListener('click', () => {
+  searchEl.value = '';
+  clearBtn.style.display = 'none';
+  searchEl.focus();
+  applyFilters();
+});
+
+document.getElementById('date-from').addEventListener('change', applyFilters);
+document.getElementById('date-to').addEventListener('change', applyFilters);
 
 // ── Reset ─────────────────────────────────────────────────────────────────────
 document.getElementById('reset-btn').addEventListener('click', () => {
-  document.getElementById('search').value = '';
+  searchEl.value = '';
+  clearBtn.style.display = 'none';
+
   ['poaching','sighting','conservation','other'].forEach(c => activeCats.add(c));
-  document.querySelectorAll('#cat-filters input').forEach(i => i.checked = true);
-  allArticles.map(a => a.source).forEach(s => activeSrcs.add(s));
-  document.querySelectorAll('#source-filters input').forEach(i => i.checked = true);
+  document.querySelectorAll('#cat-filters .filter-chip').forEach(chip => {
+    chip.classList.add('active');
+    chip.setAttribute('aria-checked', 'true');
+  });
+
+  allArticles.forEach(a => activeSrcs.add(a.source));
+  document.querySelectorAll('#source-filters .filter-chip').forEach(chip => {
+    chip.classList.add('active');
+    chip.setAttribute('aria-checked', 'true');
+  });
+
   setDefaultDates(allArticles);
   applyFilters();
 });
 
-// ── Panel collapse/expand ─────────────────────────────────────────────────────
+// ── Panel collapse ────────────────────────────────────────────────────────────
 const panel  = document.getElementById('panel');
 const toggle = document.getElementById('panel-toggle');
+
 toggle.addEventListener('click', () => {
-  panel.classList.toggle('collapsed');
-  toggle.textContent = panel.classList.contains('collapsed') ? '›' : '‹';
-  setTimeout(() => map.invalidateSize(), 300);
+  const collapsed = panel.classList.toggle('collapsed');
+  toggle.setAttribute('aria-label', collapsed ? 'Expand panel' : 'Collapse panel');
+  setTimeout(() => map.invalidateSize(), 230);
 });
 
-// ── Wire up category filters (JS state driven) ────────────────────────────────
-document.querySelectorAll('#cat-filters input').forEach(i => {
-  i.checked = true;  // visual default
-  i.autocomplete = 'off';
-  i.addEventListener('change', () => {
-    i.checked ? activeCats.add(i.dataset.cat) : activeCats.delete(i.dataset.cat);
-    applyFilters();
-  });
-});
-document.getElementById('search').addEventListener('input', applyFilters);
-document.getElementById('date-from').addEventListener('change', applyFilters);
-document.getElementById('date-to').addEventListener('change', applyFilters);
-
-// ── Load data ────────────────────────────────────────────────────────────────
+// ── Load data ─────────────────────────────────────────────────────────────────
 fetch('news.json')
-  .then(r => r.json())
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(articles => {
     allArticles = articles;
 
@@ -181,17 +317,23 @@ fetch('news.json')
         color,
         fillColor: color,
         fillOpacity: 0.85,
-        weight: 1,
+        weight: 1.5,
+        opacity: 0.9,
       });
 
-      marker.bindPopup(`
-        <div class="popup">
-          <div class="popup-meta">${a.source} &middot; ${a.published}</div>
-          <div class="popup-headline">${a.headline}</div>
-          <div class="popup-place">📍 ${a.place_name}</div>
-          <a class="popup-link" href="${a.url}" target="_blank" rel="noopener">Read article →</a>
-        </div>
-      `, { maxWidth: 280 });
+      marker.bindPopup(buildPopup(a), {
+        maxWidth: 300,
+        closeButton: true,
+        className: '',
+      });
+
+      // Subtle pulse on hover
+      marker.on('mouseover', function() {
+        this.setStyle({ weight: 2.5, fillOpacity: 1 });
+      });
+      marker.on('mouseout', function() {
+        this.setStyle({ weight: 1.5, fillOpacity: 0.85 });
+      });
 
       return { article: a, marker };
     });
