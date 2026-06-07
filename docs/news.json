@@ -304,5 +304,23 @@
     "place_name": "Eastern Ghats",
     "lat": 15.0,
     "lon": 80.0
+  },
+  {
+    "headline": "Assam villagers resist excavation for flood mitigation project",
+    "url": "https://www.thehindu.com/news/national/assam/assam-villagers-resist-excavation-for-flood-mitigation-project/article70688611.ece",
+    "source": "The Hindu",
+    "published": "2026-03-01",
+    "place_name": "Assam",
+    "lat": 26.2006,
+    "lon": 92.9376
+  },
+  {
+    "headline": "Raised in Assam’s temple pond, 104 turtle hatchlings released in rhino habitat",
+    "url": "https://www.thehindu.com/news/national/assam/raised-in-assams-temple-pond-104-turtle-hatchlings-released-in-rhino-habitat/article70104417.ece",
+    "source": "The Hindu",
+    "published": "2025-09-28",
+    "place_name": "Assam",
+    "lat": 26.2006,
+    "lon": 92.9376
   }
 ]
