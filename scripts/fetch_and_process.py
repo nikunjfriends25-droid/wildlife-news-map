@@ -16,11 +16,25 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s %(message)s')
 logger = logging.getLogger(__name__)
 
 SOURCES = [
-    'https://www.downtoearth.org/rss/wildlife',
-    'https://www.downtoearth.org/rss/forests',
+    # The Wire — science / environment
     'https://science.thewire.in/feed/',
+    # Mongabay India — wildlife / forests
     'https://india.mongabay.com/feed/',
+    # The Hindu — environment & sci-tech
     'https://www.thehindu.com/sci-tech/energy-and-environment/feeder/default.rss',
+    # The Hindu — national news (catches forest fires, poaching, PA stories)
+    'https://www.thehindu.com/news/national/feeder/default.rss',
+    # The Hindu — other states (northeast, hill states, etc.)
+    'https://www.thehindu.com/news/national/other-states/feeder/default.rss',
+    # The Hindu — state-specific (major biodiversity states)
+    'https://www.thehindu.com/news/national/kerala/feeder/default.rss',
+    'https://www.thehindu.com/news/national/karnataka/feeder/default.rss',
+    'https://www.thehindu.com/news/national/andhra-pradesh/feeder/default.rss',
+    'https://www.thehindu.com/news/national/telangana/feeder/default.rss',
+    'https://www.thehindu.com/news/national/tamil-nadu/feeder/default.rss',
+    # Times of India — environment / wildlife section
+    'https://timesofindia.indiatimes.com/rssfeeds/2647163.cms',
+    # Times of India — India news (catches forest, wildlife stories)
     'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms',
 ]
 
@@ -30,10 +44,16 @@ KEYWORDS = [
     'wildlife', 'poaching', 'forest', 'sanctuary', 'reserve', 'national park',
     'conservation', 'species', 'habitat', 'corridor', 'encroachment',
     'WII', 'WWF', 'WTI', 'forest department',
+    'mangrove', 'wetland', 'biodiversity', 'migratory', 'bird',
+    'turtle', 'dugong', 'pangolin', 'cheetah', 'snow leopard',
+    'kaziranga', 'sundarbans', 'corbett', 'bandipur', 'ranthambore',
+    'protected area', 'eco-sensitive', 'deforestation', 'afforestation',
+    'frog', 'reptile', 'amphibian', 'endemic', 'invasive',
 ]
 
 NEWS_JSON = os.path.join(os.path.dirname(__file__), '..', 'docs', 'news.json')
-CUTOFF_DAYS = 30
+CUTOFF_DAYS = 60   # keep 60 days to get more articles
+INDIA_CENTER = (20.5937, 78.9629)  # generic pin — reject these
 
 
 def load_existing():
@@ -88,7 +108,10 @@ def source_name(url: str) -> str:
     for key, name in mapping.items():
         if key in url:
             return name
-    return url.split('/')[2]
+    try:
+        return url.split('/')[2]
+    except IndexError:
+        return url
 
 
 def main():
@@ -130,6 +153,11 @@ def main():
                     logger.debug(f"Geocoding failed: {place_name}")
                     continue
                 lat, lon = coords
+
+            # Skip articles that landed on generic India centre
+            if abs(lat - INDIA_CENTER[0]) < 0.01 and abs(lon - INDIA_CENTER[1]) < 0.01:
+                logger.debug(f"Skipping India-centre pin: {title[:50]}")
+                continue
 
             article = {
                 'headline': title.strip(),
