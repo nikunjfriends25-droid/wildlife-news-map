@@ -308,3 +308,785 @@ Shimla,31.1048,77.1734,city
 Srinagar,34.0837,74.7973,city
 Dehra Dun,30.3165,78.0322,city
 India,20.5937,78.9629,country
+Anantapur,14.6819,77.6006,district_hq
+Chittoor,13.2172,79.1003,district_hq
+East Godavari Kakinada,16.9891,82.2475,district_hq
+Guntur,16.3067,80.4365,district_hq
+Krishna Machilipatnam,16.1875,81.1389,district_hq
+Kurnool,15.8281,78.0373,district_hq
+Nellore,14.4426,79.9865,district_hq
+Prakasam Ongole,15.5057,80.0499,district_hq
+Srikakulam,18.2949,83.8935,district_hq
+Visakhapatnam,17.6868,83.2185,district_hq
+Vizianagaram,18.1066,83.3956,district_hq
+West Godavari Eluru,16.7107,81.0952,district_hq
+YSR Kadapa,14.4673,78.8242,district_hq
+Sri Sathya Sai Puttaparthi,14.1637,77.785,district_hq
+Alluri Sitharama Raju Paderu,17.9193,82.6669,district_hq
+Anakapalli,17.6906,83.0038,district_hq
+Bapatla,15.9044,80.4676,district_hq
+Eluru,16.7107,81.0952,district_hq
+Nandyal,15.4786,78.4837,district_hq
+Palnadu Narasaraopet,16.2366,79.987,district_hq
+Sri Balaji Tirupati,13.6288,79.4192,district_hq
+Tirupati,13.6288,79.4192,district_hq
+Konaseema Amalapuram,16.5759,82.006,district_hq
+Manyam Parvathipuram,18.7803,83.4245,district_hq
+Kakinada,16.9891,82.2475,district_hq
+Rajam,18.4694,83.6438,district_hq
+Tawang,27.5861,91.8594,district_hq
+West Kameng Bomdila,27.2655,92.4195,district_hq
+East Kameng Seppa,27.3258,92.8972,district_hq
+Papum Pare Yupia,27.1564,93.7442,district_hq
+Kurung Kumey Koloriang,27.6755,93.5285,district_hq
+Kra Daadi Palin,27.8867,93.7295,district_hq
+Subansiri Lower Ziro,27.5437,93.8328,district_hq
+Subansiri Upper Daporijo,28.0879,94.2186,district_hq
+Arunachal West Siang Along,28.1609,94.7952,district_hq
+Arunachal East Siang Pasighat,28.0665,95.3253,district_hq
+Siang Pangin,28.1593,95.1268,district_hq
+Upper Siang Yingkiong,28.6328,95.022,district_hq
+West Siang Along,28.1609,94.7952,district_hq
+Shi Yomi Tato,28.9007,94.3601,district_hq
+Dibang Valley Anini,28.781,95.8751,district_hq
+Lower Dibang Valley Roing,28.1381,95.838,district_hq
+Lohit Tezu,27.9221,96.1709,district_hq
+Anjaw Hawai,28.042,96.7135,district_hq
+Namsai,27.67,95.834,district_hq
+Changlang,27.1167,95.7419,district_hq
+Tirap Khonsa,26.95,95.5,district_hq
+Longding,26.8,95.5833,district_hq
+Pakke Kessang,27.0528,92.7903,district_hq
+Lepa Rada Basar,27.9812,94.6868,district_hq
+Kamle Raga,27.796,94.084,district_hq
+Baksa Mushalpur,26.6788,91.3104,district_hq
+Barpeta,26.3218,91.0053,district_hq
+Biswanath Biswanath Chariali,26.7331,93.1522,district_hq
+Bongaigaon,26.4784,90.5573,district_hq
+Cachar Silchar,24.8333,92.7789,district_hq
+Charaideo Sonari,26.9922,94.8626,district_hq
+Chirang Kajalgaon,26.5784,90.5913,district_hq
+Darrang Mangaldoi,26.4396,92.0319,district_hq
+Dhemaji,27.4775,94.5662,district_hq
+Dhubri,26.0204,90.0049,district_hq
+Dibrugarh,27.4728,94.912,district_hq
+Dima Hasao Haflong,25.1653,93.0207,district_hq
+Goalpara,26.172,90.623,district_hq
+Golaghat,26.5148,93.969,district_hq
+Hailakandi,24.6805,92.5604,district_hq
+Hojai Hojai town,26.0079,92.8521,district_hq
+Jorhat,26.7465,94.2026,district_hq
+Kamrup Amingaon,26.1617,91.6954,district_hq
+Kamrup Metropolitan Guwahati,26.1445,91.7362,district_hq
+Karbi Anglong Diphu,25.8447,93.4346,district_hq
+Karimganj,24.8658,92.3564,district_hq
+Kokrajhar,26.3984,90.2726,district_hq
+Lakhimpur North Lakhimpur,27.2348,94.111,district_hq
+Majuli,26.9533,94.1622,district_hq
+Morigaon,26.253,92.3407,district_hq
+Nagaon,26.35,92.68,district_hq
+Nalbari,26.4457,91.4402,district_hq
+Sivasagar,26.9855,94.643,district_hq
+Sonitpur Tezpur,26.6338,92.7927,district_hq
+South Salmara Hatsingimari,25.15,90.35,district_hq
+Tamulpur Tamulpur town,26.6516,91.154,district_hq
+Tinsukia,27.4892,95.3564,district_hq
+Udalguri,26.7568,92.1003,district_hq
+West Karbi Anglong Hamren,26.16,92.97,district_hq
+Bajali Pathsala,26.4393,91.3188,district_hq
+Araria,26.1462,87.4565,district_hq
+Arwal,25.2425,84.6821,district_hq
+Aurangabad Bihar,24.7527,84.3745,district_hq
+Banka,24.8791,86.9217,district_hq
+Begusarai,25.4182,86.1272,district_hq
+Bhagalpur,25.2425,86.9842,district_hq
+Bhojpur Ara,25.5569,84.662,district_hq
+Buxar,25.5654,83.9783,district_hq
+Darbhanga,26.152,85.8976,district_hq
+East Champaran Motihari,26.6586,84.9172,district_hq
+Gaya,24.7955,84.9994,district_hq
+Gopalganj,26.4684,84.4356,district_hq
+Jamui,24.9255,86.2256,district_hq
+Jehanabad,25.217,84.9914,district_hq
+Kaimur Bhabua,25.0444,83.6015,district_hq
+Katihar,25.5379,87.5661,district_hq
+Khagaria,25.5019,86.4653,district_hq
+Kishanganj,26.0942,87.9401,district_hq
+Lakhisarai,25.1573,86.0952,district_hq
+Madhepura,25.9212,86.7886,district_hq
+Madhubani,26.3531,86.0713,district_hq
+Munger,25.3741,86.4735,district_hq
+Muzaffarpur,26.1225,85.3906,district_hq
+Nalanda Biharsharif,25.1961,85.5235,district_hq
+Nawada,24.8873,85.5475,district_hq
+Patna,25.5941,85.1376,district_hq
+Purnia,25.7771,87.4753,district_hq
+Rohtas Sasaram,24.9469,84.029,district_hq
+Saharsa,25.8793,86.5951,district_hq
+Samastipur,25.861,85.7819,district_hq
+Saran Chhapra,25.7771,84.7446,district_hq
+Sheikhpura,25.1395,85.8446,district_hq
+Sheohar,26.5201,85.2976,district_hq
+Sitamarhi,26.5914,85.4879,district_hq
+Siwan,26.2192,84.3544,district_hq
+Supaul,26.1241,86.598,district_hq
+Vaishali Hajipur,25.6868,85.2086,district_hq
+West Champaran Bettiah,27.0247,84.5031,district_hq
+Balod,20.7341,81.2072,district_hq
+Baloda Bazar,21.6553,82.1619,district_hq
+Balrampur CG,23.1202,83.5935,district_hq
+Bastar Jagdalpur,19.0697,82.0188,district_hq
+Bemetara,21.717,81.5367,district_hq
+Bijapur CG,18.8568,80.8055,district_hq
+Bilaspur CG,22.0796,82.1391,district_hq
+Dantewada,18.8954,81.3473,district_hq
+Dhamtari,20.7077,81.5498,district_hq
+Durg,21.1904,81.2849,district_hq
+Gariaband,20.638,82.0609,district_hq
+Gaurela Pendra Marwahi Gaurela,22.7506,81.9,district_hq
+Janjgir Champa,22.0134,82.5759,district_hq
+Jashpur Jashpur Nagar,22.8856,84.1439,district_hq
+Kanker,20.2752,81.4933,district_hq
+Kabirdham Kawardha,22.0103,81.2349,district_hq
+Kondagaon,19.5952,81.662,district_hq
+Korba,22.3595,82.7501,district_hq
+Koriya Baikunthpur,23.2591,82.5474,district_hq
+Mahasamund,21.1098,82.0946,district_hq
+Manendragarh,23.205,82.2175,district_hq
+Mohla Manpur,21.19,80.91,district_hq
+Mungeli,22.0636,81.6853,district_hq
+Narayanpur,19.7228,81.2401,district_hq
+Raigarh CG,21.8988,83.395,district_hq
+Raipur,21.2514,81.6296,district_hq
+Rajnandgaon,21.0971,81.0289,district_hq
+Sakti,22.02,82.97,district_hq
+Sarangarh Bilaigarh,21.58,83.09,district_hq
+Sukma,18.3939,81.6676,district_hq
+Surajpur,23.2157,82.8598,district_hq
+Surguja Ambikapur,23.1185,83.1958,district_hq
+Khairagarh Chhuikhadan Gandai,21.42,80.98,district_hq
+North Goa Panaji,15.4909,73.8278,district_hq
+South Goa Margao,15.2832,73.9862,district_hq
+Ahmedabad,23.0225,72.5714,district_hq
+Amreli,21.6032,71.2247,district_hq
+Anand,22.5645,72.9289,district_hq
+Aravalli Modasa,23.4631,73.2979,district_hq
+Banaskantha Palanpur,24.1724,72.4377,district_hq
+Bharuch,21.7051,72.9959,district_hq
+Botad,22.1693,71.6671,district_hq
+Chhota Udaipur,22.3086,74.0125,district_hq
+Dahod,22.8375,74.2557,district_hq
+Dang Ahwa,20.7577,73.6882,district_hq
+Devbhoomi Dwarka,22.2394,68.9678,district_hq
+Gandhinagar,23.2156,72.6369,district_hq
+Gir Somnath Veraval,20.908,70.3672,district_hq
+Jamnagar,22.4707,70.0577,district_hq
+Junagadh,21.5222,70.4579,district_hq
+Kheda Nadiad,22.6916,72.8634,district_hq
+Kutch Bhuj,23.242,69.6669,district_hq
+Mahisagar Lunawada,23.1302,73.6138,district_hq
+Mehsana,23.588,72.3693,district_hq
+Morbi,22.8173,70.837,district_hq
+Narmada Rajpipla,21.8725,73.5044,district_hq
+Navsari,20.9467,72.952,district_hq
+Panchmahal Godhra,22.7789,73.6143,district_hq
+Patan,23.8493,72.1266,district_hq
+Porbandar,21.6425,69.6293,district_hq
+Rajkot,22.3039,70.8022,district_hq
+Sabarkantha Himmatnagar,23.5998,72.965,district_hq
+Surat,21.1702,72.8311,district_hq
+Surendranagar,22.7271,71.647,district_hq
+Tapi Vyara,21.1091,73.4069,district_hq
+Valsad,20.5992,72.9342,district_hq
+Vadodara,22.3072,73.1812,district_hq
+Ambala,30.3782,76.7767,district_hq
+Bhiwani,28.7975,76.1322,district_hq
+Charkhi Dadri,28.5922,76.2712,district_hq
+Faridabad,28.4089,77.3178,district_hq
+Fatehabad,29.5153,75.4548,district_hq
+Gurugram,28.4595,77.0266,district_hq
+Hisar,29.1492,75.7217,district_hq
+Jhajjar,28.6081,76.6547,district_hq
+Jind,29.316,76.3155,district_hq
+Kaithal,29.8014,76.3996,district_hq
+Karnal,29.6857,76.9905,district_hq
+Kurukshetra,29.9695,76.8783,district_hq
+Mahendragarh Narnaul,28.0463,76.112,district_hq
+Mewat Nuh,28.1042,77.0054,district_hq
+Palwal,28.1454,77.3273,district_hq
+Panchkula,30.6942,76.8606,district_hq
+Panipat,29.3909,76.9635,district_hq
+Rewari,28.1936,76.6183,district_hq
+Rohtak,28.8955,76.6066,district_hq
+Sirsa,29.5363,75.0319,district_hq
+Sonipat,28.9931,77.0151,district_hq
+Yamunanagar,30.129,77.2674,district_hq
+Bilaspur HP,31.3327,76.7615,district_hq
+Chamba,32.5534,76.1261,district_hq
+Hamirpur HP,31.6877,76.5214,district_hq
+Kangra Dharamsala,32.219,76.3234,district_hq
+Kinnaur Reckong Peo,31.5368,78.2671,district_hq
+Kullu,31.9579,77.1095,district_hq
+Lahaul Spiti Keylong,32.5728,77.0239,district_hq
+Mandi HP,31.7118,76.9316,district_hq
+Sirmaur Nahan,30.5575,77.294,district_hq
+Solan,30.9045,77.0967,district_hq
+Una HP,31.4678,76.2696,district_hq
+Bokaro,23.6693,85.9653,district_hq
+Chatra,24.2015,84.8742,district_hq
+Deoghar,24.4853,86.694,district_hq
+Dhanbad,23.7957,86.4304,district_hq
+Dumka,24.2697,87.247,district_hq
+East Singhbhum Jamshedpur,22.8046,86.2029,district_hq
+Garhwa,24.1662,83.8124,district_hq
+Giridih,24.1823,86.3014,district_hq
+Godda,24.8323,87.2118,district_hq
+Gumla,23.0454,84.5327,district_hq
+Hazaribagh,23.9925,85.3637,district_hq
+Jamtara,23.9615,86.8009,district_hq
+Khunti,23.0713,85.2776,district_hq
+Koderma,24.4656,85.5973,district_hq
+Latehar,23.7431,84.5024,district_hq
+Lohardaga,23.4389,84.6838,district_hq
+Pakur,24.6322,87.8437,district_hq
+Palamu Daltonganj,24.0335,84.0669,district_hq
+Ramgarh,23.6358,85.5028,district_hq
+Ranchi,23.3441,85.3096,district_hq
+Sahebganj,25.2427,87.6366,district_hq
+Seraikela Kharsawan Seraikela,22.5803,85.995,district_hq
+Simdega,22.6135,84.5102,district_hq
+West Singhbhum Chaibasa,22.5521,85.8134,district_hq
+Bagalkot,16.187,75.696,district_hq
+Ballari,15.1394,76.9214,district_hq
+Belagavi,15.8497,74.4977,district_hq
+Bengaluru Rural Bengaluru,12.9716,77.5946,district_hq
+Bengaluru Urban,12.9716,77.5946,district_hq
+Bidar,17.9104,77.5199,district_hq
+Chamarajanagar,11.9258,76.9437,district_hq
+Chikkaballapura,13.4355,77.7318,district_hq
+Chikkamagaluru,13.3161,75.772,district_hq
+Chitradurga,14.2251,76.3982,district_hq
+Dakshina Kannada Mangaluru,12.8698,74.8429,district_hq
+Davanagere,14.4644,75.9214,district_hq
+Dharwad Hubballi,15.3647,75.124,district_hq
+Gadag,15.4138,75.627,district_hq
+Hassan,13.0068,76.1004,district_hq
+Haveri,14.7962,75.4005,district_hq
+Kalaburagi,17.3297,76.8343,district_hq
+Kodagu Madikeri,12.4234,75.7376,district_hq
+Kolar,13.136,78.1294,district_hq
+Koppal,15.3507,76.1546,district_hq
+Mandya,12.5218,76.895,district_hq
+Mysuru,12.2958,76.6394,district_hq
+Raichur,16.212,77.3439,district_hq
+Ramanagara,12.7157,77.2801,district_hq
+Shivamogga,13.9299,75.5681,district_hq
+Tumakuru,13.3409,77.101,district_hq
+Udupi,13.3409,74.7421,district_hq
+Uttara Kannada Karwar,14.8003,74.127,district_hq
+Vijayapura,16.8302,75.71,district_hq
+Vijayanagara Hospet,15.2689,76.387,district_hq
+Yadgir,16.7704,77.1316,district_hq
+Alappuzha,9.4981,76.3388,district_hq
+Ernakulam Kochi,9.9312,76.2673,district_hq
+Idukki Painavu,9.8501,77.1025,district_hq
+Kannur,11.8745,75.3704,district_hq
+Kasaragod,12.4996,74.9869,district_hq
+Kollam,8.8932,76.6141,district_hq
+Kottayam,9.5916,76.5222,district_hq
+Kozhikode,11.2588,75.7804,district_hq
+Malappuram,11.051,76.0711,district_hq
+Palakkad,10.7867,76.6548,district_hq
+Pathanamthitta,9.2648,76.787,district_hq
+Thiruvananthapuram,8.5241,76.9366,district_hq
+Thrissur,10.5276,76.2144,district_hq
+Wayanad Kalpetta,11.6085,76.082,district_hq
+Agar Malwa,23.7122,76.0188,district_hq
+Alirajpur,22.308,74.3594,district_hq
+Anuppur,23.1023,81.693,district_hq
+Ashoknagar,24.579,77.728,district_hq
+Balaghat,21.8132,80.186,district_hq
+Barwani,22.0356,74.9047,district_hq
+Betul,21.9095,77.9022,district_hq
+Bhind,26.56,78.79,district_hq
+Burhanpur,21.3107,76.2306,district_hq
+Chhatarpur,24.9019,79.5864,district_hq
+Chhindwara,22.0574,78.9382,district_hq
+Damoh,23.8344,79.442,district_hq
+Datia,25.6706,78.4536,district_hq
+Dewas,22.9623,76.0503,district_hq
+Dhar,22.5983,75.2989,district_hq
+Dindori,22.9467,81.0795,district_hq
+Guna,24.648,77.3148,district_hq
+Gwalior,26.2183,78.1828,district_hq
+Harda,22.3395,77.0927,district_hq
+Hoshangabad Narmadapuram,22.7456,77.7237,district_hq
+Indore,22.7196,75.8577,district_hq
+Jabalpur,23.1815,79.9864,district_hq
+Jhabua,22.7699,74.5957,district_hq
+Katni,23.8325,80.3967,district_hq
+Khandwa,21.8258,76.3521,district_hq
+Khargone,21.8232,75.6161,district_hq
+Mandla,22.5994,80.3751,district_hq
+Mandsaur,24.0736,75.0666,district_hq
+Morena,26.4997,77.9983,district_hq
+Maihar,24.263,80.757,district_hq
+Narsinghpur,22.9487,79.1929,district_hq
+Neemuch,24.4697,74.8719,district_hq
+Niwari,24.9839,78.8021,district_hq
+Panna,24.7181,80.1895,district_hq
+Raisen,23.3303,77.7873,district_hq
+Rajgarh,24.0344,76.7273,district_hq
+Ratlam,23.3325,75.0409,district_hq
+Rewa,24.5373,81.2966,district_hq
+Sagar,23.8388,78.7378,district_hq
+Satna,24.6005,80.8322,district_hq
+Sehore,23.2009,77.0876,district_hq
+Seoni,22.0878,79.5426,district_hq
+Shahdol,23.2966,81.3531,district_hq
+Shajapur,23.4287,76.2768,district_hq
+Sheopur,25.67,76.71,district_hq
+Shivpuri,25.4233,77.6616,district_hq
+Sidhi,24.4159,81.8819,district_hq
+Singrauli,24.1985,82.6752,district_hq
+Tikamgarh,24.7444,78.8311,district_hq
+Ujjain,23.1828,75.7772,district_hq
+Umaria,23.5241,80.8363,district_hq
+Vidisha,23.525,77.8169,district_hq
+Mauganj,24.68,81.89,district_hq
+Pandhurna,21.59,78.53,district_hq
+Ahmednagar,19.0948,74.748,district_hq
+Akola,20.7002,77.0082,district_hq
+Amravati,20.932,77.7523,district_hq
+Aurangabad MH,19.8762,75.3433,district_hq
+Beed,18.9891,75.7601,district_hq
+Bhandara,21.1693,79.6473,district_hq
+Buldhana,20.5292,76.1844,district_hq
+Chandrapur,19.9615,79.2961,district_hq
+Dhule,20.9042,74.7749,district_hq
+Gadchiroli,20.1809,80.0059,district_hq
+Gondia,21.4602,80.1939,district_hq
+Hingoli,19.7165,77.1498,district_hq
+Jalgaon,21.0077,75.5626,district_hq
+Jalna,19.8415,75.8814,district_hq
+Kolhapur,16.705,74.2433,district_hq
+Latur,18.4088,76.5604,district_hq
+Mumbai,19.076,72.8777,district_hq
+Mumbai Suburban,19.1759,72.9777,district_hq
+Nanded,19.1383,77.321,district_hq
+Nandurbar,21.3706,74.2435,district_hq
+Nashik,19.9975,73.7898,district_hq
+Osmanabad Dharashiv,18.1787,76.0413,district_hq
+Palghar,19.6967,72.7651,district_hq
+Parbhani,19.2704,76.7767,district_hq
+Raigad Alibaug,18.6407,72.8722,district_hq
+Ratnagiri,16.9944,73.3,district_hq
+Sangli,16.8524,74.5815,district_hq
+Satara,17.6805,73.9925,district_hq
+Sindhudurg Oros,16.3001,73.55,district_hq
+Solapur,17.6805,75.9064,district_hq
+Thane,19.2183,72.9781,district_hq
+Wardha,20.7453,78.5987,district_hq
+Washim,20.117,77.1346,district_hq
+Yavatmal,20.3888,78.1204,district_hq
+Bishnupur MN,24.6278,93.7718,district_hq
+Chandel,24.3188,94.0215,district_hq
+Churachandpur,24.3318,93.6798,district_hq
+Imphal East,24.817,93.9368,district_hq
+Imphal West,24.817,93.9368,district_hq
+Jiribam,24.8059,93.123,district_hq
+Kakching,24.5093,93.9785,district_hq
+Kamjong,25.16,94.52,district_hq
+Kangpokpi,25.08,93.97,district_hq
+Noney,25.02,93.34,district_hq
+Pherzawl,24.07,93.49,district_hq
+Senapati,25.2725,94.0141,district_hq
+Tamenglong,24.9791,93.5065,district_hq
+Tengnoupal Moreh,24.2498,94.2711,district_hq
+Thoubal,24.6388,93.995,district_hq
+Ukhrul,25.1035,94.3568,district_hq
+East Garo Hills Williamnagar,25.4914,90.6,district_hq
+East Jaintia Hills Khliehriat,25.258,92.265,district_hq
+East Khasi Hills Shillong,25.5788,91.8933,district_hq
+North Garo Hills Resubelpara,25.854,90.188,district_hq
+Ri Bhoi Nongpoh,25.9043,91.8669,district_hq
+South Garo Hills Baghmara,25.2045,90.6339,district_hq
+South West Garo Hills Ampati,25.343,90.085,district_hq
+South West Khasi Hills Mawkyrwat,25.28,91.49,district_hq
+West Garo Hills Tura,25.5141,90.213,district_hq
+West Jaintia Hills Jowai,25.4524,92.2028,district_hq
+West Khasi Hills Nongstoin,25.52,91.26,district_hq
+Eastern West Khasi Hills Mairang,25.55,91.68,district_hq
+Champhai,23.458,93.324,district_hq
+Hnahthial,23.0,92.75,district_hq
+Khawzawl,23.45,93.12,district_hq
+Kolasib,24.2286,92.6763,district_hq
+Lawngtlai,22.5256,92.8984,district_hq
+Lunglei,22.8891,92.7347,district_hq
+Mamit,23.9183,92.4849,district_hq
+Saiha,22.49,92.97,district_hq
+Saitual,23.78,92.94,district_hq
+Serchhip,23.3071,92.8481,district_hq
+Chumoukedima,25.66,94.2,district_hq
+Dimapur,25.9063,93.7306,district_hq
+Kiphire,26.032,94.794,district_hq
+Longleng,26.6025,94.8234,district_hq
+Mokokchung,26.3248,94.5191,district_hq
+Mon Nagaland,26.72,94.96,district_hq
+Niuland,25.79,94.0,district_hq
+Noklak,26.32,95.27,district_hq
+Peren,25.4779,93.7257,district_hq
+Phek,25.6785,94.4639,district_hq
+Shamator,26.4,95.05,district_hq
+Tseminyu,26.09,94.6,district_hq
+Tuensang,26.2741,94.8138,district_hq
+Wokha,26.1009,94.2568,district_hq
+Zunheboto,25.9906,94.522,district_hq
+Angul,20.8403,85.1017,district_hq
+Balangir,20.7017,83.4887,district_hq
+Balasore,21.4934,86.9395,district_hq
+Bargarh,21.334,83.6169,district_hq
+Boudh,20.8399,84.3253,district_hq
+Cuttack,20.4625,85.883,district_hq
+Deogarh,21.5373,84.7368,district_hq
+Dhenkanal,20.6632,85.5979,district_hq
+Gajapati Paralakhemundi,18.7796,84.088,district_hq
+Ganjam Chatrapur,19.3592,84.9928,district_hq
+Jagatsinghpur,20.2547,86.1744,district_hq
+Jajpur,20.8406,86.3317,district_hq
+Jharsuguda,21.8527,84.0069,district_hq
+Kalahandi Bhawanipatna,19.9085,83.1686,district_hq
+Kandhamal Phulbani,20.483,84.2344,district_hq
+Kendrapara,20.5029,86.4213,district_hq
+Kendujhar Keonjhar,21.6291,85.5806,district_hq
+Khordha Bhubaneswar,20.2961,85.8245,district_hq
+Koraput,18.8124,82.7128,district_hq
+Malkangiri,18.353,81.8983,district_hq
+Mayurbhanj Baripada,21.9334,86.7304,district_hq
+Nabarangapur,19.2319,82.5494,district_hq
+Nayagarh,20.1283,85.0965,district_hq
+Nuapada,20.8148,82.5347,district_hq
+Puri,19.8133,85.8315,district_hq
+Rayagada,19.17,83.41,district_hq
+Sambalpur,21.4669,83.9812,district_hq
+Sonepur Subarnapur,20.8315,83.9063,district_hq
+Sundargarh,22.1178,84.034,district_hq
+Boudh Boudh town,20.8399,84.3253,district_hq
+Amritsar,31.634,74.8723,district_hq
+Barnala,30.3779,75.5452,district_hq
+Bathinda,30.211,74.9455,district_hq
+Faridkot,30.673,74.7572,district_hq
+Fatehgarh Sahib,30.6489,76.3914,district_hq
+Fazilka,30.4029,74.0247,district_hq
+Ferozepur,30.9254,74.6149,district_hq
+Gurdaspur,32.0357,75.406,district_hq
+Hoshiarpur,31.5326,75.911,district_hq
+Jalandhar,31.326,75.5762,district_hq
+Kapurthala,31.3815,75.3806,district_hq
+Ludhiana,30.901,75.8573,district_hq
+Malerkotla,30.5306,75.8814,district_hq
+Mansa,29.99,75.39,district_hq
+Moga,30.8168,75.1735,district_hq
+Pathankot,32.2643,75.65,district_hq
+Patiala,30.3398,76.3869,district_hq
+Rupnagar,30.9645,76.525,district_hq
+Sahibzada Ajit Singh Nagar Mohali,30.7046,76.7179,district_hq
+Sangrur,30.2449,75.8407,district_hq
+Shahid Bhagat Singh Nagar Nawanshahr,31.1251,76.1153,district_hq
+Sri Muktsar Sahib Muktsar,30.4725,74.5138,district_hq
+Tarn Taran,31.4519,74.9277,district_hq
+Ajmer,26.4499,74.6399,district_hq
+Alwar,27.553,76.6347,district_hq
+Anupgarh,29.19,73.21,district_hq
+Balotra,25.83,72.24,district_hq
+Banswara,23.5442,74.4421,district_hq
+Baran,25.1012,76.513,district_hq
+Barmer,25.7521,71.3967,district_hq
+Beawar,26.101,74.323,district_hq
+Bharatpur,27.2152,77.503,district_hq
+Bhilwara,25.3469,74.6355,district_hq
+Bikaner,28.0229,73.3119,district_hq
+Bundi,25.4389,75.648,district_hq
+Chittorgarh,24.8887,74.6269,district_hq
+Churu,28.2955,74.9669,district_hq
+Dausa,26.893,76.338,district_hq
+Dholpur,26.7015,77.8944,district_hq
+Didwana Kuchaman,27.3998,74.5833,district_hq
+Dungarpur,23.8439,73.7143,district_hq
+Ganganagar Sri Ganganagar,29.9038,73.8772,district_hq
+Hanumangarh,29.5832,74.3296,district_hq
+Jaipur Rural,26.9124,75.7873,district_hq
+Jaisalmer,26.9157,70.9083,district_hq
+Jalore,25.3461,72.6156,district_hq
+Jhalawar,24.598,76.1624,district_hq
+Jhunjhunu,28.1289,75.3997,district_hq
+Jodhpur,26.2389,73.0243,district_hq
+Jodhpur Rural,26.2389,73.0243,district_hq
+Karauli,26.508,77.0218,district_hq
+Kekri,25.97,75.16,district_hq
+Kota,25.2138,75.8648,district_hq
+Nagaur,27.2037,73.735,district_hq
+Neem Ka Thana,27.74,75.79,district_hq
+Pali,25.7711,73.3234,district_hq
+Phalodi,27.13,72.37,district_hq
+Pratapgarh RJ,24.033,74.783,district_hq
+Rajsamand,25.0629,73.8838,district_hq
+Salumbar,24.14,74.06,district_hq
+Sanchore,24.75,71.79,district_hq
+Sawai Madhopur,26.0211,76.3564,district_hq
+Shahpura RJ,27.39,75.96,district_hq
+Sikar,27.6094,75.1399,district_hq
+Sirohi,24.8858,72.8634,district_hq
+Sri Ganganagar,29.9038,73.8772,district_hq
+Tonk,26.1664,75.79,district_hq
+Udaipur,24.5854,73.7125,district_hq
+Bundi district,25.4389,75.648,district_hq
+Bikaner district,28.0229,73.3119,district_hq
+Barmer district,25.7521,71.3967,district_hq
+Chittorgarh district,24.8887,74.6269,district_hq
+East Sikkim Gangtok,27.3389,88.6065,district_hq
+North Sikkim Mangan,27.5152,88.5325,district_hq
+Pakyong,27.26,88.6,district_hq
+Serathang,27.29,88.65,district_hq
+South Sikkim Namchi,27.1637,88.3614,district_hq
+West Sikkim Gyalshing,27.2839,88.2526,district_hq
+Ariyalur,11.14,79.08,district_hq
+Chengalpattu,12.6922,79.977,district_hq
+Coimbatore,11.0168,76.9558,district_hq
+Cuddalore,11.748,79.7714,district_hq
+Dharmapuri,12.1281,78.1582,district_hq
+Dindigul,10.3624,77.9695,district_hq
+Erode,11.3428,77.727,district_hq
+Kallakurichi,11.7373,78.9594,district_hq
+Kancheepuram,12.8185,79.6947,district_hq
+Kanyakumari Nagercoil,8.1833,77.4119,district_hq
+Karur,10.9601,78.0766,district_hq
+Krishnagiri,12.5266,78.2137,district_hq
+Madurai,9.9252,78.1198,district_hq
+Mayiladuthurai,11.1036,79.6503,district_hq
+Nagapattinam,10.7672,79.8422,district_hq
+Namakkal,11.2219,78.1674,district_hq
+Nilgiris Udhagamandalam,11.4064,76.6932,district_hq
+Perambalur,11.2333,78.8833,district_hq
+Pudukkottai,10.3797,78.8197,district_hq
+Ramanathapuram,9.3762,78.8302,district_hq
+Ranipet,12.926,79.3326,district_hq
+Salem,11.6643,78.146,district_hq
+Sivaganga,9.8477,78.4807,district_hq
+Tenkasi,8.959,77.3152,district_hq
+Thanjavur,10.787,79.1378,district_hq
+Theni,10.0104,77.4778,district_hq
+Thoothukudi Tuticorin,8.7642,78.1348,district_hq
+Tiruchirappalli,10.7905,78.7047,district_hq
+Tirunelveli,8.7139,77.7567,district_hq
+Tirupattur,12.4963,78.5719,district_hq
+Tiruppur,11.1085,77.3411,district_hq
+Tiruvallur,13.14,79.91,district_hq
+Tiruvannamalai,12.2253,79.0747,district_hq
+Tiruvarur,10.7742,79.637,district_hq
+Vellore,12.9165,79.1325,district_hq
+Viluppuram,11.9401,79.4861,district_hq
+Virudhunagar,9.582,77.9624,district_hq
+Adilabad,19.6641,78.532,district_hq
+Bhadradri Kothagudem,17.5514,80.6191,district_hq
+Hanumakonda,17.9784,79.5941,district_hq
+Jagtial,18.7972,78.9154,district_hq
+Jangaon,17.7247,79.1531,district_hq
+Jayashankar Bhupalpally,18.4347,79.8924,district_hq
+Jogulamba Gadwal,16.2388,77.8015,district_hq
+Kamareddy,18.3212,78.3415,district_hq
+Karimnagar,18.4386,79.1288,district_hq
+Khammam,17.2473,80.1514,district_hq
+Komaram Bheem Asifabad,19.3691,79.2882,district_hq
+Mahabubabad,17.5989,80.0121,district_hq
+Mahabubnagar,16.7488,77.9829,district_hq
+Mancherial,18.8691,79.4449,district_hq
+Medak,18.044,78.2676,district_hq
+Medchal Malkajgiri,17.533,78.58,district_hq
+Mulugu,18.1946,80.0549,district_hq
+Nagarkurnool,16.4813,78.3159,district_hq
+Nalgonda,17.0575,79.2674,district_hq
+Narayanpet,16.7436,77.496,district_hq
+Nirmal,19.0982,78.3498,district_hq
+Nizamabad,18.6724,78.094,district_hq
+Peddapalli,18.6156,79.3726,district_hq
+Rajanna Sircilla,18.3876,78.8373,district_hq
+Ranga Reddy,17.2403,78.3607,district_hq
+Sangareddy,17.625,78.0862,district_hq
+Siddipet,18.102,78.8516,district_hq
+Suryapet,17.1434,79.6258,district_hq
+Vikarabad,17.3374,77.9036,district_hq
+Wanaparthy,16.3627,78.0587,district_hq
+Warangal,17.9784,79.5941,district_hq
+Yadadri Bhuvanagiri,17.5889,79.222,district_hq
+Dhalai Ambassa,24.01,91.98,district_hq
+Gomati Udaipur,23.536,91.4829,district_hq
+Khowai,24.0653,91.6038,district_hq
+North Tripura Dharmanagar,24.3737,92.1639,district_hq
+Sepahijala Bishramganj,23.6828,91.2925,district_hq
+South Tripura Belonia,23.2521,91.4579,district_hq
+Unakoti Kailashahar,24.3325,92.003,district_hq
+West Tripura Agartala,23.8315,91.2868,district_hq
+Agra,27.1767,78.0081,district_hq
+Aligarh,27.8974,78.088,district_hq
+Ambedkar Nagar Akbarpur,26.4282,82.5283,district_hq
+Amethi,26.1519,81.8115,district_hq
+Amroha,28.9032,78.4636,district_hq
+Auraiya,26.4651,79.5153,district_hq
+Ayodhya,26.7922,82.1998,district_hq
+Azamgarh,26.0668,83.1837,district_hq
+Baghpat,28.9459,77.2175,district_hq
+Bahraich,27.5744,81.5987,district_hq
+Ballia,25.7589,84.148,district_hq
+Balrampur UP,27.4306,82.1761,district_hq
+Banda UP,25.4754,80.3355,district_hq
+Barabanki,26.9418,81.1994,district_hq
+Bareilly,28.367,79.4304,district_hq
+Basti,26.801,82.729,district_hq
+Bhadohi,25.3919,82.569,district_hq
+Bijnor,29.3723,78.1358,district_hq
+Budaun,28.0434,79.1143,district_hq
+Bulandshahr,28.4068,77.8497,district_hq
+Chandauli,25.2777,83.2677,district_hq
+Chitrakoot,25.209,80.9056,district_hq
+Deoria,26.503,83.78,district_hq
+Etah,27.5579,78.6652,district_hq
+Etawah,26.7764,79.0124,district_hq
+Farrukhabad,27.3901,79.5833,district_hq
+Fatehpur UP,25.9292,80.813,district_hq
+Firozabad,27.16,78.3955,district_hq
+Gautam Buddha Nagar Greater Noida,28.4744,77.504,district_hq
+Ghaziabad,28.6692,77.4538,district_hq
+Ghazipur,25.5824,83.5763,district_hq
+Gonda,27.1305,81.958,district_hq
+Gorakhpur,26.7606,83.3732,district_hq
+Hamirpur UP,25.9569,80.1543,district_hq
+Hapur,28.7318,77.7757,district_hq
+Hardoi,27.3977,80.1274,district_hq
+Hathras,27.6049,78.0485,district_hq
+Jalaun Orai,25.9796,79.4523,district_hq
+Jaunpur,25.7462,82.6836,district_hq
+Jhansi,25.4484,78.5685,district_hq
+Kannauj,27.0567,79.9165,district_hq
+Kanpur Dehat Akbarpur,26.4376,79.683,district_hq
+Kanpur Nagar,26.4499,80.3319,district_hq
+Kasganj,27.8084,78.6454,district_hq
+Kaushambi Manjhanpur,25.5365,81.3996,district_hq
+Kheri Lakhimpur,27.9487,80.7803,district_hq
+Kushinagar Padrauna,26.7401,84.1154,district_hq
+Lalitpur,24.6886,78.4113,district_hq
+Lucknow,26.8467,80.9462,district_hq
+Maharajganj,27.1312,83.5607,district_hq
+Mahoba UP,25.2916,79.8728,district_hq
+Mainpuri,27.2251,79.0227,district_hq
+Mathura,27.4924,77.6737,district_hq
+Mau,25.9409,83.5613,district_hq
+Meerut,28.9845,77.7064,district_hq
+Mirzapur,25.145,82.5695,district_hq
+Moradabad,28.8386,78.7733,district_hq
+Muzaffarnagar,29.4727,77.7085,district_hq
+Pilibhit,28.6412,79.8046,district_hq
+Pratapgarh UP,25.9014,81.9935,district_hq
+Prayagraj Allahabad,25.4358,81.8463,district_hq
+Rae Bareli,26.2301,81.2312,district_hq
+Rampur,28.7989,79.005,district_hq
+Saharanpur,29.968,77.551,district_hq
+Sambhal Moradabad,28.5894,78.5682,district_hq
+Sant Kabir Nagar Khalilabad,26.7646,83.0681,district_hq
+Shahjahanpur,27.8835,79.9147,district_hq
+Shamli,29.4497,77.3045,district_hq
+Shravasti Bhinga,27.7077,81.9302,district_hq
+Siddharthnagar,27.2959,83.0755,district_hq
+Sitapur,27.5624,80.6825,district_hq
+Sonbhadra Robertsganj,24.7051,83.0593,district_hq
+Sultanpur,26.2636,82.0726,district_hq
+Unnao,26.5448,80.485,district_hq
+Varanasi,25.3176,82.9739,district_hq
+Almora,29.5977,79.659,district_hq
+Bageshwar,29.8384,79.7718,district_hq
+Chamoli Gopeshwar,30.4068,79.3125,district_hq
+Champawat,29.3345,80.0916,district_hq
+Haridwar,29.9457,78.1642,district_hq
+Nainital,29.3919,79.4542,district_hq
+Pauri Garhwal Pauri,30.1496,78.7776,district_hq
+Pithoragarh,29.583,80.2174,district_hq
+Rudraprayag,30.2842,78.9823,district_hq
+Tehri Garhwal Tehri,30.3854,78.4322,district_hq
+Udham Singh Nagar Rudrapur,28.9772,79.4021,district_hq
+Uttarkashi,30.7268,78.4354,district_hq
+Alipurduar,26.4879,89.5268,district_hq
+Bankura,23.2324,87.0753,district_hq
+Birbhum Suri,23.9166,87.5345,district_hq
+Cooch Behar,26.3229,89.4448,district_hq
+Dakshin Dinajpur Balurghat,25.2222,88.7776,district_hq
+Darjeeling,27.036,88.2627,district_hq
+Hooghly Chinsurah,22.9097,88.3888,district_hq
+Howrah,22.5958,88.2636,district_hq
+Jalpaiguri,26.5449,88.7179,district_hq
+Jhargram,22.4472,86.9945,district_hq
+Kalimpong,27.059,88.4733,district_hq
+Malda English Bazar,25.0086,88.138,district_hq
+Murshidabad Berhampore,24.1046,88.2742,district_hq
+Nadia Krishnanagar,23.4028,88.4988,district_hq
+North 24 Parganas Barasat,22.7225,88.4762,district_hq
+Paschim Bardhaman Asansol,23.6889,87.0952,district_hq
+Paschim Medinipur Midnapore,22.4236,87.3196,district_hq
+Purba Bardhaman Burdwan,23.2324,87.8615,district_hq
+Purba Medinipur Tamluk,22.2993,87.9172,district_hq
+Purulia,23.3357,86.3666,district_hq
+South 24 Parganas Alipore,22.5043,88.3322,district_hq
+Uttar Dinajpur Raiganj,25.6213,88.1209,district_hq
+Central Delhi,28.6519,77.2315,district_hq
+East Delhi,28.6507,77.3152,district_hq
+New Delhi district,28.6139,77.209,district_hq
+North Delhi,28.7041,77.2068,district_hq
+North East Delhi,28.6835,77.2782,district_hq
+North West Delhi,28.7244,77.1068,district_hq
+Shahdara Delhi,28.6841,77.288,district_hq
+South Delhi,28.5243,77.2374,district_hq
+South East Delhi,28.5672,77.2832,district_hq
+South West Delhi,28.5528,77.0813,district_hq
+West Delhi,28.6521,77.1033,district_hq
+Anantnag,33.7311,75.1544,district_hq
+Bandipora,34.4196,74.651,district_hq
+Baramulla,34.195,74.3436,district_hq
+Budgam,34.0366,74.7173,district_hq
+Doda,33.1437,75.5466,district_hq
+Ganderbal,34.2286,74.7747,district_hq
+Jammu,32.7266,74.857,district_hq
+Kathua,32.3862,75.5196,district_hq
+Kishtwar,33.3137,75.7706,district_hq
+Kulgam,33.6435,75.0199,district_hq
+Kupwara,34.524,74.257,district_hq
+Poonch,33.7736,74.0929,district_hq
+Pulwama,33.8742,74.8959,district_hq
+Rajouri,33.3793,74.3105,district_hq
+Ramban,33.2432,75.2018,district_hq
+Reasi,33.0863,74.833,district_hq
+Samba,32.578,75.1147,district_hq
+Shopian,33.7163,74.8312,district_hq
+Udhampur,32.9297,75.1413,district_hq
+Kargil,34.5539,76.1349,district_hq
+Leh,34.1642,77.5847,district_hq
+Karaikal,10.9254,79.838,district_hq
+Mahe,11.7008,75.5361,district_hq
+Puducherry,11.9416,79.8083,district_hq
+Yanam,16.7321,82.2133,district_hq
+Chandigarh,30.7333,76.7794,district_hq
+Nicobar Car Nicobar,9.15,92.75,district_hq
+North and Middle Andaman Mayabunder,12.9458,92.7652,district_hq
+South Andaman Port Blair,11.6234,92.7265,district_hq
+Lakshadweep Kavaratti,10.5626,72.6369,district_hq
+Dadra and Nagar Haveli Silvassa,20.2766,73.0145,district_hq
+Daman,20.3974,72.8328,district_hq
+Diu,20.7144,70.9874,district_hq
+Bihar,25.0961,85.3131,state
+Goa,15.2993,74.1240,state
+Haryana,29.0588,76.0856,state
+Punjab,31.1471,75.3412,state
+Tripura,23.9408,91.9882,state
+Uttar Pradesh,26.8467,80.9462,state
+Delhi,28.7041,77.1025,state
+Ladakh,34.2268,77.5619,state
+Andaman and Nicobar Islands,11.7401,92.6586,state
+Daman and Diu,20.3974,72.8328,state
