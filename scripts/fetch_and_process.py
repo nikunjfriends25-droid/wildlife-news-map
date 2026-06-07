@@ -56,6 +56,17 @@ KEYWORDS = [
     'frog', 'reptile', 'amphibian', 'endemic', 'invasive',
 ]
 
+# Articles matching ANY of these terms are excluded even if they hit KEYWORDS.
+# Catches military ops, crime, politics, sports etc. that mention "forest" incidentally.
+EXCLUDE_KEYWORDS = [
+    'militant', 'terrorist', 'encounter', 'ceasefire', 'army operation',
+    'security forces', 'paramilitary', 'naxal', 'maoist', 'insurgent',
+    'ipl', 'cricket', 'football', 'election', 'poll', 'constituency',
+    'murder', 'rape', 'accident', 'crash', 'blast', 'bomb', 'explosion',
+    'stock market', 'sensex', 'nifty', 'budget', 'gdp', 'inflation',
+    'drone strike', 'airstrike', 'gunfight', 'firing',
+]
+
 NEWS_JSON = os.path.join(os.path.dirname(__file__), '..', 'docs', 'news.json')
 CUTOFF_DAYS = 60   # keep 60 days to get more articles
 INDIA_CENTER = (20.5937, 78.9629)  # generic pin — reject these
@@ -74,6 +85,8 @@ def load_existing():
 
 def matches_keywords(text: str) -> bool:
     lower = text.lower()
+    if any(ex.lower() in lower for ex in EXCLUDE_KEYWORDS):
+        return False
     return any(kw.lower() in lower for kw in KEYWORDS)
 
 
