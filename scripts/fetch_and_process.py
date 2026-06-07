@@ -3,7 +3,7 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 
 import feedparser
 from dateutil import parser as dateparser
@@ -68,7 +68,6 @@ EXCLUDE_KEYWORDS = [
 ]
 
 NEWS_JSON = os.path.join(os.path.dirname(__file__), '..', 'docs', 'news.json')
-CUTOFF_DAYS = 60   # keep 60 days to get more articles
 INDIA_CENTER = (20.5937, 78.9629)  # generic pin — reject these
 
 
@@ -148,7 +147,6 @@ def main():
     seen_urls = {a['url'] for a in existing}
     logger.info(f"Loaded {len(existing)} existing articles")
 
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=CUTOFF_DAYS)).strftime('%Y-%m-%d')
     new_articles = []
 
     for feed_url in SOURCES:
@@ -201,7 +199,6 @@ def main():
             logger.info(f"  + {title[:50]} @ {place_name}")
 
     merged = existing + new_articles
-    merged = [a for a in merged if a.get('published', '') >= cutoff]
     merged.sort(key=lambda a: a.get('published', ''), reverse=True)
 
     os.makedirs(os.path.dirname(NEWS_JSON), exist_ok=True)
