@@ -1,5 +1,104 @@
 [
   {
+    "headline": "Heat, not disease, caused deaths of 8 lion cubs in Gir forest",
+    "url": "https://www.thehindu.com/news/national/gujarat/heat-not-disease-caused-deaths-of-8-lion-cubs-in-gir-forest/article71070133.ece",
+    "source": "The Hindu",
+    "published": "2026-06-06",
+    "place_name": "Gir",
+    "lat": 21.1239,
+    "lon": 70.798
+  },
+  {
+    "headline": "Kaziranga National Park records 30 raptor and six stork species",
+    "url": "https://www.thehindu.com/news/national/kaziranga-national-park-records-30-raptor-and-six-stork-species/article71069139.ece",
+    "source": "The Hindu",
+    "published": "2026-06-06",
+    "place_name": "Kaziranga National Park",
+    "lat": 26.5775,
+    "lon": 93.1711
+  },
+  {
+    "headline": "Communities rally to conserve marbled cat",
+    "url": "https://india.mongabay.com/2026/06/communities-rally-to-conserve-marbled-cat/",
+    "source": "Mongabay India",
+    "published": "2026-06-05",
+    "place_name": "Arunachal Pradesh",
+    "lat": 28.218,
+    "lon": 94.7278
+  },
+  {
+    "headline": "Compensatory afforestation for biodiversity loss in Nicobar a bogus argument: Jairam Ramesh",
+    "url": "https://www.thehindu.com/the-huddle/compensatory-afforestation-for-biodiversity-loss-in-nicobar-is-bogus-argument-jairam-ramesh/article71064638.ece",
+    "source": "The Hindu",
+    "published": "2026-06-05",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "Vanishing shade: Coimbatore’s sparse tree cover falls prey to illegal felling",
+    "url": "https://www.thehindu.com/news/cities/Coimbatore/lack-of-guidelines-lacunas-mar-protection-of-trees-in-public-places-from-felling/article71062350.ece",
+    "source": "The Hindu",
+    "published": "2026-06-05",
+    "place_name": "Coimbatore",
+    "lat": 11.0168,
+    "lon": 76.9558
+  },
+  {
+    "headline": "Funding India’s climate future, the trillion-dollar question’",
+    "url": "https://www.thehindu.com/opinion/lead/funding-indias-climate-future-the-trillion-dollar-question/article71062224.ece",
+    "source": "The Hindu",
+    "published": "2026-06-05",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "Bengal tigers from India to be introduced in Cambodia",
+    "url": "https://india.mongabay.com/2026/06/bengal-tigers-from-india-to-be-introduced-in-cambodia/",
+    "source": "Mongabay India",
+    "published": "2026-06-04",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "The whistling pack hunter",
+    "url": "https://india.mongabay.com/short-article/2026/06/the-whistling-pack-hunter/",
+    "source": "Mongabay India",
+    "published": "2026-06-03",
+    "place_name": "Odisha",
+    "lat": 20.9517,
+    "lon": 85.0985
+  },
+  {
+    "headline": "Why India’s tree-planting programmes are falling short",
+    "url": "https://india.mongabay.com/2026/06/why-indias-tree-planting-programmes-are-falling-short/",
+    "source": "Mongabay India",
+    "published": "2026-06-03",
+    "place_name": "India",
+    "lat": 20.5937,
+    "lon": 78.9629
+  },
+  {
+    "headline": "Tigress Zeenat gives birth to four cubs in Similipal",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/tigress-zeenat-gives-birth-to-four-cubs-in-similipal-boost-to-translocation-effort/article71052567.ece",
+    "source": "The Hindu",
+    "published": "2026-06-03",
+    "place_name": "Odisha",
+    "lat": 20.9517,
+    "lon": 85.0985
+  },
+  {
+    "headline": "Kaziranga records first yellow-throated marten",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/kaziranga-records-first-yellow-throated-marten/article71053318.ece",
+    "source": "The Hindu",
+    "published": "2026-06-03",
+    "place_name": "Assam",
+    "lat": 26.2006,
+    "lon": 92.9376
+  },
+  {
     "headline": "After eight lions die from Babesia infection, treatment and isolation controls spread",
     "url": "https://india.mongabay.com/short-article/2026/06/after-eight-lions-die-from-babesia-infection-treatment-and-isolation-controls-spread/",
     "source": "Mongabay India",
