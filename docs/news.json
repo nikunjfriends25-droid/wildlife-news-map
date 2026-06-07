@@ -108,15 +108,6 @@
     "lon": 70.798
   },
   {
-    "headline": "Decoding Heat",
-    "url": "https://india.mongabay.com/specials/2026/06/decoding-heat/",
-    "source": "Mongabay India",
-    "published": "2026-06-02",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
-  },
-  {
     "headline": "Cub deaths prompt preventive measures for Asiatic lions in Bhavnagar",
     "url": "https://www.thehindu.com/sci-tech/energy-and-environment/cub-deaths-prompt-preventive-measures-for-asiatic-lions-in-bhavnagar/article71049594.ece",
     "source": "The Hindu",
@@ -124,15 +115,6 @@
     "place_name": "Asiatic lion",
     "lat": 21.1239,
     "lon": 70.798
-  },
-  {
-    "headline": "'15 lakh hits within 2 minutes': CBSE re-evaluation portal faces cyberattacks; over 1 lakh attempts for unauthorised access",
-    "url": "https://timesofindia.indiatimes.com/india/1-5-million-hits-within-2-minutes-cbse-re-evaluation-portal-faces-cyberattacks-over-1-lakh-attempts-for-unauthorised-access/articleshow/131462198.cms",
-    "source": "Times of India",
-    "published": "2026-06-02",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
   },
   {
     "headline": "Gram Sabha consent fabricated to divert forest for mining bauxite, say villagers in Odisha’s Koraput",
@@ -189,33 +171,6 @@
     "lon": 80.0
   },
   {
-    "headline": "A low flyer of the grasslands",
-    "url": "https://india.mongabay.com/short-article/2026/05/a-low-flyer-of-the-grasslands/",
-    "source": "Mongabay India",
-    "published": "2026-05-27",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
-  },
-  {
-    "headline": "The importance and exploitation of Indian forests down the ages [Book Review]",
-    "url": "https://india.mongabay.com/2026/05/the-importance-and-exploitation-of-indian-forests-down-the-ages-book-review/",
-    "source": "Mongabay India",
-    "published": "2026-05-27",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
-  },
-  {
-    "headline": "Indian Army, IAF contain major forest fire in Himachal’s Kasauli slopes",
-    "url": "https://www.thehindu.com/news/national/himachal-pradesh/indian-army-iaf-contain-major-forest-fire-in-himachals-kasauli-slopes/article71029584.ece",
-    "source": "The Hindu",
-    "published": "2026-05-27",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
-  },
-  {
     "headline": "New toad species recorded in Meghalaya named after Khasi women’s attire",
     "url": "https://www.thehindu.com/sci-tech/energy-and-environment/new-toad-species-recorded-in-meghalaya-named-after-khasi-womens-attire/article71027776.ece",
     "source": "The Hindu",
@@ -223,24 +178,6 @@
     "place_name": "Meghalaya",
     "lat": 25.467,
     "lon": 91.3662
-  },
-  {
-    "headline": "India home to 191 species of cockroaches, 60% of them are endemic, says ZSI study",
-    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/india-home-to-191-species-of-cockroaches-60-of-them-are-endemic-says-zsi-study/article71025748.ece",
-    "source": "The Hindu",
-    "published": "2026-05-27",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
-  },
-  {
-    "headline": "How are degraded coral reefs restored in India? [Explainer]",
-    "url": "https://india.mongabay.com/2026/05/how-are-degraded-coral-reefs-restored-in-india-explainer/",
-    "source": "Mongabay India",
-    "published": "2026-05-26",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
   },
   {
     "headline": "Uttarakhand recorded 375 forest fires in past three months; Chamoli worst hit",
@@ -288,15 +225,6 @@
     "lon": 75.7139
   },
   {
-    "headline": "How India’s divers turned ocean encounters into conservation action with the help of PADI’s Go Eco Month",
-    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/how-indias-divers-turned-ocean-encounters-into-conservation-action-with-the-help-of-padis-go-eco-month/article70887057.ece",
-    "source": "The Hindu",
-    "published": "2026-05-23",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
-  },
-  {
     "headline": "How NGOs are bringing India’s informal waste collectors into the system",
     "url": "https://india.mongabay.com/2026/05/how-ngos-are-bringing-indias-informal-waste-collectors-into-the-system/",
     "source": "Mongabay India",
@@ -310,8 +238,8 @@
     "url": "https://www.thehindu.com/life-and-style/a-new-field-guide-spotlights-delhis-marvellous-bat-diversity/article71001380.ece",
     "source": "The Hindu",
     "published": "2026-05-21",
-    "place_name": "India",
-    "lat": 20.5937,
-    "lon": 78.9629
+    "place_name": "Delhi",
+    "lat": 28.7041,
+    "lon": 77.1025
   }
 ]

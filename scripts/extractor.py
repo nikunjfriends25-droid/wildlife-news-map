@@ -51,12 +51,20 @@ def extract_location(title: str, description: str):
     """
     text = f"{title} {description[:600]}"
 
-    # Pass 1: gazetteer match
+    # Pass 1: gazetteer match — specific entries first, country-level as last resort
     gazetteer = _load_gazetteer()
     text_lower = text.lower()
+    country_fallback = None
     for entry in gazetteer:
         if entry['name'].lower() in text_lower:
-            return entry['name'], entry['lat'], entry['lon']
+            if entry['type'] == 'country':
+                # Record but don't return yet — prefer any specific match
+                if country_fallback is None:
+                    country_fallback = (entry['name'], entry['lat'], entry['lon'])
+            else:
+                return entry['name'], entry['lat'], entry['lon']
+    if country_fallback:
+        return country_fallback
 
     # Pass 2: spaCy NER
     nlp = _load_nlp()
