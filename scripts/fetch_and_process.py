@@ -16,12 +16,15 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s %(message)s')
 logger = logging.getLogger(__name__)
 
 SOURCES = [
-    # NOTE: Down to Earth (downtoearth.org) blocks all RSS with HTTP 403 — excluded.
+    # NOTE: Down to Earth — HTTP 403, blocks all RSS programmatic access.
+    # NOTE: The Wire Science — RSS feed broken; serves Feb-2024 articles indefinitely.
 
-    # The Wire — science / environment (requires browser User-Agent)
-    'https://science.thewire.in/feed/',
     # Mongabay India — wildlife / forests
     'https://india.mongabay.com/feed/',
+    # NDTV India — catches wildlife, forest, conservation stories
+    'https://feeds.feedburner.com/ndtvnews-india-news',
+    # Indian Express India — wildlife, poaching, forest coverage
+    'https://indianexpress.com/section/india/feed/',
     # The Hindu — environment & sci-tech
     'https://www.thehindu.com/sci-tech/energy-and-environment/feeder/default.rss',
     # The Hindu — national news (catches forest fires, poaching, PA stories)
@@ -109,11 +112,14 @@ def fetch_feed(url: str) -> list:
 
 def source_name(url: str) -> str:
     mapping = {
-        'downtoearth.org': 'Down To Earth',
-        'thewire.in': 'The Wire',
-        'mongabay.com': 'Mongabay India',
-        'thehindu.com': 'The Hindu',
-        'timesofindia': 'Times of India',
+        'downtoearth.org':    'Down To Earth',
+        'thewire.in':         'The Wire',
+        'mongabay.com':       'Mongabay India',
+        'thehindu.com':       'The Hindu',
+        'timesofindia':       'Times of India',
+        'ndtv':               'NDTV',
+        'indianexpress.com':  'Indian Express',
+        'hindustantimes.com': 'Hindustan Times',
     }
     for key, name in mapping.items():
         if key in url:

@@ -18,6 +18,15 @@
     "lon": 78.6569
   },
   {
+    "headline": "8 Asiatic Lion Cubs At Gir Died Due To Heat, Not Infection: Gujarat Minister",
+    "url": "https://www.ndtv.com/india-news/8-asiatic-lion-cubs-died-due-to-heat-not-babesia-infection-in-gir-forest-gujarat-forest-minister-arjun-modhwadia-11602074#publisher=newsstand",
+    "source": "NDTV",
+    "published": "2026-06-07",
+    "place_name": "Asiatic lion",
+    "lat": 21.1239,
+    "lon": 70.798
+  },
+  {
     "headline": "Heat, not disease, caused deaths of 8 lion cubs in Gir forest",
     "url": "https://www.thehindu.com/news/national/gujarat/heat-not-disease-caused-deaths-of-8-lion-cubs-in-gir-forest/article71070133.ece",
     "source": "The Hindu",
@@ -70,6 +79,15 @@
     "place_name": "Hyderabad",
     "lat": 17.385,
     "lon": 78.4867
+  },
+  {
+    "headline": "Oil India’s latest gas find could unlock more hydrocarbon reserves in Andaman offshore",
+    "url": "https://indianexpress.com/article/india/oil-india-gas-find-hydrocarbon-reserves-andaman-offshore-10726676/",
+    "source": "Indian Express",
+    "published": "2026-06-06",
+    "place_name": "Andaman",
+    "lat": 11.7401,
+    "lon": 92.6586
   },
   {
     "headline": "Communities rally to conserve marbled cat",
@@ -207,6 +225,15 @@
     "lon": 85.2799
   },
   {
+    "headline": "Hunt for militants enters Day 8 in Rajouri-Poonch forests, drones and helicopters deployed",
+    "url": "https://indianexpress.com/article/india/hunt-for-militants-enters-day-8-in-rajouri-poonch-forests-drones-and-helicopters-deployed-10716205/",
+    "source": "Indian Express",
+    "published": "2026-05-31",
+    "place_name": "Rajouri",
+    "lat": 33.3793,
+    "lon": 74.3105
+  },
+  {
     "headline": "Nagaland yields a new-to-science cascade frog species",
     "url": "https://www.thehindu.com/sci-tech/energy-and-environment/nagaland-yields-a-new-to-science-cascade-frog-species/article71040301.ece",
     "source": "The Hindu",
@@ -223,6 +250,15 @@
     "place_name": "Rajaji National Park",
     "lat": 30.0167,
     "lon": 78.2667
+  },
+  {
+    "headline": "Postmortem twist in Bandhavgarh tiger death: Struck by tranquiliser ‘after death’, suffered ‘prolonged physical deterioration’",
+    "url": "https://indianexpress.com/article/india/bandhavgarh-tiger-death-postmortem-tranquiliser-dart-report-10714656/",
+    "source": "Indian Express",
+    "published": "2026-05-29",
+    "place_name": "Bandhavgarh",
+    "lat": 23.7167,
+    "lon": 81.0333
   },
   {
     "headline": "Western Ghats has high odonate endemism, reveals survey",
