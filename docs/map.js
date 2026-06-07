@@ -29,10 +29,10 @@ const CATEGORY_KEYWORDS = {
 const map = L.map('map', {
   center: [22, 82],
   zoom: 5,
-  minZoom: 4,
+  minZoom: 5,
   maxZoom: 15,
-  maxBounds: INDIA_BOUNDS,
-  maxBoundsViscosity: 0.9,
+  maxBounds: [[2, 60], [40, 105]],   // slightly wider than India so fitBounds has room
+  maxBoundsViscosity: 0.85,
   zoomControl: false,
 });
 
@@ -46,8 +46,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   maxZoom: 19,
 }).addTo(map);
 
-// Fit India snugly
-map.fitBounds(INDIA_BOUNDS, { padding: [24, 24] });
+// Fit India to fill the viewport — tight padding so India is prominent
+map.fitBounds(INDIA_BOUNDS, { padding: [10, 10] });
 
 // ── Cluster group ─────────────────────────────────────────────────────────────
 const clusters = L.markerClusterGroup({
