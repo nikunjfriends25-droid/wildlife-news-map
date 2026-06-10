@@ -30,15 +30,29 @@ const CATEGORY_LABELS = {
 
 // Language display names and accent colours for badges
 const LANG_COLORS = {
-  'Malayalam': '#10b981',  // emerald
-  'Hindi':     '#f59e0b',  // amber
-  'Assamese':  '#6366f1',  // indigo
+  'Malayalam': '#10b981',  // emerald  — Kerala
+  'Hindi':     '#f59e0b',  // amber    — UP/MP/HP/Bihar/Rajasthan
+  'Assamese':  '#6366f1',  // indigo   — Assam/Northeast
+  'Telugu':    '#ec4899',  // pink     — AP/Telangana
+  'Kannada':   '#f97316',  // orange   — Karnataka
+  'Odia':      '#14b8a6',  // teal     — Odisha
+  'Bengali':   '#8b5cf6',  // violet   — West Bengal
+  'Marathi':   '#ef4444',  // red      — Maharashtra
+  'Tamil':     '#06b6d4',  // cyan     — Tamil Nadu
+  'Gujarati':  '#84cc16',  // lime     — Gujarat
 };
 
 const LANG_DISPLAY = {
   'Malayalam': 'മലയാളം',
   'Hindi':     'हिन्दी',
   'Assamese':  'অসমীয়া',
+  'Telugu':    'తెలుగు',
+  'Kannada':   'ಕನ್ನಡ',
+  'Odia':      'ଓଡ଼ିଆ',
+  'Bengali':   'বাংলা',
+  'Marathi':   'मराठी',
+  'Tamil':     'தமிழ்',
+  'Gujarati':  'ગુજરાતી',
 };
 
 // Order matters — first match wins. conservation is the fallback.

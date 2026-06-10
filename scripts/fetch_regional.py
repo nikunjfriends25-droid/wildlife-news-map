@@ -99,6 +99,140 @@ REGIONAL_SOURCES = [
         'lang': 'Assamese',
         'lang_code': 'as',
     },
+
+    # ── Telugu (Andhra Pradesh / Telangana) ──────────────────────────────────
+    # Sakshi — major Telugu daily (direct RSS works); AP/TG wildlife, forests
+    {
+        'url': 'https://www.sakshi.com/rss.xml',
+        'source': 'Sakshi',
+        'lang': 'Telugu',
+        'lang_code': 'te',
+    },
+    # Eenadu via Google News — largest Telugu daily; Nagarjunasagar, Kawal, Papikonda
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:eenadu.net'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Eenadu',
+        'lang': 'Telugu',
+        'lang_code': 'te',
+    },
+
+    # ── Kannada (Karnataka) ──────────────────────────────────────────────────
+    # Prajavani — Karnataka's leading Kannada daily (direct RSS); Bandipur, BRT, Dandeli
+    {
+        'url': 'https://www.prajavani.net/feed/',
+        'source': 'Prajavani',
+        'lang': 'Kannada',
+        'lang_code': 'kn',
+    },
+    # Vijay Karnataka via Google News — Bangalore Mirror group; Nagarhole, Cauvery
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+sanctuary+site:vijaykarnataka.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Vijay Karnataka',
+        'lang': 'Kannada',
+        'lang_code': 'kn',
+    },
+
+    # ── Odia (Odisha) ─────────────────────────────────────────────────────────
+    # Dharitri — major Odia daily (direct RSS); Simlipal, Bhitarkanika, Chilika
+    {
+        'url': 'https://www.dharitri.com/feed/',
+        'source': 'Dharitri',
+        'lang': 'Odia',
+        'lang_code': 'or',
+    },
+    # Sambad via Google News — Odisha's largest-circulation paper
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+sanctuary+site:sambad.in'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Sambad',
+        'lang': 'Odia',
+        'lang_code': 'or',
+    },
+
+    # ── Bengali (West Bengal / Tripura) ──────────────────────────────────────
+    # Anandabazar Patrika via Google News — largest Bengali daily; Sundarbans, Buxa
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:anandabazar.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Anandabazar Patrika',
+        'lang': 'Bengali',
+        'lang_code': 'bn',
+    },
+    # Sangbad Pratidin via Google News — major Bengali daily; WB wildlife news
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+sanctuary+site:sangbadpratidin.in'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Sangbad Pratidin',
+        'lang': 'Bengali',
+        'lang_code': 'bn',
+    },
+
+    # ── Marathi (Maharashtra) ─────────────────────────────────────────────────
+    # Loksatta via Google News — Maharashtra's leading Marathi daily; Tadoba, Melghat
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:loksatta.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Loksatta',
+        'lang': 'Marathi',
+        'lang_code': 'mr',
+    },
+    # Maharashtra Times via Google News — ToI group Marathi paper; Vidarbha wildlife
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+sanctuary+site:maharashtratimes.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Maharashtra Times',
+        'lang': 'Marathi',
+        'lang_code': 'mr',
+    },
+
+    # ── Tamil (Tamil Nadu / Puducherry) ───────────────────────────────────────
+    # Dinamalar via Google News — largest Tamil daily; Mudumalai, Anamalai, KMTR
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:dinamalar.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Dinamalar',
+        'lang': 'Tamil',
+        'lang_code': 'ta',
+    },
+    # Dinamani via Google News — established Tamil daily; forest & environment beat
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+sanctuary+site:dinamani.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Dinamani',
+        'lang': 'Tamil',
+        'lang_code': 'ta',
+    },
+
+    # ── Gujarati (Gujarat) ────────────────────────────────────────────────────
+    # Divya Bhaskar via Google News — Gujarat's largest paper; Gir, Velavadar, Wild Ass
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+lion'
+                '+elephant+poaching+sanctuary+site:divyabhaskar.co.in'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Divya Bhaskar',
+        'lang': 'Gujarati',
+        'lang_code': 'gu',
+    },
+    # Gujarat Samachar via Google News — Ahmedabad-based; Gir, Rann of Kutch
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+lion'
+                '+elephant+sanctuary+site:gujaratsamachar.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Gujarat Samachar',
+        'lang': 'Gujarati',
+        'lang_code': 'gu',
+    },
 ]
 
 REGIONAL_JSON = os.path.join(

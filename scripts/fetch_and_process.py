@@ -273,6 +273,24 @@ KEYWORDS = [
     'pilibhit', 'sohagi barwa', 'hastinapur', 'nawabganj', 'katarniaghat',
     # Bihar / Jharkhand
     'valmiki', 'betla', 'palamau',
+    # Andhra Pradesh / Telangana
+    'nagarjunasagar', 'papikonda', 'kawal', 'coringa', 'eturnagaram',
+    'kinnersani', 'kolleru', 'pocharam', 'manjira',
+    # Karnataka
+    'biligiri', 'brt tiger', 'dandeli', 'kali tiger', 'ranibennur',
+    # Odisha
+    'simlipal', 'bhitarkanika', 'chilika', 'satkosia', 'debrigarh',
+    'hadgarh', 'nandankanan',
+    # West Bengal
+    'buxa', 'gorumara', 'jaldapara', 'chapramari', 'neora valley', 'senchal',
+    # Maharashtra
+    'nawegaon', 'umred', 'radhanagari', 'bhimashankar', 'koyna', 'phansad',
+    # Tamil Nadu
+    'grizzled squirrel', 'guindy', 'pulicat', 'vedanthangal',
+    'point calimere', 'megamalai', 'topslip', 'srivilliputhur',
+    # Gujarat
+    'wild ass', 'velavadar', 'nal sarovar', 'jessore', 'vansda', 'shoolpaneshwar',
+    'rann of kutch',
 ]
 
 # ── Exclusion list — any match blocks the article ────────────────────────────
