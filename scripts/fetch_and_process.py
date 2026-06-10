@@ -17,10 +17,15 @@ logger = logging.getLogger(__name__)
 
 SOURCES = [
     # NOTE: Down to Earth — HTTP 403, blocks all RSS programmatic access.
-    # NOTE: The Wire Science — RSS feed broken; serves Feb-2024 articles indefinitely.
+    # NOTE: The Wire Science feed — broken, serves Feb-2024 articles indefinitely.
+    # NOTE: The Wire Environment (cms.thewire.in) — server times out consistently.
 
-    # Mongabay India — wildlife / forests
+    # Mongabay India — wildlife / forests (best Indian wildlife source)
     'https://india.mongabay.com/feed/',
+    # Research Matters — Indian science & ecology research
+    'https://researchmatters.in/rss.xml',
+    # Nature India — Nature journal's India science coverage
+    'https://www.nature.com/natindia.rss',
     # NDTV India — catches wildlife, forest, conservation stories
     'https://feeds.feedburner.com/ndtvnews-india-news',
     # Indian Express India — wildlife, poaching, forest coverage
@@ -197,6 +202,8 @@ def source_name(url: str) -> str:
         'ndtv':               'NDTV',
         'indianexpress.com':  'Indian Express',
         'hindustantimes.com': 'Hindustan Times',
+        'researchmatters.in': 'Research Matters',
+        'nature.com':         'Nature India',
     }
     for key, name in mapping.items():
         if key in url:
