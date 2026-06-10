@@ -1,5 +1,59 @@
 [
   {
+    "headline": "CREDAI supports Parandur project, says second airport for Chennai is necessary",
+    "url": "https://www.thehindu.com/news/national/tamil-nadu/credai-supports-parandur-project-says-second-airport-for-chennai-is-necessary/article71082041.ece",
+    "source": "The Hindu",
+    "published": "2026-06-10",
+    "place_name": "Chennai",
+    "lat": 13.0827,
+    "lon": 80.2707
+  },
+  {
+    "headline": "Crime against caracal sparks a census project for the cat",
+    "url": "https://india.mongabay.com/2026/06/crime-against-caracal-sparks-a-census-project-for-the-cat/",
+    "source": "Mongabay India",
+    "published": "2026-06-10",
+    "place_name": "Rajasthan",
+    "lat": 27.0238,
+    "lon": 74.2179
+  },
+  {
+    "headline": "A long-distance ocean traveller",
+    "url": "https://india.mongabay.com/short-article/2026/06/a-long-distance-ocean-traveller/",
+    "source": "Mongabay India",
+    "published": "2026-06-10",
+    "place_name": "Tamil Nadu",
+    "lat": 11.1271,
+    "lon": 78.6569
+  },
+  {
+    "headline": "Wild elephant attack claims 65-year-old man in Keralaâ€™s Wayanad",
+    "url": "https://www.thehindu.com/news/national/kerala/wild-elephant-attack-claims-65-year-old-man-in-keralas-wayanad/article71084237.ece",
+    "source": "The Hindu",
+    "published": "2026-06-10",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
+    "headline": "Gaur that roamed 300 km across districts relocated to forest habitat",
+    "url": "https://www.thehindu.com/news/national/tamil-nadu/gaur-that-roamed-300-km-across-districts-relocated-to-forest-habitat/article71081314.ece",
+    "source": "The Hindu",
+    "published": "2026-06-10",
+    "place_name": "Ramanathapuram",
+    "lat": 9.3762,
+    "lon": 78.8302
+  },
+  {
+    "headline": "Three pillars of Chennai Port-Maduravoyal Corridor to come up inside Mayor Sundara Rao Park",
+    "url": "https://www.thehindu.com/news/cities/chennai/three-pillars-of-chennai-port-maduravoyal-corridor-to-come-up-inside-mayor-sundara-rao-park/article71082054.ece",
+    "source": "The Hindu",
+    "published": "2026-06-10",
+    "place_name": "Chennai",
+    "lat": 13.0827,
+    "lon": 80.2707
+  },
+  {
     "headline": "Kathua fire guts two dozen hutments in J&K; forest fire sparks mine blasts in Rajouri",
     "url": "https://www.thehindu.com/news/national/jammu-and-kashmir/kathua-fire-guts-two-dozen-hutments-in-jk-forest-fire-sparks-mine-blasts-in-rajouri/article71084482.ece",
     "source": "The Hindu",
@@ -9,7 +63,7 @@
     "lon": 74.3105
   },
   {
-    "headline": "Centre issues draft notification declaring ESZ around Kerala’s Eravikulam National Park",
+    "headline": "Centre issues draft notification declaring ESZ around Keralaâ€™s Eravikulam National Park",
     "url": "https://www.thehindu.com/news/national/kerala/centre-issues-draft-notification-declaring-esz-around-keralas-eravikulam-national-park/article71085734.ece",
     "source": "The Hindu",
     "published": "2026-06-10",
@@ -27,40 +81,13 @@
     "lon": 76.2711
   },
   {
-    "headline": "Wild elephant attack claims 65-year-old man in Kerala’s Wayanad",
-    "url": "https://www.thehindu.com/news/national/kerala/wild-elephant-attack-claims-65-year-old-man-in-keralas-wayanad/article71084237.ece",
-    "source": "The Hindu",
-    "published": "2026-06-10",
-    "place_name": "Kerala",
-    "lat": 10.8505,
-    "lon": 76.2711
-  },
-  {
-    "headline": "Experts question Kerala’s move to assess carrying capacity of forests and conduct wildlife census to mitigate conflicts",
-    "url": "https://www.thehindu.com/news/national/kerala/experts-question-keralas-move-to-assess-carrying-capacity-of-forests-and-conduct-wildlife-census-to-mitigate-conflicts/article71073256.ece",
-    "source": "The Hindu",
-    "published": "2026-06-10",
-    "place_name": "Kerala",
-    "lat": 10.8505,
-    "lon": 76.2711
-  },
-  {
-    "headline": "Green forum seeks removal of Forest Minister’s Additional Private Secretary",
+    "headline": "Green forum seeks removal of Forest Ministerâ€™s Additional Private Secretary",
     "url": "https://www.thehindu.com/news/national/kerala/green-forum-seek-removal-of-forest-ministers-additional-private-secretary/article71084785.ece",
     "source": "The Hindu",
     "published": "2026-06-10",
     "place_name": "Kerala",
     "lat": 10.8505,
     "lon": 76.2711
-  },
-  {
-    "headline": "Gaur that roamed 300 km across districts relocated to forest habitat",
-    "url": "https://www.thehindu.com/news/national/tamil-nadu/gaur-that-roamed-300-km-across-districts-relocated-to-forest-habitat/article71081314.ece",
-    "source": "The Hindu",
-    "published": "2026-06-10",
-    "place_name": "Ramanathapuram",
-    "lat": 9.3762,
-    "lon": 78.8302
   },
   {
     "headline": "Researchers describe a new fanged frog species that builds mud nests on the forest floor",
@@ -72,6 +99,51 @@
     "lon": 96.3833
   },
   {
+    "headline": "Kerala govt seeks Centreâ€™s permission to use forest land for Wayanad MCH expansion",
+    "url": "https://www.thehindu.com/news/national/kerala/kerala-govt-seeks-centres-permission-to-use-forest-land-for-wayanad-mch-expansion/article71079653.ece",
+    "source": "The Hindu",
+    "published": "2026-06-09",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
+    "headline": "Drone squad formed to monitor wild elephants at Aralam in Keralaâ€™s Kannur",
+    "url": "https://www.thehindu.com/news/national/kerala/drone-squad-formed-to-monitor-wild-elephants-at-aralam-in-keralas-kannur/article71079609.ece",
+    "source": "The Hindu",
+    "published": "2026-06-09",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
+    "headline": "Woman, 55, Mauled To Death By Leopard In Uttarakhand, Wild Cat Shot Dead",
+    "url": "https://www.ndtv.com/india-news/woman-55-mauled-to-death-by-leopard-in-uttarakhand-wild-cat-shot-dead-11614383#publisher=newsstand",
+    "source": "NDTV",
+    "published": "2026-06-09",
+    "place_name": "Uttarakhand",
+    "lat": 30.0668,
+    "lon": 79.0193
+  },
+  {
+    "headline": "Kerala wild elephant attack: forest department takes responsibility for  victimâ€™s children",
+    "url": "https://www.thehindu.com/news/national/kerala/kerala-wild-elephant-attack-forest-department-takes-responsibility-for-victims-children/article71081002.ece",
+    "source": "The Hindu",
+    "published": "2026-06-09",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
+    "headline": "Study unveils new fish species in Western Ghats, solves evolutionary riddle",
+    "url": "https://www.thehindu.com/news/national/kerala/study-unveils-new-fish-species-in-western-ghats-solves-evolutionary-riddle/article71080594.ece",
+    "source": "The Hindu",
+    "published": "2026-06-09",
+    "place_name": "Western Ghats",
+    "lat": 13.0,
+    "lon": 75.5
+  },
+  {
     "headline": "Awareness campaign against plastic use held during temple festival in Mudumalai Tiger Reserve",
     "url": "https://www.thehindu.com/news/cities/Coimbatore/awareness-campaign-against-plastic-use-held-during-temple-festival-in-mudumalai-tiger-reserve/article71079997.ece",
     "source": "The Hindu",
@@ -79,6 +151,15 @@
     "place_name": "Mudumalai Tiger Reserve",
     "lat": 11.55,
     "lon": 76.6167
+  },
+  {
+    "headline": "A stray tigress finds a new home, giving a struggling Chhattisgarh reserve hope of revival",
+    "url": "https://indianexpress.com/article/india/a-stray-tigress-finds-a-new-home-giving-a-struggling-chhattisgarh-reserve-hope-of-revival-10728794/",
+    "source": "Indian Express",
+    "published": "2026-06-08",
+    "place_name": "Chhattisgarh",
+    "lat": 21.2787,
+    "lon": 81.8661
   },
   {
     "headline": "15 months & counting, Rajasthan Forest Department sits on its probe that exposed graft within",
@@ -90,6 +171,24 @@
     "lon": 74.2179
   },
   {
+    "headline": "Special missions on the anvil for integrated water management and wetland protection in Kerala",
+    "url": "https://www.thehindu.com/news/national/kerala/special-missions-on-the-anvil-for-integrated-water-management-and-wetland-protection-in-kerala/article71076408.ece",
+    "source": "The Hindu",
+    "published": "2026-06-08",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
+    "headline": "Experts question Keralaâ€™s move to assess carrying capacity of forests and conduct wildlife census to mitigate conflicts",
+    "url": "https://www.thehindu.com/news/national/kerala/experts-question-keralas-move-to-assess-carrying-capacity-of-forests-and-conduct-wildlife-census-to-mitigate-conflicts/article71073256.ece",
+    "source": "The Hindu",
+    "published": "2026-06-08",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
     "headline": "Naga man killed by armed miscreants in Kangpokpi forest",
     "url": "https://indianexpress.com/article/india/manipur-violence-rongmei-naga-leader-killed-kangpokpi-forest-10730180/",
     "source": "Indian Express",
@@ -97,6 +196,42 @@
     "place_name": "Kangpokpi",
     "lat": 25.08,
     "lon": 93.97
+  },
+  {
+    "headline": "Mild tension in Khammam as tribal women clash with forest staff over â€˜podu landâ€™ claims",
+    "url": "https://www.thehindu.com/news/national/telangana/tension-over-podu-land-issue-in-khammam-district/article71078027.ece",
+    "source": "The Hindu",
+    "published": "2026-06-08",
+    "place_name": "Khammam",
+    "lat": 17.2473,
+    "lon": 80.1514
+  },
+  {
+    "headline": "Goa Forest Official submits police complaint against Minister over soil transportation from forest",
+    "url": "https://www.thehindu.com/news/national/goa/goa-forest-official-submits-police-complaint-against-minister-over-soil-transportation-from-forest/article71072494.ece",
+    "source": "The Hindu",
+    "published": "2026-06-07",
+    "place_name": "Goa",
+    "lat": 15.2993,
+    "lon": 74.124
+  },
+  {
+    "headline": "Tamil Nadu Governor leads plantation drive, lays foundation stone for PLAZA in Auroville",
+    "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-governor-leads-plantation-drive-lays-foundation-stone-for-plaza-in-auroville/article71072416.ece",
+    "source": "The Hindu",
+    "published": "2026-06-07",
+    "place_name": "Tamil Nadu",
+    "lat": 11.1271,
+    "lon": 78.6569
+  },
+  {
+    "headline": "8 Asiatic Lion Cubs At Gir Died Due To Heat, Not Infection: Gujarat Minister",
+    "url": "https://www.ndtv.com/india-news/8-asiatic-lion-cubs-died-due-to-heat-not-babesia-infection-in-gir-forest-gujarat-forest-minister-arjun-modhwadia-11602074#publisher=newsstand",
+    "source": "NDTV",
+    "published": "2026-06-07",
+    "place_name": "Asiatic lion",
+    "lat": 21.1239,
+    "lon": 70.798
   },
   {
     "headline": "Heat, not disease, caused deaths of 8 lion cubs in Gir forest",
@@ -117,6 +252,60 @@
     "lon": 93.1711
   },
   {
+    "headline": "Kerala Forest dept. introduces IndiaÃ¢â‚¬â„¢s first judiciary-integrated digital system for wildlife offences",
+    "url": "https://www.thehindu.com/news/national/kerala/kerala-forest-dept-introduces-indias-first-judiciary-integrated-digital-system-for-wildlife-offences/article71069629.ece",
+    "source": "The Hindu",
+    "published": "2026-06-06",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
+    "headline": "Sustained afforestation efforts under MGNREGA  transforms barren land in Bidar into a thriving green forest",
+    "url": "https://www.thehindu.com/news/national/karnataka/sustained-afforestation-efforts-under-mgnrega-transforms-barren-land-in-bidar-into-a-thriving-green-forest/article71069532.ece",
+    "source": "The Hindu",
+    "published": "2026-06-06",
+    "place_name": "Bidar",
+    "lat": 17.9104,
+    "lon": 77.5199
+  },
+  {
+    "headline": "Mining, encroachments threaten AnakapalliÃ¢â‚¬â„¢s ecology, says Rajendra Singh",
+    "url": "https://www.thehindu.com/news/national/andhra-pradesh/mining-encroachments-threaten-anakapallis-ecology-says-rajendra-singh/article71066505.ece",
+    "source": "The Hindu",
+    "published": "2026-06-06",
+    "place_name": "Anakapalli",
+    "lat": 17.6906,
+    "lon": 83.0038
+  },
+  {
+    "headline": "Signals from the sea: why sardines, jellyfish are washing ashore",
+    "url": "https://www.thehindu.com/news/cities/Hyderabad/signals-from-the-sea-why-sardines-jellyfish-are-washing-ashore/article71061429.ece",
+    "source": "The Hindu",
+    "published": "2026-06-06",
+    "place_name": "Hyderabad",
+    "lat": 17.385,
+    "lon": 78.4867
+  },
+  {
+    "headline": "Oil IndiaÃ¢â‚¬â„¢s latest gas find could unlock more hydrocarbon reserves in Andaman offshore",
+    "url": "https://indianexpress.com/article/india/oil-india-gas-find-hydrocarbon-reserves-andaman-offshore-10726676/",
+    "source": "Indian Express",
+    "published": "2026-06-06",
+    "place_name": "Andaman",
+    "lat": 11.7401,
+    "lon": 92.6586
+  },
+  {
+    "headline": "Communities rally to conserve marbled cat",
+    "url": "https://india.mongabay.com/2026/06/communities-rally-to-conserve-marbled-cat/",
+    "source": "Mongabay India",
+    "published": "2026-06-05",
+    "place_name": "Arunachal Pradesh",
+    "lat": 28.218,
+    "lon": 94.7278
+  },
+  {
     "headline": "Compensatory afforestation for biodiversity loss in Nicobar a bogus argument: Jairam Ramesh",
     "url": "https://www.thehindu.com/the-huddle/compensatory-afforestation-for-biodiversity-loss-in-nicobar-is-bogus-argument-jairam-ramesh/article71064638.ece",
     "source": "The Hindu",
@@ -124,6 +313,42 @@
     "place_name": "Nicobar",
     "lat": 8.0883,
     "lon": 93.545
+  },
+  {
+    "headline": "Vanishing shade: CoimbatoreÃ¢â‚¬â„¢s sparse tree cover falls prey to illegal felling",
+    "url": "https://www.thehindu.com/news/cities/Coimbatore/lack-of-guidelines-lacunas-mar-protection-of-trees-in-public-places-from-felling/article71062350.ece",
+    "source": "The Hindu",
+    "published": "2026-06-05",
+    "place_name": "Coimbatore",
+    "lat": 11.0168,
+    "lon": 76.9558
+  },
+  {
+    "headline": "BPCL greenfield project in Nellore nears deadline",
+    "url": "https://www.thehindu.com/news/national/andhra-pradesh/bpcl-greenfield-project-in-nellore-nears-deadline/article71065940.ece",
+    "source": "The Hindu",
+    "published": "2026-06-05",
+    "place_name": "Nellore",
+    "lat": 14.4426,
+    "lon": 79.9865
+  },
+  {
+    "headline": "Prime accused in Gandipet government land encroachment case arrested in Tamil Nadu",
+    "url": "https://www.thehindu.com/news/cities/Hyderabad/prime-accused-in-gandipet-government-land-encroachment-case-arrested-in-tamil-nadu/article71065424.ece",
+    "source": "The Hindu",
+    "published": "2026-06-05",
+    "place_name": "Tamil Nadu",
+    "lat": 11.1271,
+    "lon": 78.6569
+  },
+  {
+    "headline": "Camera traps installed at 10 locations to track leopard movement in Erode",
+    "url": "https://www.thehindu.com/news/cities/Coimbatore/camera-traps-installed-at-10-locations-to-track-leopard-movement-in-erode/article71064652.ece",
+    "source": "The Hindu",
+    "published": "2026-06-05",
+    "place_name": "Erode",
+    "lat": 11.3428,
+    "lon": 77.727
   },
   {
     "headline": "A new leopard gecko emerges from ancient rocks",
@@ -135,13 +360,40 @@
     "lon": 76.0
   },
   {
-    "headline": "Tourists to be banned in Tadoba tiger reserve’s core areas for 3 months with eye on monsoon",
+    "headline": "Unseasonal snowfall blocks the path for migratory pastoralists",
+    "url": "https://india.mongabay.com/2026/06/unseasonal-snowfall-blocks-the-path-for-migratory-pastoralists/",
+    "source": "Mongabay India",
+    "published": "2026-06-04",
+    "place_name": "Jammu and Kashmir",
+    "lat": 33.7782,
+    "lon": 76.5762
+  },
+  {
+    "headline": "The whistling pack hunter",
+    "url": "https://india.mongabay.com/short-article/2026/06/the-whistling-pack-hunter/",
+    "source": "Mongabay India",
+    "published": "2026-06-03",
+    "place_name": "Odisha",
+    "lat": 20.9517,
+    "lon": 85.0985
+  },
+  {
+    "headline": "Tourists to be banned in Tadoba tiger reserveÃ¢â‚¬â„¢s core areas for 3 months with eye on monsoon",
     "url": "https://www.thehindu.com/news/national/maharashtra/tourists-to-be-banned-in-tadoba-tiger-reserves-core-areas-for-3-months-with-eye-on-monsoon/article71055567.ece",
     "source": "The Hindu",
     "published": "2026-06-03",
     "place_name": "Tadoba",
     "lat": 20.2333,
     "lon": 79.3833
+  },
+  {
+    "headline": "Tigress Zeenat gives birth to four cubs in Similipal",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/tigress-zeenat-gives-birth-to-four-cubs-in-similipal-boost-to-translocation-effort/article71052567.ece",
+    "source": "The Hindu",
+    "published": "2026-06-03",
+    "place_name": "Odisha",
+    "lat": 20.9517,
+    "lon": 85.0985
   },
   {
     "headline": "Kaziranga records first yellow-throated marten",
@@ -153,7 +405,25 @@
     "lon": 92.9376
   },
   {
-    "headline": "Gram Sabha consent fabricated to divert forest for mining bauxite, say villagers in Odisha’s Koraput",
+    "headline": "Artificial light at night alters foraging behaviour in kites",
+    "url": "https://india.mongabay.com/2026/06/artificial-light-at-night-is-altering-foraging-behaviour-in-kites/",
+    "source": "Mongabay India",
+    "published": "2026-06-02",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
+    "headline": "Cub deaths prompt preventive measures for Asiatic lions in Bhavnagar",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/cub-deaths-prompt-preventive-measures-for-asiatic-lions-in-bhavnagar/article71049594.ece",
+    "source": "The Hindu",
+    "published": "2026-06-02",
+    "place_name": "Bhavnagar",
+    "lat": 21.7645,
+    "lon": 72.1519
+  },
+  {
+    "headline": "Gram Sabha consent fabricated to divert forest for mining bauxite, say villagers in OdishaÃ¢â‚¬â„¢s Koraput",
     "url": "https://www.thehindu.com/news/national/odisha/gram-sabha-consent-fabricated-to-divert-forest-for-mining-bauxite-say-villagers-in-odishas-koraput/article71048380.ece",
     "source": "The Hindu",
     "published": "2026-06-01",
@@ -180,7 +450,88 @@
     "lon": 94.5624
   },
   {
-    "headline": "Raised in Assam’s temple pond, 104 turtle hatchlings released in rhino habitat",
+    "headline": "Tuskers form all-male groups in the wild, finds study",
+    "url": "https://india.mongabay.com/2026/05/tuskers-form-all-male-groups-in-the-wild-finds-study/",
+    "source": "Mongabay India",
+    "published": "2026-05-29",
+    "place_name": "Rajaji National Park",
+    "lat": 30.0167,
+    "lon": 78.2667
+  },
+  {
+    "headline": "Postmortem twist in Bandhavgarh tiger death: Struck by tranquiliser Ã¢â‚¬Ëœafter deathÃ¢â‚¬â„¢, suffered Ã¢â‚¬Ëœprolonged physical deteriorationÃ¢â‚¬â„¢",
+    "url": "https://indianexpress.com/article/india/bandhavgarh-tiger-death-postmortem-tranquiliser-dart-report-10714656/",
+    "source": "Indian Express",
+    "published": "2026-05-29",
+    "place_name": "Bandhavgarh",
+    "lat": 23.7167,
+    "lon": 81.0333
+  },
+  {
+    "headline": "Western Ghats has high odonate endemism, reveals survey",
+    "url": "https://india.mongabay.com/short-article/2026/05/western-ghats-has-high-odonate-endemism-reveals-survey/",
+    "source": "Mongabay India",
+    "published": "2026-05-28",
+    "place_name": "Western Ghats",
+    "lat": 13.0,
+    "lon": 75.5
+  },
+  {
+    "headline": "4 lion cubs die in Gujarat's Gir forest region, 17 isolated amid viral infection scare",
+    "url": "https://www.thehindu.com/news/national/gujarat/4-lion-cubs-die-in-gujarats-gir-forest-region-17-isolated-amid-viral-infection-scare/article71031878.ece",
+    "source": "The Hindu",
+    "published": "2026-05-28",
+    "place_name": "Gujarat",
+    "lat": 22.2587,
+    "lon": 71.1924
+  },
+  {
+    "headline": "Indian Army, IAF contain major forest fire in HimachalÃ¢â‚¬â„¢s Kasauli slopes",
+    "url": "https://www.thehindu.com/news/national/himachal-pradesh/indian-army-iaf-contain-major-forest-fire-in-himachals-kasauli-slopes/article71029584.ece",
+    "source": "The Hindu",
+    "published": "2026-05-27",
+    "place_name": "Himachal",
+    "lat": 31.1048,
+    "lon": 77.1734
+  },
+  {
+    "headline": "New toad species recorded in Meghalaya named after Khasi womenÃ¢â‚¬â„¢s attire",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/new-toad-species-recorded-in-meghalaya-named-after-khasi-womens-attire/article71027776.ece",
+    "source": "The Hindu",
+    "published": "2026-05-27",
+    "place_name": "Meghalaya",
+    "lat": 25.467,
+    "lon": 91.3662
+  },
+  {
+    "headline": "Assam school students learn hands-on water quality testing",
+    "url": "https://www.thehindu.com/news/national/assam/assam-school-students-learn-hands-on-water-quality-testing/article70990189.ece",
+    "source": "The Hindu",
+    "published": "2026-05-17",
+    "place_name": "Assam",
+    "lat": 26.2006,
+    "lon": 92.9376
+  },
+  {
+    "headline": "Pawan Kalyan backs Peacock Tarantula conservation as rare Eastern Ghats species faces extinction risk",
+    "url": "https://timesofindia.indiatimes.com/etimes/animals/pawan-kalyan-backs-peacock-tarantula-conservation-as-rare-eastern-ghats-species-faces-extinction-risk/articleshow/130810857.cms",
+    "source": "Times of India",
+    "published": "2026-05-05",
+    "place_name": "Eastern Ghats",
+    "lat": 15.0,
+    "lon": 80.0
+  },
+  {
+    "headline": "Assam villagers resist excavation for flood mitigation project",
+    "url": "https://www.thehindu.com/news/national/assam/assam-villagers-resist-excavation-for-flood-mitigation-project/article70688611.ece",
+    "source": "The Hindu",
+    "published": "2026-03-01",
+    "place_name": "Assam",
+    "lat": 26.2006,
+    "lon": 92.9376
+  },
+  {
+    "headline": "Raised in Assamâ€™s temple pond, 104 turtle hatchlings released in rhino habitat",
     "url": "https://www.thehindu.com/news/national/assam/raised-in-assams-temple-pond-104-turtle-hatchlings-released-in-rhino-habitat/article70104417.ece",
     "source": "The Hindu",
     "published": "2025-09-28",
