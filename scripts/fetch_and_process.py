@@ -307,6 +307,7 @@ EXCLUDE_KEYWORDS = [
     'rebellion', 'political', 'party', 'tmc', 'bjp', 'congress', 'aap',
     'nda ', ' upa', 'chief minister', 'governor appoints',
     'anti-encroachment drive', 'demolition drive', 'encroachment drive',
+    'legislators', 'lawmaker', 'offsite', 'review huddle', 'party huddle',
     # Infrastructure / civic
     'metro', 'railway', 'highway', 'flyover', 'road widening',
     'airport link', 'commonwealth games', 'expressway',
