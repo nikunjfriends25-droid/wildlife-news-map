@@ -62,7 +62,7 @@ KEYWORDS = [
     'national park', 'wildlife sanctuary', 'tiger reserve', 'biosphere reserve',
     'wildlife corridor', 'elephant corridor', 'forest corridor',
     'wildlife conservation', 'species conservation', 'biodiversity conservation',
-    'forest department', 'forest fire', 'forest cover', 'forest loss',
+    'forest', 'forest department', 'forest fire', 'forest cover', 'forest loss',
     'reserve forest', 'protected forest', 'protected area',
     'deforestation', 'afforestation', 'reforestation',
     'habitat loss', 'habitat destruction', 'habitat fragmentation',
@@ -105,9 +105,7 @@ EXCLUDE_KEYWORDS = [
     # Crime / law & order
     'murder', 'rape', 'kidnap', 'robbery', 'fraud', 'scam', 'arrest',
     'blast', 'bomb', 'explosion', 'riot', 'curfew', 'internet blackout',
-    'prohibitory orders', 'missing officer', 'officer missing',
-    'officer arrested', 'officer suspended', 'officer still missing',
-    'forest department officer', 'forest officer missing',
+    'prohibitory orders',
     # Sports
     'ipl', 'cricket', 'football', 'hockey match', 'tennis', 'wrestling',
     'commonwealth games',
