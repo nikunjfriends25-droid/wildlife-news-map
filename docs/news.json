@@ -486,6 +486,15 @@
     "lon": 92.9376
   },
   {
+    "headline": "Amid internal rumblings, Omar takes NC legislators to Dachigam for offsite ‘review’ huddle",
+    "url": "https://indianexpress.com/article/india/omar-abdullah-nc-mla-dachigam-review-meeting-10722013/",
+    "source": "Indian Express",
+    "published": "2026-06-03",
+    "place_name": "Dachigam",
+    "lat": 34.15,
+    "lon": 74.9
+  },
+  {
     "headline": "Artificial light at night alters foraging behaviour in kites",
     "url": "https://india.mongabay.com/2026/06/artificial-light-at-night-is-altering-foraging-behaviour-in-kites/",
     "source": "Mongabay India",
@@ -763,5 +772,14 @@
     "place_name": "Brahmaputra",
     "lat": 26.8,
     "lon": 93.7
+  },
+  {
+    "headline": "Great Himalayan National Park in Himachal On UNESCO Tentative World Heritage List",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPT2EyZXQtRF8tdHVzMkZPdF95dzR1TXc5V1FKank4aXJFUVl5YlJDTTl3SEphTmplaWxmQWl4U3ZJclFiTUVOVXdzcTNqdUxFQjRZZlBySzFhajE1a0JicnRKUHJ4SFJhSEdpTkN2cFBnUjhUZC1Qd0hiNzR2ejNEdld4MG9ZSDVybGtpRkJ2Ml84XzY3Vm9FOUlva2ppaFVLS19fU1Q5U1ROaTBsaUJ0a3NRbGw?oc=5",
+    "source": "Hill Post",
+    "published": "2009-07-10",
+    "place_name": "Great Himalayan National Park",
+    "lat": 31.75,
+    "lon": 77.5833
   }
 ]
