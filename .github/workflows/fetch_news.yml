@@ -26,17 +26,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Cache spaCy model
-        id: spacy-cache
-        uses: actions/cache@v4
-        with:
-          path: /opt/hostedtoolcache/Python/3.11*/x64/lib/python3.11/site-packages/en_core_web_trf
-          key: spacy-en-core-web-trf-${{ hashFiles('scripts/requirements.txt') }}
-
-      - name: Download spaCy model
-        if: steps.spacy-cache.outputs.cache-hit != 'true'
-        run: python -m spacy download en_core_web_trf
-
       - name: Run English pipeline
         run: python scripts/fetch_and_process.py
 
