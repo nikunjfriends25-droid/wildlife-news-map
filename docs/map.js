@@ -371,8 +371,8 @@ fetch('news.json')
 
 // ── Tour ──────────────────────────────────────────────────────────────────────
 function startTour() {
-  // Driver.js v1 IIFE exposes window['driver.js']; fall back to window.driver
-  const mod = window['driver.js'] || window.driver;
+  // Driver.js v1 IIFE: this.driver={}, this.driver.js = module, module.driver = fn
+  const mod = window.driver && window.driver.js;
   if (!mod || !mod.driver) {
     console.warn('WildLens: Driver.js not loaded — tour unavailable');
     return;
