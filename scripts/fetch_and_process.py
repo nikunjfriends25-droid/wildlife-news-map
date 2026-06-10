@@ -55,6 +55,44 @@ SOURCES = [
     # EastMojo — covers all 8 NE states; environment & wildlife desk
     'https://eastmojo.com/feed/',
 
+    # ── J&K & Ladakh ──────────────────────────────────────────────────────────
+    # Greater Kashmir — J&K's largest English daily; Dachigam, Hangul, snow leopard
+    'https://www.greaterkashmir.com/feed/',
+    # Rising Kashmir — broad J&K coverage; forest, wildlife, environment
+    'https://risingkashmir.com/feed/',
+    # Daily Excelsior — Jammu-based; covers Trikuta hills, Ramnagar, Chenab valley forests
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+snow+leopard'
+                '+elephant+poaching+sanctuary+site:dailyexcelsior.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Daily Excelsior',
+    },
+
+    # ── UP & MP (Central India tiger belt) ────────────────────────────────────
+    # The Pioneer — Lucknow-based; covers Dudhwa, Pilibhit (UP) + Kanha, Bandhavgarh (MP)
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:dailypioneer.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'The Pioneer',
+    },
+    # Central Chronicle — Bhopal-based; dedicated MP coverage (Satpura, Pench, Panna)
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:centralchronicle.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Central Chronicle',
+    },
+
+    # ── Himachal Pradesh & Uttarakhand ────────────────────────────────────────
+    # Hill Post — HP & Uttarakhand focus; Great Himalayan NP, Govind Pashu Vihar
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+snow+leopard'
+                '+tiger+sanctuary+site:hillpost.in'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Hill Post',
+    },
+
     # ── National ───────────────────────────────────────────────────────────────
     # Hindustan Times — strong UP, Uttarakhand, Gujarat, national coverage
     'https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml',
@@ -226,6 +264,15 @@ KEYWORDS = [
     'bhadra', 'kudremukh', 'pushpagiri', 'brahmagiri',
     'indravati', 'panna', 'achanakmar', 'udanti',
     'nokrek', 'dampa', 'khangchendzonga', 'singalila',
+    # J&K / Ladakh
+    'dachigam', 'hemis', 'kishtwar', 'salim ali', 'jasrota', 'surinsar', 'mansar',
+    # Himachal Pradesh / Uttarakhand
+    'great himalayan', 'pin valley', 'kibber', 'kugti', 'simbalbara',
+    'nandhaur', 'govind pashu vihar', 'askot', 'sonanadi',
+    # Uttar Pradesh
+    'pilibhit', 'sohagi barwa', 'hastinapur', 'nawabganj', 'katarniaghat',
+    # Bihar / Jharkhand
+    'valmiki', 'betla', 'palamau',
 ]
 
 # ── Exclusion list — any match blocks the article ────────────────────────────
@@ -363,9 +410,11 @@ def source_name(url: str) -> str:
         'hindustantimes.com': 'Hindustan Times',
         'researchmatters.in': 'Research Matters',
         'nature.com':         'Nature India',
-        'assamtribune.com':   'Assam Tribune',
-        'nenow.in':           'Northeast Now',
-        'eastmojo.com':       'EastMojo',
+        'assamtribune.com':    'Assam Tribune',
+        'nenow.in':            'Northeast Now',
+        'eastmojo.com':        'EastMojo',
+        'greaterkashmir.com':  'Greater Kashmir',
+        'risingkashmir.com':   'Rising Kashmir',
     }
     for key, name in mapping.items():
         if key in url:
