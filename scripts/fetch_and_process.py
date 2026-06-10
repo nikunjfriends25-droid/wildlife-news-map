@@ -54,6 +54,39 @@ SOURCES = [
     'https://nenow.in/feed',
     # EastMojo — covers all 8 NE states; environment & wildlife desk
     'https://eastmojo.com/feed/',
+
+    # ── National ───────────────────────────────────────────────────────────────
+    # Hindustan Times — strong UP, Uttarakhand, Gujarat, national coverage
+    'https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml',
+
+    # ── Via Google News proxy (direct RSS blocked by Cloudflare / 403) ────────
+    # Google pre-filters by wildlife keywords AND serves through Google's CDN,
+    # bypassing the source site's bot protection entirely.
+    # entry.source.title in each result gives the real publication name.
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:thewire.in'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'The Wire',
+    },
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:tribuneindia.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Tribune India',
+    },
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:telegraphindia.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Telegraph India',
+    },
+    {
+        'url': ('https://news.google.com/rss/search?q=wildlife+forest+tiger'
+                '+elephant+poaching+sanctuary+site:deccanherald.com'
+                '&hl=en-IN&gl=IN&ceid=IN:en'),
+        'source': 'Deccan Herald',
+    },
 ]
 
 # ── Comprehensive species + ecology keywords ────────────────────────────────
@@ -330,6 +363,9 @@ def source_name(url: str) -> str:
         'hindustantimes.com': 'Hindustan Times',
         'researchmatters.in': 'Research Matters',
         'nature.com':         'Nature India',
+        'assamtribune.com':   'Assam Tribune',
+        'nenow.in':           'Northeast Now',
+        'eastmojo.com':       'EastMojo',
     }
     for key, name in mapping.items():
         if key in url:
@@ -347,8 +383,16 @@ def main():
 
     new_articles = []
 
-    for feed_url in SOURCES:
-        logger.info(f"Fetching {feed_url}")
+    for src in SOURCES:
+        # SOURCES entries can be a plain URL string or a dict with url + source override
+        if isinstance(src, dict):
+            feed_url = src['url']
+            forced_source = src.get('source')  # e.g. 'The Wire' for Google News proxies
+        else:
+            feed_url = src
+            forced_source = None
+
+        logger.info(f"Fetching {feed_url[:80]}")
         entries = fetch_feed(feed_url)
 
         for entry in entries:
@@ -358,6 +402,18 @@ def main():
 
             title = fix_encoding(getattr(entry, 'title', '') or '')
             description = fix_encoding(getattr(entry, 'summary', '') or '')
+
+            # Skip Google News search-result pages that sneak in as entries
+            if title.startswith('You searched for'):
+                continue
+
+            # Strip "- Publication Name" suffix Google News appends to titles
+            # e.g. "Tiger census results - Deccan Herald" → "Tiger census results"
+            if forced_source:
+                for sep in (f' - {forced_source}', f' | {forced_source}'):
+                    if title.endswith(sep):
+                        title = title[:-len(sep)].strip()
+                        break
 
             if not matches_keywords(title, description):
                 continue
@@ -382,10 +438,12 @@ def main():
                 logger.debug(f"Skipping India-centre pin: {title[:50]}")
                 continue
 
+            sname = forced_source if forced_source else source_name(feed_url)
+
             article = {
                 'headline': title.strip(),
                 'url': url,
-                'source': source_name(feed_url),
+                'source': sname,
                 'published': pub_date,
                 'place_name': place_name,
                 'lat': lat,
