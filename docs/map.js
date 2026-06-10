@@ -170,7 +170,7 @@ function applyFilters() {
 
   const filtered = allMarkers.filter(({ article: a }) => {
     if (!activeCats.has(categorize(a.headline))) return false;
-    if (activeSrcs.size && !activeSrcs.has(a.source)) return false;
+    if (!activeSrcs.has(a.source)) return false;
     if (dateFrom && a.published < dateFrom) return false;
     if (dateTo   && a.published > dateTo)   return false;
     if (query && !(
