@@ -27,7 +27,7 @@
     "lon": 78.6569
   },
   {
-    "headline": "Wild elephant attack claims 65-year-old man in Keralaâ€™s Wayanad",
+    "headline": "Wild elephant attack claims 65-year-old man in Kerala’s Wayanad",
     "url": "https://www.thehindu.com/news/national/kerala/wild-elephant-attack-claims-65-year-old-man-in-keralas-wayanad/article71084237.ece",
     "source": "The Hindu",
     "published": "2026-06-10",
@@ -63,7 +63,7 @@
     "lon": 74.3105
   },
   {
-    "headline": "Centre issues draft notification declaring ESZ around Keralaâ€™s Eravikulam National Park",
+    "headline": "Centre issues draft notification declaring ESZ around Kerala’s Eravikulam National Park",
     "url": "https://www.thehindu.com/news/national/kerala/centre-issues-draft-notification-declaring-esz-around-keralas-eravikulam-national-park/article71085734.ece",
     "source": "The Hindu",
     "published": "2026-06-10",
@@ -81,7 +81,7 @@
     "lon": 76.2711
   },
   {
-    "headline": "Green forum seeks removal of Forest Ministerâ€™s Additional Private Secretary",
+    "headline": "Green forum seeks removal of Forest Minister’s Additional Private Secretary",
     "url": "https://www.thehindu.com/news/national/kerala/green-forum-seek-removal-of-forest-ministers-additional-private-secretary/article71084785.ece",
     "source": "The Hindu",
     "published": "2026-06-10",
@@ -99,7 +99,7 @@
     "lon": 96.3833
   },
   {
-    "headline": "Kerala govt seeks Centreâ€™s permission to use forest land for Wayanad MCH expansion",
+    "headline": "Kerala govt seeks Centre’s permission to use forest land for Wayanad MCH expansion",
     "url": "https://www.thehindu.com/news/national/kerala/kerala-govt-seeks-centres-permission-to-use-forest-land-for-wayanad-mch-expansion/article71079653.ece",
     "source": "The Hindu",
     "published": "2026-06-09",
@@ -108,7 +108,7 @@
     "lon": 76.2711
   },
   {
-    "headline": "Drone squad formed to monitor wild elephants at Aralam in Keralaâ€™s Kannur",
+    "headline": "Drone squad formed to monitor wild elephants at Aralam in Kerala’s Kannur",
     "url": "https://www.thehindu.com/news/national/kerala/drone-squad-formed-to-monitor-wild-elephants-at-aralam-in-keralas-kannur/article71079609.ece",
     "source": "The Hindu",
     "published": "2026-06-09",
@@ -126,7 +126,7 @@
     "lon": 79.0193
   },
   {
-    "headline": "Kerala wild elephant attack: forest department takes responsibility for  victimâ€™s children",
+    "headline": "Kerala wild elephant attack: forest department takes responsibility for  victim’s children",
     "url": "https://www.thehindu.com/news/national/kerala/kerala-wild-elephant-attack-forest-department-takes-responsibility-for-victims-children/article71081002.ece",
     "source": "The Hindu",
     "published": "2026-06-09",
@@ -151,6 +151,15 @@
     "place_name": "Mudumalai Tiger Reserve",
     "lat": 11.55,
     "lon": 76.6167
+  },
+  {
+    "headline": "Tree plantation drive held to mark ‘Surgeons Week’ in Kurnool",
+    "url": "https://www.thehindu.com/news/national/andhra-pradesh/tree-plantation-drive-held-to-mark-surgeons-week-in-kurnool/article71079766.ece",
+    "source": "The Hindu",
+    "published": "2026-06-09",
+    "place_name": "Kurnool",
+    "lat": 15.8281,
+    "lon": 78.0373
   },
   {
     "headline": "A stray tigress finds a new home, giving a struggling Chhattisgarh reserve hope of revival",
@@ -180,7 +189,7 @@
     "lon": 76.2711
   },
   {
-    "headline": "Experts question Keralaâ€™s move to assess carrying capacity of forests and conduct wildlife census to mitigate conflicts",
+    "headline": "Experts question Kerala’s move to assess carrying capacity of forests and conduct wildlife census to mitigate conflicts",
     "url": "https://www.thehindu.com/news/national/kerala/experts-question-keralas-move-to-assess-carrying-capacity-of-forests-and-conduct-wildlife-census-to-mitigate-conflicts/article71073256.ece",
     "source": "The Hindu",
     "published": "2026-06-08",
@@ -198,13 +207,31 @@
     "lon": 93.97
   },
   {
-    "headline": "Mild tension in Khammam as tribal women clash with forest staff over â€˜podu landâ€™ claims",
+    "headline": "Mild tension in Khammam as tribal women clash with forest staff over ‘podu land’ claims",
     "url": "https://www.thehindu.com/news/national/telangana/tension-over-podu-land-issue-in-khammam-district/article71078027.ece",
     "source": "The Hindu",
     "published": "2026-06-08",
     "place_name": "Khammam",
     "lat": 17.2473,
     "lon": 80.1514
+  },
+  {
+    "headline": "Rare new snake eel species discovered amongst fishing bycatch off the coast of Kakinada",
+    "url": "https://researchmatters.in/news/rare-new-snake-eel-species-discovered-amongst-fishing-bycatch-coast-kakinada",
+    "source": "Research Matters",
+    "published": "2026-06-08",
+    "place_name": "Kakinada",
+    "lat": 16.9891,
+    "lon": 82.2475
+  },
+  {
+    "headline": "How India’s divers turned ocean encounters into conservation action with the help of PADI’s Go Eco Month",
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/how-indias-divers-turned-ocean-encounters-into-conservation-action-with-the-help-of-padis-go-eco-month/article70887057.ece",
+    "source": "The Hindu",
+    "published": "2026-06-08",
+    "place_name": "Goa",
+    "lat": 15.2993,
+    "lon": 74.124
   },
   {
     "headline": "Goa Forest Official submits police complaint against Minister over soil transportation from forest",
@@ -252,7 +279,7 @@
     "lon": 93.1711
   },
   {
-    "headline": "Kerala Forest dept. introduces IndiaÃ¢â‚¬â„¢s first judiciary-integrated digital system for wildlife offences",
+    "headline": "Kerala Forest dept. introduces India’s first judiciary-integrated digital system for wildlife offences",
     "url": "https://www.thehindu.com/news/national/kerala/kerala-forest-dept-introduces-indias-first-judiciary-integrated-digital-system-for-wildlife-offences/article71069629.ece",
     "source": "The Hindu",
     "published": "2026-06-06",
@@ -270,7 +297,7 @@
     "lon": 77.5199
   },
   {
-    "headline": "Mining, encroachments threaten AnakapalliÃ¢â‚¬â„¢s ecology, says Rajendra Singh",
+    "headline": "Mining, encroachments threaten Anakapalli’s ecology, says Rajendra Singh",
     "url": "https://www.thehindu.com/news/national/andhra-pradesh/mining-encroachments-threaten-anakapallis-ecology-says-rajendra-singh/article71066505.ece",
     "source": "The Hindu",
     "published": "2026-06-06",
@@ -288,7 +315,7 @@
     "lon": 78.4867
   },
   {
-    "headline": "Oil IndiaÃ¢â‚¬â„¢s latest gas find could unlock more hydrocarbon reserves in Andaman offshore",
+    "headline": "Oil India’s latest gas find could unlock more hydrocarbon reserves in Andaman offshore",
     "url": "https://indianexpress.com/article/india/oil-india-gas-find-hydrocarbon-reserves-andaman-offshore-10726676/",
     "source": "Indian Express",
     "published": "2026-06-06",
@@ -315,7 +342,7 @@
     "lon": 93.545
   },
   {
-    "headline": "Vanishing shade: CoimbatoreÃ¢â‚¬â„¢s sparse tree cover falls prey to illegal felling",
+    "headline": "Vanishing shade: Coimbatore’s sparse tree cover falls prey to illegal felling",
     "url": "https://www.thehindu.com/news/cities/Coimbatore/lack-of-guidelines-lacunas-mar-protection-of-trees-in-public-places-from-felling/article71062350.ece",
     "source": "The Hindu",
     "published": "2026-06-05",
@@ -378,7 +405,7 @@
     "lon": 85.0985
   },
   {
-    "headline": "Tourists to be banned in Tadoba tiger reserveÃ¢â‚¬â„¢s core areas for 3 months with eye on monsoon",
+    "headline": "Tourists to be banned in Tadoba tiger reserve’s core areas for 3 months with eye on monsoon",
     "url": "https://www.thehindu.com/news/national/maharashtra/tourists-to-be-banned-in-tadoba-tiger-reserves-core-areas-for-3-months-with-eye-on-monsoon/article71055567.ece",
     "source": "The Hindu",
     "published": "2026-06-03",
@@ -423,7 +450,7 @@
     "lon": 72.1519
   },
   {
-    "headline": "Gram Sabha consent fabricated to divert forest for mining bauxite, say villagers in OdishaÃ¢â‚¬â„¢s Koraput",
+    "headline": "Gram Sabha consent fabricated to divert forest for mining bauxite, say villagers in Odisha’s Koraput",
     "url": "https://www.thehindu.com/news/national/odisha/gram-sabha-consent-fabricated-to-divert-forest-for-mining-bauxite-say-villagers-in-odishas-koraput/article71048380.ece",
     "source": "The Hindu",
     "published": "2026-06-01",
@@ -459,7 +486,7 @@
     "lon": 78.2667
   },
   {
-    "headline": "Postmortem twist in Bandhavgarh tiger death: Struck by tranquiliser Ã¢â‚¬Ëœafter deathÃ¢â‚¬â„¢, suffered Ã¢â‚¬Ëœprolonged physical deteriorationÃ¢â‚¬â„¢",
+    "headline": "Postmortem twist in Bandhavgarh tiger death: Struck by tranquiliser ‘after death’, suffered ‘prolonged physical deterioration’",
     "url": "https://indianexpress.com/article/india/bandhavgarh-tiger-death-postmortem-tranquiliser-dart-report-10714656/",
     "source": "Indian Express",
     "published": "2026-05-29",
@@ -486,7 +513,7 @@
     "lon": 71.1924
   },
   {
-    "headline": "Indian Army, IAF contain major forest fire in HimachalÃ¢â‚¬â„¢s Kasauli slopes",
+    "headline": "Indian Army, IAF contain major forest fire in Himachal’s Kasauli slopes",
     "url": "https://www.thehindu.com/news/national/himachal-pradesh/indian-army-iaf-contain-major-forest-fire-in-himachals-kasauli-slopes/article71029584.ece",
     "source": "The Hindu",
     "published": "2026-05-27",
@@ -495,7 +522,7 @@
     "lon": 77.1734
   },
   {
-    "headline": "New toad species recorded in Meghalaya named after Khasi womenÃ¢â‚¬â„¢s attire",
+    "headline": "New toad species recorded in Meghalaya named after Khasi women’s attire",
     "url": "https://www.thehindu.com/sci-tech/energy-and-environment/new-toad-species-recorded-in-meghalaya-named-after-khasi-womens-attire/article71027776.ece",
     "source": "The Hindu",
     "published": "2026-05-27",
@@ -531,7 +558,7 @@
     "lon": 92.9376
   },
   {
-    "headline": "Raised in Assamâ€™s temple pond, 104 turtle hatchlings released in rhino habitat",
+    "headline": "Raised in Assam’s temple pond, 104 turtle hatchlings released in rhino habitat",
     "url": "https://www.thehindu.com/news/national/assam/raised-in-assams-temple-pond-104-turtle-hatchlings-released-in-rhino-habitat/article70104417.ece",
     "source": "The Hindu",
     "published": "2025-09-28",

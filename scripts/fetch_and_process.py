@@ -87,6 +87,16 @@ KEYWORDS = [
     'coral reef', 'seagrass', 'mangrove forest',
     'carbon sequestration', 'ecosystem', 'ecology',
     'climate change impact on wildlife', 'species extinction',
+    # Broader species / nature science (catches Research Matters, Nature India)
+    'species', 'snake', 'eel', 'wasp', 'moth', 'beetle', 'butterfly',
+    'spider', 'scorpion', 'lizard', 'gecko', 'turtle', 'tortoise',
+    'woodland', 'native forest', 'tree cover', 'tree plantation',
+    'marine', 'coastal ecosystem', 'coastal ecology', 'river dolphin',
+    'migratory', 'nesting', 'breeding', 'spawning',
+    'conservation biology', 'wildlife biology', 'ecology research',
+    'species discovery', 'species found', 'new to science',
+    'citizen science', 'wildlife monitoring', 'animal behaviour',
+    'habitat', 'conservation',
 ]
 
 # ── Exclusion list — any match blocks the article ────────────────────────────
@@ -135,6 +145,26 @@ def load_existing():
 
 
 import re as _re
+
+def fix_encoding(text: str) -> str:
+    """Fix cp1252/utf-8 mojibake (e.g. 'Ã¢â‚¬Ëœ' → curly quote).
+    Some feeds double/triple encode; apply up to 3 passes until stable.
+    Only accepts the fixed version if it contains no replacement chars (U+FFFD)
+    and is actually different — avoids corrupting already-correct text."""
+    if not text:
+        return text
+    for _ in range(3):
+        try:
+            fixed = text.encode('cp1252').decode('utf-8')
+            if fixed == text:
+                break
+            # Reject if fix introduced replacement characters
+            if '�' in fixed:
+                break
+            text = fixed
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            break
+    return text
 
 def _word_in(phrase: str, text: str) -> bool:
     """True if phrase appears as whole word(s) in text (case-insensitive)."""
@@ -230,9 +260,8 @@ def main():
             if not url or url in seen_urls:
                 continue
 
-            title = getattr(entry, 'title', '') or ''
-            description = getattr(entry, 'summary', '') or ''
-            text = f"{title} {description}"
+            title = fix_encoding(getattr(entry, 'title', '') or '')
+            description = fix_encoding(getattr(entry, 'summary', '') or '')
 
             if not matches_keywords(title, description):
                 continue
