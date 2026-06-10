@@ -351,3 +351,88 @@ fetch('news.json')
     console.error('Failed to load news.json:', err);
     document.getElementById('stats').textContent = 'Failed to load articles.';
   });
+
+// ── Visit counter ─────────────────────────────────────────────────────────────
+(function () {
+  const wrap = document.getElementById('visit-count');
+  const num  = document.getElementById('visit-num');
+  if (!wrap || !num) return;
+
+  fetch('https://api.counterapi.dev/v1/wildlens-india/pageviews/up', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : Promise.reject('non-ok'))
+    .then(data => {
+      if (data && typeof data.count === 'number') {
+        num.textContent = data.count.toLocaleString('en-IN');
+        wrap.style.display = 'flex';
+      }
+    })
+    .catch(() => {}); // non-critical — silently hide if unreachable
+}());
+
+// ── Tour ──────────────────────────────────────────────────────────────────────
+function startTour() {
+  // Driver.js v1 IIFE exposes window['driver.js']; fall back to window.driver
+  const mod = window['driver.js'] || window.driver;
+  if (!mod || !mod.driver) {
+    console.warn('WildLens: Driver.js not loaded — tour unavailable');
+    return;
+  }
+
+  mod.driver({
+    showProgress: true,
+    progressText: '{{current}} / {{total}}',
+    nextBtnText:  'Next →',
+    prevBtnText:  '← Back',
+    doneBtnText:  'Done',
+    steps: [
+      {
+        element: '#panel-brand',
+        popover: {
+          title:       'Welcome to WildLens',
+          description: 'India\'s wildlife and environment news, pinned live on an interactive map. Updated every 6 hours from multiple publications.',
+          side: 'right', align: 'start',
+        },
+      },
+      {
+        element: '#cat-body',
+        popover: {
+          title:       'Filter by category',
+          description: 'Five colour-coded types — Poaching & Crime, Species Discovery, Human-Wildlife Conflict, Research & Science, and Conservation & Policy. Click any chip to show or hide that type on the map.',
+          side: 'right', align: 'start',
+        },
+      },
+      {
+        element: '#src-body',
+        popover: {
+          title:       'Filter by source',
+          description: 'Choose which publications to include — Mongabay India, The Hindu, NDTV, Research Matters, Nature India, and more.',
+          side: 'right', align: 'start',
+        },
+      },
+      {
+        element: '#search',
+        popover: {
+          title:       'Search',
+          description: 'Search across headlines, place names, and source names in real time.',
+          side: 'right', align: 'start',
+        },
+      },
+      {
+        element: '#map',
+        popover: {
+          title:       'The map',
+          description: 'Each pin is a news article. Click a pin to see the headline, location, date, and a link to the full story. Clusters expand when you zoom in.',
+          side: 'left', align: 'center',
+        },
+      },
+    ],
+  }).drive();
+}
+
+// Auto-start on first visit (after map has a moment to render)
+if (!localStorage.getItem('wildlens-tour-done')) {
+  localStorage.setItem('wildlens-tour-done', '1');
+  setTimeout(startTour, 1400);
+}
+
+document.getElementById('tour-btn')?.addEventListener('click', startTour);

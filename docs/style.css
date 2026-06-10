@@ -628,6 +628,152 @@ input[type="date"]:focus {
 .popup-link:hover { background: #e8e8e8; }
 .popup-link svg { flex-shrink: 0; }
 
+/* ── Footer meta: visit counter + tour button ───────────────────────────────── */
+#footer-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+#visit-count {
+  display: none; /* revealed by JS once count loads */
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+#visit-count svg { color: var(--text-faint); flex-shrink: 0; }
+
+#tour-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--border-mid);
+  border-radius: var(--r-sm);
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast);
+  white-space: nowrap;
+}
+
+#tour-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-light);
+  color: var(--text-primary);
+}
+
+/* ── Driver.js — monochrome dark override ───────────────────────────────────── */
+.driver-popover {
+  background: #191919 !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.85), 0 2px 10px rgba(0,0,0,0.5) !important;
+  padding: 18px 18px 14px !important;
+  font-family: var(--font) !important;
+  max-width: 280px !important;
+  min-width: 240px !important;
+}
+
+.driver-popover-title {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #f2f2f2 !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 6px !important;
+  line-height: 1.3 !important;
+}
+
+.driver-popover-description {
+  font-size: 12px !important;
+  color: #888 !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+}
+
+.driver-popover-footer {
+  margin-top: 14px !important;
+  gap: 6px !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.driver-popover-progress-text {
+  font-size: 10px !important;
+  color: #444 !important;
+  letter-spacing: 0.04em !important;
+  font-weight: 600 !important;
+  font-family: var(--font) !important;
+  align-self: center !important;
+}
+
+.driver-popover-next-btn,
+.driver-popover-done-btn {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: none !important;
+  font-family: var(--font) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  border-radius: 7px !important;
+  padding: 7px 14px !important;
+  cursor: pointer !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: background 120ms !important;
+}
+
+.driver-popover-next-btn:hover,
+.driver-popover-done-btn:hover {
+  background: #e0e0e0 !important;
+  color: #000 !important;
+}
+
+.driver-popover-prev-btn {
+  background: transparent !important;
+  color: #888 !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  font-family: var(--font) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  border-radius: 7px !important;
+  padding: 7px 14px !important;
+  cursor: pointer !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: color 120ms, border-color 120ms, background 120ms !important;
+}
+
+.driver-popover-prev-btn:hover {
+  color: #f2f2f2 !important;
+  border-color: rgba(255,255,255,0.3) !important;
+  background: rgba(255,255,255,0.05) !important;
+}
+
+.driver-popover-close-btn {
+  color: #555 !important;
+  background: none !important;
+  border: none !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+  transition: color 120ms !important;
+}
+
+.driver-popover-close-btn:hover { color: #f2f2f2 !important; }
+
+/* Hide arrow — floating card looks cleaner */
+.driver-popover-arrow { display: none !important; }
+
 /* ── Reduced motion ─────────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
