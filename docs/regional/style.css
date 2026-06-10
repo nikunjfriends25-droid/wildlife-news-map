@@ -171,25 +171,6 @@ button { font-family: var(--font); cursor: pointer; }
   white-space: nowrap;
 }
 
-/* "Regional Edition →" link in panel header */
-#regional-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-faint);
-  text-decoration: none;
-  white-space: nowrap;
-  transition: color var(--dur-fast);
-  margin-top: 1px;
-}
-
-#regional-link:hover { color: var(--text-secondary); }
-#regional-link:focus-visible { outline: 1px solid rgba(255,255,255,0.3); border-radius: 2px; }
-
 #panel.collapsed #panel-brand { display: none; }
 
 #panel.collapsed #panel-header {
@@ -823,3 +804,74 @@ input[type="date"]:focus {
 @media (min-width: 601px) and (max-width: 900px) {
   :root { --panel-width: 270px; }
 }
+
+/* ── Regional Edition — additional styles ───────────────────────────────────── */
+
+/* "← English Edition" back-link in panel header */
+#english-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--dur-fast);
+  margin-top: 1px;
+}
+
+#english-link:hover { color: var(--text-secondary); }
+#english-link:focus-visible { outline: 1px solid rgba(255,255,255,0.3); border-radius: 2px; }
+
+/* Language filter chips (same layout as category chips + native script label) */
+#lang-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-chip .chip-label-native {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-left: -4px;
+}
+
+/* Language badge inside popup */
+.lang-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: var(--r-full);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* English translation subtitle inside popup */
+.popup-translation {
+  font-size: 11px;
+  color: #555;
+  font-style: italic;
+  line-height: 1.45;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Footer meta for regional (translation notice instead of visit counter) */
+#translation-note {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+
+#translation-note svg { flex-shrink: 0; }
