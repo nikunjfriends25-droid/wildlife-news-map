@@ -43,28 +43,77 @@ SOURCES = [
     'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms',
 ]
 
+# ── Specific wildlife / ecology keywords ────────────────────────────────────
+# Use PHRASES where a single word is too ambiguous (e.g. "lion" → "asiatic lion").
 KEYWORDS = [
-    'tiger', 'leopard', 'elephant', 'rhino', 'lion', 'wolf', 'bear',
-    'gharial', 'crocodile', 'python', 'vulture', 'bustard', 'dolphin',
-    'wildlife', 'poaching', 'forest', 'sanctuary', 'reserve', 'national park',
-    'conservation', 'species', 'habitat', 'corridor', 'encroachment',
-    'WII', 'WWF', 'WTI', 'forest department',
-    'mangrove', 'wetland', 'biodiversity', 'migratory', 'bird',
-    'turtle', 'dugong', 'pangolin', 'cheetah', 'snow leopard',
+    # Unambiguous animal names
+    'tiger', 'leopard', 'elephant', 'rhinoceros', 'rhino', 'gharial',
+    'crocodile', 'python', 'vulture', 'bustard', 'dolphin', 'whale',
+    'dugong', 'pangolin', 'cheetah', 'snow leopard', 'clouded leopard',
+    'sloth bear', 'himalayan bear', 'black bear',
+    'asiatic lion', 'gir lion', 'wolf pack', 'indian wolf',
+    'sea turtle', 'olive ridley', 'leatherback', 'hawksbill',
+    'great indian bustard', 'red panda', 'one-horned rhino',
+    'king cobra', 'monitor lizard', 'fishing cat',
+    'migratory bird', 'bird species', 'raptor', 'avian', 'avifauna',
+    'flamingo', 'pelican', 'hornbill', 'kingfisher', 'eagle', 'owl',
+    # Wildlife / ecology terms — phrases only for ambiguous words
+    'wildlife', 'poaching', 'wildlife trafficking', 'wildlife crime',
+    'national park', 'wildlife sanctuary', 'tiger reserve', 'biosphere reserve',
+    'wildlife corridor', 'elephant corridor', 'forest corridor',
+    'wildlife conservation', 'species conservation', 'biodiversity conservation',
+    'forest department', 'forest fire', 'forest cover', 'forest loss',
+    'reserve forest', 'protected forest', 'protected area',
+    'deforestation', 'afforestation', 'reforestation',
+    'habitat loss', 'habitat destruction', 'habitat fragmentation',
+    'human-wildlife conflict', 'man-animal conflict',
+    'eco-sensitive', 'biodiversity', 'mangrove', 'wetland',
+    'endangered species', 'threatened species', 'extinct species',
+    'invasive species', 'endemic species', 'new species',
+    'camera trap', 'wildlife survey', 'wildlife census',
+    'WII', 'WWF', 'WTI', 'wildlife institute',
+    # Specific protected areas (unambiguous)
     'kaziranga', 'sundarbans', 'corbett', 'bandipur', 'ranthambore',
-    'protected area', 'eco-sensitive', 'deforestation', 'afforestation',
-    'frog', 'reptile', 'amphibian', 'endemic', 'invasive',
+    'bandhavgarh', 'kanha', 'tadoba', 'nagarhole', 'periyar',
+    'satpura', 'melghat', 'pench', 'simlipal', 'manas',
+    'gir forest', 'sariska', 'rajaji', 'dudhwa',
+    # Ecology / environment science
+    'amphibian', 'reptile', 'frog species', 'toad species',
+    'coral reef', 'seagrass', 'mangrove forest',
+    'carbon sequestration', 'ecosystem', 'ecology',
+    'climate change impact on wildlife', 'species extinction',
 ]
 
-# Articles matching ANY of these terms are excluded even if they hit KEYWORDS.
-# Catches military ops, crime, politics, sports etc. that mention "forest" incidentally.
+# ── Exclusion list — any match blocks the article ────────────────────────────
+# Catches politics, infrastructure, crime, sports, finance etc. that
+# incidentally mention an ecology keyword.
 EXCLUDE_KEYWORDS = [
+    # Military / security
     'militant', 'terrorist', 'encounter', 'ceasefire', 'army operation',
     'security forces', 'paramilitary', 'naxal', 'maoist', 'insurgent',
-    'ipl', 'cricket', 'football', 'election', 'poll', 'constituency',
-    'murder', 'rape', 'accident', 'crash', 'blast', 'bomb', 'explosion',
+    'drone strike', 'airstrike', 'gunfight', 'firing', 'crpf', 'bsf',
+    # Politics / government
+    'election', 'constituency', 'mla', 'mp ', ' mp,', 'cabinet approves',
+    'union cabinet', 'lok sabha', 'rajya sabha', 'parliament',
+    'rebellion', 'political', 'party', 'tmc', 'bjp', 'congress', 'aap',
+    'nda ', ' upa', 'chief minister', 'governor appoints',
+    'anti-encroachment drive', 'demolition drive', 'encroachment drive',
+    # Infrastructure / civic
+    'metro', 'railway', 'highway', 'flyover', 'road widening',
+    'airport link', 'commonwealth games', 'expressway',
+    'mosque demolished', 'temple demolished', 'mazar',
+    # Crime / law & order
+    'murder', 'rape', 'kidnap', 'robbery', 'fraud', 'scam', 'arrest',
+    'blast', 'bomb', 'explosion', 'riot', 'curfew', 'internet blackout',
+    'prohibitory orders', 'missing officer', 'officer missing',
+    'officer arrested', 'officer suspended', 'officer still missing',
+    'forest department officer', 'forest officer missing',
+    # Sports
+    'ipl', 'cricket', 'football', 'hockey match', 'tennis', 'wrestling',
+    'commonwealth games',
+    # Finance / economy
     'stock market', 'sensex', 'nifty', 'budget', 'gdp', 'inflation',
-    'drone strike', 'airstrike', 'gunfight', 'firing',
+    'interest rate', 'rbi ', 'sebi ', 'ipo ',
 ]
 
 NEWS_JSON = os.path.join(os.path.dirname(__file__), '..', 'docs', 'news.json')
@@ -82,11 +131,29 @@ def load_existing():
     return []
 
 
-def matches_keywords(text: str) -> bool:
-    lower = text.lower()
-    if any(ex.lower() in lower for ex in EXCLUDE_KEYWORDS):
+import re as _re
+
+def _word_in(phrase: str, text: str) -> bool:
+    """True if phrase appears as whole word(s) in text (case-insensitive)."""
+    escaped = _re.escape(phrase.lower())
+    return bool(_re.search(r'\b' + escaped + r'\b', text))
+
+def matches_keywords(title: str, description: str = '') -> bool:
+    """
+    Two-stage check:
+    1. Exclusion — whole-word match against title+description.
+    2. Inclusion — at least one KEYWORD must appear as whole word(s) in the TITLE.
+       Word-boundary matching prevents 'owl' matching inside 'Gachibowli', etc.
+    """
+    combined = (title + ' ' + description).lower()
+    title_lower = title.lower()
+
+    # Stage 1: exclude
+    if any(_word_in(ex, combined) for ex in EXCLUDE_KEYWORDS):
         return False
-    return any(kw.lower() in lower for kw in KEYWORDS)
+
+    # Stage 2: keyword must appear in the TITLE as whole word/phrase
+    return any(_word_in(kw, title_lower) for kw in KEYWORDS)
 
 
 def parse_date(entry) -> str:
@@ -162,7 +229,7 @@ def main():
             description = getattr(entry, 'summary', '') or ''
             text = f"{title} {description}"
 
-            if not matches_keywords(text):
+            if not matches_keywords(title, description):
                 continue
 
             pub_date = parse_date(entry)
