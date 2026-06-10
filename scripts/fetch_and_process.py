@@ -48,21 +48,108 @@ SOURCES = [
     'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms',
 ]
 
-# ── Specific wildlife / ecology keywords ────────────────────────────────────
-# Use PHRASES where a single word is too ambiguous (e.g. "lion" → "asiatic lion").
+# ── Comprehensive species + ecology keywords ────────────────────────────────
 KEYWORDS = [
-    # Unambiguous animal names
-    'tiger', 'leopard', 'elephant', 'rhinoceros', 'rhino', 'gharial',
-    'crocodile', 'python', 'vulture', 'bustard', 'dolphin', 'whale',
-    'dugong', 'pangolin', 'cheetah', 'snow leopard', 'clouded leopard',
-    'sloth bear', 'himalayan bear', 'black bear',
-    'asiatic lion', 'gir lion', 'wolf pack', 'indian wolf',
-    'sea turtle', 'olive ridley', 'leatherback', 'hawksbill',
-    'great indian bustard', 'red panda', 'one-horned rhino',
-    'king cobra', 'monitor lizard', 'fishing cat',
-    'migratory bird', 'bird species', 'raptor', 'avian', 'avifauna',
-    'flamingo', 'pelican', 'hornbill', 'kingfisher', 'eagle', 'owl',
-    # Wildlife / ecology terms — phrases only for ambiguous words
+
+    # ── MAMMALS ──────────────────────────────────────────────────────────────
+    # Big cats & felids
+    'tiger', 'leopard', 'cheetah', 'snow leopard', 'clouded leopard',
+    'fishing cat', 'rusty-spotted cat', 'jungle cat', 'leopard cat', 'caracal',
+    # Elephants & rhinos
+    'elephant', 'rhinoceros', 'rhino', 'one-horned rhino',
+    # Bears
+    'sloth bear', 'himalayan bear', 'black bear', 'brown bear', 'sun bear',
+    # Canids & hyena
+    'wolf', 'dhole', 'indian wild dog', 'wild dog', 'jackal', 'fox', 'hyena',
+    # Primates
+    'langur', 'macaque', 'gibbon', 'hoolock gibbon', 'lion-tailed macaque',
+    'bonnet macaque', 'slow loris', 'monkey',
+    # Deer & antelope
+    'sambar', 'chital', 'spotted deer', 'barasingha', 'swamp deer',
+    'hog deer', 'barking deer', 'mouse deer', 'musk deer',
+    'nilgai', 'blackbuck', 'chinkara', 'four-horned antelope', 'gazelle',
+    # Mountain ungulates
+    'nilgiri tahr', 'markhor', 'ibex', 'blue sheep', 'bharal', 'hangul',
+    'kashmir stag', 'mithun', 'gaur', 'bison', 'wild buffalo',
+    # Lions
+    'asiatic lion', 'gir lion',
+    # Pangolin, panda & others
+    'pangolin', 'red panda', 'giant squirrel', 'malabar squirrel',
+    'flying squirrel', 'porcupine', 'Indian crested porcupine',
+    # Otters, civets & mustelids
+    'otter', 'smooth-coated otter', 'small-clawed otter',
+    'civet', 'palm civet', 'binturong', 'mongoose',
+    # Wild pig
+    'wild boar',
+    # Marine mammals
+    'dolphin', 'river dolphin', 'gangetic dolphin', 'irrawaddy dolphin',
+    'whale', 'blue whale', 'humpback whale', 'sperm whale', 'porpoise', 'dugong',
+
+    # ── BIRDS ────────────────────────────────────────────────────────────────
+    # Raptors
+    'eagle', 'vulture', 'osprey', 'falcon', 'kite', 'hawk', 'harrier',
+    'buzzard', 'kestrel', 'raptor', 'shikra', 'goshawk',
+    # Bustards & cranes
+    'bustard', 'great indian bustard', 'sarus crane', 'demoiselle crane', 'crane',
+    # Large waterbirds
+    'flamingo', 'pelican', 'stork', 'spoonbill', 'ibis', 'adjutant',
+    'painted stork', 'cormorant', 'darter', 'egret', 'heron',
+    # Hornbills, kingfishers & related
+    'hornbill', 'kingfisher', 'bee-eater', 'roller', 'hoopoe', 'barbet',
+    # Owls & nightjars
+    'owl', 'owlet', 'nightjar', 'frogmouth',
+    # Parakeets & pigeons
+    'parakeet', 'parrot', 'pigeon', 'dove',
+    # Peacock
+    'peacock', 'peafowl',
+    # Pheasants & junglefowl
+    'pheasant', 'junglefowl', 'jungle fowl', 'partridge', 'quail',
+    # Passerines & others
+    'sunbird', 'woodpecker', 'drongo', 'pitta', 'bulbul', 'babbler',
+    'warbler', 'flycatcher', 'robin', 'thrush', 'myna', 'starling',
+    'weaver', 'munia', 'sparrow',
+    # Shorebirds & wetland birds
+    'plover', 'sandpiper', 'lapwing', 'tern', 'skimmer', 'snipe',
+    'avocet', 'stilt', 'pratincole',
+    # General bird terms
+    'avian', 'avifauna', 'migratory bird', 'bird species', 'bird migration',
+    'nesting bird', 'breeding bird', 'waterbird', 'wader', 'seabird',
+
+    # ── REPTILES ─────────────────────────────────────────────────────────────
+    'crocodile', 'gharial', 'mugger',
+    'python', 'king cobra', 'cobra', 'krait', 'viper', 'russell viper',
+    'rat snake', 'sand boa', 'boa', 'sea snake',
+    'monitor lizard', 'lizard', 'gecko', 'skink', 'chameleon', 'agama',
+    'turtle', 'tortoise', 'sea turtle', 'olive ridley', 'leatherback', 'hawksbill',
+    'green turtle', 'loggerhead', 'softshell turtle',
+
+    # ── AMPHIBIANS ───────────────────────────────────────────────────────────
+    'frog', 'toad', 'salamander', 'newt', 'caecilian', 'amphibian',
+    'tree frog', 'night frog', 'shrub frog', 'torrent frog',
+
+    # ── FISH ─────────────────────────────────────────────────────────────────
+    'mahseer', 'hilsa', 'rohu', 'catfish', 'snakehead',
+    'shark', 'whale shark', 'ray', 'manta ray', 'sawfish',
+    'seahorse', 'pufferfish', 'clownfish', 'coral fish',
+    'eel', 'river fish', 'freshwater fish', 'marine fish',
+
+    # ── INVERTEBRATES ────────────────────────────────────────────────────────
+    'butterfly', 'moth', 'dragonfly', 'damselfly', 'odonate',
+    'beetle', 'wasp', 'bee', 'honeybee', 'bumblebee',
+    'ant', 'termite', 'firefly', 'glowworm', 'cicada',
+    'spider', 'scorpion', 'crab', 'horseshoe crab',
+    'coral', 'coral reef', 'jellyfish', 'sea urchin',
+    'octopus', 'squid', 'cuttlefish', 'mollusc',
+    'snail', 'earthworm',
+
+    # ── PLANTS & FUNGI ───────────────────────────────────────────────────────
+    'orchid', 'pitcher plant', 'sundew', 'cycad', 'tree fern',
+    'rhododendron', 'magnolia', 'wild banana', 'bamboo species',
+    'medicinal plant', 'plant species', 'endemic plant', 'invasive plant',
+    'algae', 'seagrass', 'moss', 'lichen', 'fungi', 'mushroom species',
+    'foraminifera', 'diatom', 'plankton', 'microorganism', 'zooplankton',
+
+    # ── ECOLOGY & CONSERVATION ───────────────────────────────────────────────
     'wildlife', 'poaching', 'wildlife trafficking', 'wildlife crime',
     'national park', 'wildlife sanctuary', 'tiger reserve', 'biosphere reserve',
     'wildlife corridor', 'elephant corridor', 'forest corridor',
@@ -74,29 +161,30 @@ KEYWORDS = [
     'human-wildlife conflict', 'man-animal conflict',
     'eco-sensitive', 'biodiversity', 'mangrove', 'wetland',
     'endangered species', 'threatened species', 'extinct species',
-    'invasive species', 'endemic species', 'new species',
-    'camera trap', 'wildlife survey', 'wildlife census',
-    'WII', 'WWF', 'WTI', 'wildlife institute',
-    # Specific protected areas (unambiguous)
+    'invasive species', 'endemic species', 'new species', 'new to science',
+    'species discovered', 'species found', 'species recorded',
+    'camera trap', 'wildlife survey', 'wildlife census', 'wildlife monitoring',
+    'WII', 'WWF', 'WTI', 'IUCN', 'wildlife institute',
+    'ecosystem', 'ecology', 'ecological', 'carbon sequestration',
+    'marine ecosystem', 'coastal ecosystem', 'freshwater ecosystem',
+    'woodland', 'native forest', 'tree cover',
+    'migratory', 'nesting', 'breeding', 'spawning',
+    'animal behaviour', 'conservation biology',
+    'citizen science', 'species',
+
+    # ── PROTECTED AREAS ──────────────────────────────────────────────────────
     'kaziranga', 'sundarbans', 'corbett', 'bandipur', 'ranthambore',
     'bandhavgarh', 'kanha', 'tadoba', 'nagarhole', 'periyar',
     'satpura', 'melghat', 'pench', 'simlipal', 'manas',
-    'gir forest', 'sariska', 'rajaji', 'dudhwa',
-    # Ecology / environment science
-    'amphibian', 'reptile', 'frog species', 'toad species',
-    'coral reef', 'seagrass', 'mangrove forest',
-    'carbon sequestration', 'ecosystem', 'ecology',
-    'climate change impact on wildlife', 'species extinction',
-    # Broader species / nature science (catches Research Matters, Nature India)
-    'species', 'snake', 'eel', 'wasp', 'moth', 'beetle', 'butterfly',
-    'spider', 'scorpion', 'lizard', 'gecko', 'turtle', 'tortoise',
-    'woodland', 'native forest', 'tree cover', 'tree plantation',
-    'marine', 'coastal ecosystem', 'coastal ecology', 'river dolphin',
-    'migratory', 'nesting', 'breeding', 'spawning',
-    'conservation biology', 'wildlife biology', 'ecology research',
-    'species discovery', 'species found', 'new to science',
-    'citizen science', 'wildlife monitoring', 'animal behaviour',
-    'habitat', 'conservation',
+    'gir forest', 'sariska', 'rajaji', 'dudhwa', 'mudumalai',
+    'anamalai', 'kalakad', 'mundanthurai', 'agasthyamalai',
+    'wayanad', 'parambikulam', 'silent valley', 'mukurthi',
+    'pakke', 'eaglenest', 'dibru-saikhowa', 'nameri',
+    'buxa', 'gorumara', 'jaldapara', 'chapramari',
+    'orang', 'pobitora', 'laokhowa',
+    'bhadra', 'kudremukh', 'pushpagiri', 'brahmagiri',
+    'indravati', 'panna', 'achanakmar', 'udanti',
+    'nokrek', 'dampa', 'khangchendzonga', 'singalila',
 ]
 
 # ── Exclusion list — any match blocks the article ────────────────────────────
