@@ -46,6 +46,14 @@ SOURCES = [
     'https://timesofindia.indiatimes.com/rssfeeds/2647163.cms',
     # Times of India — India news (catches forest, wildlife stories)
     'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms',
+
+    # ── Northeast India ────────────────────────────────────────────────────────
+    # Assam Tribune — Assam's leading English daily; strong forest/wildlife beat
+    'https://www.assamtribune.com/feed/',
+    # Northeast Now — dedicated Northeast desk; covers all 8 NE states
+    'https://nenow.in/feed',
+    # EastMojo — covers all 8 NE states; environment & wildlife desk
+    'https://eastmojo.com/feed/',
 ]
 
 # ── Comprehensive species + ecology keywords ────────────────────────────────
