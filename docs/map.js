@@ -7,22 +7,26 @@ const INDIA_BOUNDS = [[6, 68], [37, 98]];
 
 const CATEGORY_COLORS = {
   poaching:     '#ef4444',
-  sighting:     '#22c55e',
+  discovery:    '#f59e0b',
+  conflict:     '#f97316',
+  research:     '#06b6d4',
   conservation: '#818cf8',
-  other:        '#64748b',
 };
 
 const CATEGORY_LABELS = {
-  poaching:     'Poaching',
-  sighting:     'Sighting',
-  conservation: 'Conservation',
-  other:        'Other',
+  poaching:     'Poaching & Crime',
+  discovery:    'Species Discovery',
+  conflict:     'Human-Wildlife Conflict',
+  research:     'Research & Science',
+  conservation: 'Conservation & Policy',
 };
 
+// Order matters — first match wins. conservation is the fallback (not listed here).
 const CATEGORY_KEYWORDS = {
-  poaching:     ['poach', 'snare', 'trap', 'traffick', 'smuggl', 'ivory', 'illegal hunt', 'kill', 'seized', 'arrested', 'wildlife crime', 'confiscat'],
-  sighting:     ['sight', 'spot', 'seen', 'found', 'camera trap', 'photograph', 'recorded', 'survey', 'new species', 'discover', 'endemic', 'rare species'],
-  conservation: ['conserv', 'protect', 'rescue', 'rehabilitat', 'restor', 'reserve', 'sanctuary', 'corridor', 'national park', 'habitat', 'conflict', 'forest fire', 'encroach', 'deforest', 'afforest', 'extinct', 'endanger', 'dies', 'death', 'infection', 'mining', 'degrad', 'biodiversity', 'mangrove', 'wetland'],
+  poaching:  ['poach', 'snare', 'traffick', 'smuggl', 'ivory', 'wildlife crime', 'confiscat', 'illegal hunt', 'crime against'],
+  discovery: ['new species', 'new-to-science', 'records first', 'first record', 'scientists discover', 'new fanged', 'new toad', 'new frog', 'new fish species', 'new gecko', 'new snake eel', 'emerges from ancient', 'solves evolutionary'],
+  conflict:  ['elephant attack', 'leopard attack', 'tiger attack', 'bear attack', 'mauled', 'conflict hotspot', 'human-wildlife', 'man-animal', 'human-animal', 'drone squad'],
+  research:  ['finds study', 'reveals survey', 'reveals study', 'population rises', 'population survey', 'census', 'behaviour', 'behavior', 'foraging', 'camera trap', 'odonate', 'migratory pastoralist'],
 };
 
 // ── Map init ──────────────────────────────────────────────────────────────────
@@ -69,7 +73,7 @@ map.addLayer(clusters);
 // ── State ─────────────────────────────────────────────────────────────────────
 let allArticles = [];
 let allMarkers  = [];
-const activeCats = new Set(['poaching', 'sighting', 'conservation', 'other']);
+const activeCats = new Set(['poaching', 'discovery', 'conflict', 'research', 'conservation']);
 const activeSrcs = new Set();
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -78,7 +82,7 @@ function categorize(headline) {
   for (const [cat, words] of Object.entries(CATEGORY_KEYWORDS)) {
     if (words.some(w => lower.includes(w))) return cat;
   }
-  return 'other';
+  return 'conservation'; // fallback — Conservation & Policy catches everything else
 }
 
 function markerRadius(published) {
@@ -96,11 +100,12 @@ function formatDate(dateStr) {
 function popupBadgeStyle(cat) {
   const colors = {
     poaching:     { bg: 'rgba(239,68,68,0.15)',   border: 'rgba(239,68,68,0.35)',   text: '#fca5a5', dot: '#ef4444' },
-    sighting:     { bg: 'rgba(34,197,94,0.15)',    border: 'rgba(34,197,94,0.35)',   text: '#86efac', dot: '#22c55e' },
-    conservation: { bg: 'rgba(129,140,248,0.15)',  border: 'rgba(129,140,248,0.35)', text: '#a5b4fc', dot: '#818cf8' },
-    other:        { bg: 'rgba(100,116,139,0.15)',  border: 'rgba(100,116,139,0.35)', text: '#94a3b8', dot: '#64748b' },
+    discovery:    { bg: 'rgba(245,158,11,0.15)',  border: 'rgba(245,158,11,0.35)',  text: '#fcd34d', dot: '#f59e0b' },
+    conflict:     { bg: 'rgba(249,115,22,0.15)',  border: 'rgba(249,115,22,0.35)',  text: '#fdba74', dot: '#f97316' },
+    research:     { bg: 'rgba(6,182,212,0.15)',   border: 'rgba(6,182,212,0.35)',   text: '#67e8f9', dot: '#06b6d4' },
+    conservation: { bg: 'rgba(129,140,248,0.15)', border: 'rgba(129,140,248,0.35)', text: '#a5b4fc', dot: '#818cf8' },
   };
-  return colors[cat] || colors.other;
+  return colors[cat] || colors.conservation;
 }
 
 function buildPopup(a) {
@@ -275,7 +280,7 @@ document.getElementById('reset-btn').addEventListener('click', () => {
   searchEl.value = '';
   clearBtn.style.display = 'none';
 
-  ['poaching','sighting','conservation','other'].forEach(c => activeCats.add(c));
+  ['poaching','discovery','conflict','research','conservation'].forEach(c => activeCats.add(c));
   document.querySelectorAll('#cat-filters .filter-chip').forEach(chip => {
     chip.classList.add('active');
     chip.setAttribute('aria-checked', 'true');

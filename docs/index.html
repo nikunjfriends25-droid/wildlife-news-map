@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
 
@@ -73,28 +73,35 @@
           <div id="cat-filters" role="group" aria-label="Category filter">
             <div class="filter-chip active" data-cat="poaching" role="checkbox" aria-checked="true" tabindex="0">
               <span class="chip-dot" style="background:#ef4444" aria-hidden="true"></span>
-              <span class="chip-label">Poaching</span>
+              <span class="chip-label">Poaching & Crime</span>
               <span class="chip-check" aria-hidden="true">
                 <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </span>
             </div>
-            <div class="filter-chip active" data-cat="sighting" role="checkbox" aria-checked="true" tabindex="0">
-              <span class="chip-dot" style="background:#22c55e" aria-hidden="true"></span>
-              <span class="chip-label">Sighting</span>
+            <div class="filter-chip active" data-cat="discovery" role="checkbox" aria-checked="true" tabindex="0">
+              <span class="chip-dot" style="background:#f59e0b" aria-hidden="true"></span>
+              <span class="chip-label">Species Discovery</span>
+              <span class="chip-check" aria-hidden="true">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+            </div>
+            <div class="filter-chip active" data-cat="conflict" role="checkbox" aria-checked="true" tabindex="0">
+              <span class="chip-dot" style="background:#f97316" aria-hidden="true"></span>
+              <span class="chip-label">Human-Wildlife Conflict</span>
+              <span class="chip-check" aria-hidden="true">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+            </div>
+            <div class="filter-chip active" data-cat="research" role="checkbox" aria-checked="true" tabindex="0">
+              <span class="chip-dot" style="background:#06b6d4" aria-hidden="true"></span>
+              <span class="chip-label">Research & Science</span>
               <span class="chip-check" aria-hidden="true">
                 <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </span>
             </div>
             <div class="filter-chip active" data-cat="conservation" role="checkbox" aria-checked="true" tabindex="0">
               <span class="chip-dot" style="background:#818cf8" aria-hidden="true"></span>
-              <span class="chip-label">Conservation</span>
-              <span class="chip-check" aria-hidden="true">
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-            </div>
-            <div class="filter-chip active" data-cat="other" role="checkbox" aria-checked="true" tabindex="0">
-              <span class="chip-dot" style="background:#64748b" aria-hidden="true"></span>
-              <span class="chip-label">Other</span>
+              <span class="chip-label">Conservation & Policy</span>
               <span class="chip-check" aria-hidden="true">
                 <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </span>
@@ -160,6 +167,6 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-  <script src="map.js?v=9"></script>
+  <script src="map.js?v=10"></script>
 </body>
 </html>
