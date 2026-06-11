@@ -1,5 +1,32 @@
 [
   {
+    "headline": "3 injured in two suspected elephant attacks in Kerala’s Palakkad",
+    "url": "https://www.thehindu.com/news/national/kerala/3-injured-in-two-suspected-elephant-attacks-in-keralas-palakkad/article71087626.ece",
+    "source": "The Hindu",
+    "published": "2026-06-11",
+    "place_name": "Palakkad",
+    "lat": 10.7867,
+    "lon": 76.6548
+  },
+  {
+    "headline": "Forest fire along LoC triggers land mine explosions in Rajouri",
+    "url": "https://www.greaterkashmir.com/pir-panjal/forest-fire-along-loc-triggers-land-mine-explosions-in-rajouri-12023793",
+    "source": "Greater Kashmir",
+    "published": "2026-06-11",
+    "place_name": "Rajouri",
+    "lat": 33.3793,
+    "lon": 74.3105
+  },
+  {
+    "headline": "Massive forest fires damage hundreds of Kanals of green cover in Rajouri",
+    "url": "https://www.greaterkashmir.com/pir-panjal/massive-forest-fires-damage-hundreds-of-kanals-of-green-cover-in-rajouri-12023792",
+    "source": "Greater Kashmir",
+    "published": "2026-06-11",
+    "place_name": "Rajouri",
+    "lat": 33.3793,
+    "lon": 74.3105
+  },
+  {
     "headline": "CREDAI supports Parandur project, says second airport for Chennai is necessary",
     "url": "https://www.thehindu.com/news/national/tamil-nadu/credai-supports-parandur-project-says-second-airport-for-chennai-is-necessary/article71082041.ece",
     "source": "The Hindu",
@@ -124,6 +151,15 @@
     "place_name": "Kerala",
     "lat": 10.8505,
     "lon": 76.2711
+  },
+  {
+    "headline": "From caves to concrete bunkers: How militants adapt hideouts in Jammu and Kashmir’s forest belt",
+    "url": "https://indianexpress.com/article/india/from-caves-to-concrete-bunkers-how-militants-adapt-hideouts-in-jammu-and-kashmirs-forest-belt-10733808/",
+    "source": "Indian Express",
+    "published": "2026-06-10",
+    "place_name": "Jammu and Kashmir",
+    "lat": 33.7782,
+    "lon": 76.5762
   },
   {
     "headline": "Researchers describe a new fanged frog species that builds mud nests on the forest floor",
@@ -702,6 +738,15 @@
     "lon": 93.1711
   },
   {
+    "headline": "Assam plans to add 4.52 sq km to Kaziranga to protect highlands for wildlife during floods",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZGZNRVhaZHRSc2J3d3FyOU1DYURReVh2aDRVNXJDN1FDWEp4T1doU0NBUnQ4d01PMGxUa3pyOFBXLVBmWldpS2JmZHQ2ZGdOaHJTa0k2bGplWG40WlZmSVVTY1RTaEM0dFUyUUFidDZHdHI5TzNzek5wYkJRUGh6MHRRWHJqX1ZSWkh2d2d3ejBjblZtVlA3UGRvaWFFbjhqZnNqVHo2OEZHNE13aW5HVDFGMkdSLUZBcC1nVTB3Z0pReDlBZVNQMTBOT2pvX2RaRHhR?oc=5",
+    "source": "Deccan Herald",
+    "published": "2021-11-10",
+    "place_name": "Assam",
+    "lat": 26.2006,
+    "lon": 92.9376
+  },
+  {
     "headline": "Assam Flood: Surging Brahmaputra Takes Heavy Toll on State’s Wildlife - The Wire Science",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNM1YzQU5NZ2xDUGZteGRHaGNwYXdRT0FhNEQzdjQxRkRzejZJczF4SUdad05FYjFac2xvWGJLeW1sRmg5MUgtdlByUGZfeHFROHEtWU1sZVhTeHlFd2w1TjZLUmtSdUZNaXhZblpWYlUya0RxZEl4VG42LUdDcGtyd2FOZmh6R3lkbk5LNEtxVU1jM1VxNDR5VW55MWpva2ZuQVpz?oc=5",
     "source": "The Wire",
@@ -763,6 +808,15 @@
     "place_name": "Brahmaputra",
     "lat": 26.8,
     "lon": 93.7
+  },
+  {
+    "headline": "Snow Leopard Skin Recovered in Uttarakhand",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ2RLQnVxYWdBMHhzQ3NiN2JfVHNVMkRvc1pnRTBCOUE0S29WUXFnOW9tZ3NQRG5fSnR5d2s4d1BhcXRHMy03cTBNV0hBV1h4M0NiZjFBLWV3MzZ6cDV0WlBZM21iY0RBMnU4VGl2YkVHQXRpeXV4a1BGNGFaVF83Y2RBaw?oc=5",
+    "source": "Hill Post",
+    "published": "2012-12-06",
+    "place_name": "Uttarakhand",
+    "lat": 30.0668,
+    "lon": 79.0193
   },
   {
     "headline": "Great Himalayan National Park in Himachal On UNESCO Tentative World Heritage List",
