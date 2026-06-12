@@ -33,10 +33,10 @@ const CATEGORY_KEYWORDS = {
 const map = L.map('map', {
   center: [22, 82],
   zoom: 5,
-  minZoom: 5,
+  minZoom: 4,
   maxZoom: 15,
   zoomSnap: 0.25,            // allows fractional zoom so fitBounds fills India tightly
-  maxBounds: [[4, 65], [39, 100]],  // tight around India — prevents panning to surrounding countries
+  maxBounds: [[1, 63], [41, 102]],  // contains India + small buffer; prevents far panning
   maxBoundsViscosity: 1.0,   // hard boundary — no drag outside India area
   zoomControl: false,
 });
@@ -51,8 +51,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   maxZoom: 19,
 }).addTo(map);
 
-// Fit India — slightly expanded from INDIA_BOUNDS so J&K top and island chains aren't clipped
-map.fitBounds([[5.5, 67], [37.5, 98.5]], { padding: [8, 8] });
+// Fit India — generous bounds so J&K (38.5°N) and Nicobar (3.5°N) are comfortably visible
+map.fitBounds([[3.5, 66], [38.5, 99]], { padding: [10, 10] });
 
 // India official boundary overlay (follows India's claimed boundary incl. Arunachal Pradesh,
 // full J&K/PoK/Gilgit-Baltistan, and Aksai Chin). Non-interactive; sits above tile layer.
