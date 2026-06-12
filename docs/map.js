@@ -478,6 +478,14 @@ document.getElementById('tour-btn')?.addEventListener('click', startTour);
   }
   function addBot(html) { addMsg('bot', html); }
 
+  const STOP_WORDS = new Set([
+    'list', 'show', 'find', 'display', 'see', 'get', 'give', 'tell', 'please',
+    'articles', 'article', 'news', 'related', 'about', 'to', 'for', 'from',
+    'the', 'a', 'an', 'any', 'some', 'all', 'me', 'in', 'of', 'on', 'at',
+    'with', 'how', 'many', 'what', 'which', 'where', 'latest', 'recent',
+    'newest', 'last', 'count', 'number',
+  ]);
+
   const SPECIES = [
     'snow leopard', 'sloth bear', 'tiger', 'elephant', 'leopard', 'lion',
     'rhino', 'rhinoceros', 'bear', 'wolf', 'gharial', 'crocodile', 'vulture',
@@ -549,6 +557,23 @@ document.getElementById('tour-btn')?.addEventListener('click', startTour);
     } else if (source) {
       filtered = arts.filter(a => a.source === source);
       desc = `articles from ${source}`;
+    } else {
+      // free-text fallback: strip intent/stop words, search remaining terms
+      const terms = q.split(/\s+/).filter(w => w.length > 2 && !STOP_WORDS.has(w));
+      if (terms.length) {
+        const phrase = terms.join(' ');
+        // prefer exact phrase match, fall back to all-words match
+        const phraseMatches = arts.filter(a => artMatches(a, phrase));
+        filtered = phraseMatches.length
+          ? phraseMatches
+          : arts.filter(a => terms.every(t => artMatches(a, t)));
+        if (filtered.length && filtered.length < arts.length) {
+          desc = `"${phrase}" articles`;
+          mapKw = phrase;
+        } else {
+          filtered = arts; // no meaningful match — keep all
+        }
+      }
     }
 
     // stats or bare total count
