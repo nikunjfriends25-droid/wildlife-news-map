@@ -59,7 +59,7 @@ fetch('india_boundary.geojson')
   .then(r => r.json())
   .then(data => {
     L.geoJSON(data, {
-      style: { color: '#ffffff', weight: 2.5, opacity: 0.75, fill: false },
+      style: { color: '#ffffff', weight: 1, opacity: 0.3, fill: false },
       interactive: false,
     }).addTo(map);
   })
