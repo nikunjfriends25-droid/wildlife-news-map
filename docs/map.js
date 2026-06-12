@@ -436,3 +436,197 @@ if (!localStorage.getItem('wildlens-tour-done')) {
 }
 
 document.getElementById('tour-btn')?.addEventListener('click', startTour);
+
+// ── Chat widget ───────────────────────────────────────────────────────────────
+(function chatWidget() {
+  const fab      = document.getElementById('chat-fab');
+  const widget   = document.getElementById('chat-widget');
+  const closeBtn = document.getElementById('chat-close');
+  const msgs     = document.getElementById('chat-messages');
+  const inp      = document.getElementById('chat-input');
+  const sendBtn  = document.getElementById('chat-send');
+
+  if (!fab || !widget) return;
+
+  let isOpen = false;
+
+  function openChat() {
+    isOpen = true;
+    widget.classList.add('open');
+    inp.focus();
+    if (!msgs.childElementCount) {
+      addBot('Hi! Ask me about the articles on the map — try:<ul>' +
+        '<li><em>How many tiger articles?</em></li>' +
+        '<li><em>Show me poaching news</em></li>' +
+        '<li><em>Latest elephant article</em></li>' +
+        '<li><em>Which place has most articles?</em></li>' +
+        '</ul>');
+    }
+  }
+  function closeChat() { isOpen = false; widget.classList.remove('open'); }
+
+  fab.addEventListener('click', () => isOpen ? closeChat() : openChat());
+  closeBtn.addEventListener('click', closeChat);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen) closeChat(); });
+
+  function addMsg(role, html) {
+    const div = document.createElement('div');
+    div.className = `chat-msg chat-msg-${role}`;
+    div.innerHTML = html;
+    msgs.appendChild(div);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addBot(html) { addMsg('bot', html); }
+
+  const SPECIES = [
+    'snow leopard', 'sloth bear', 'tiger', 'elephant', 'leopard', 'lion',
+    'rhino', 'rhinoceros', 'bear', 'wolf', 'gharial', 'crocodile', 'vulture',
+    'bustard', 'dolphin', 'python', 'pangolin', 'jackal', 'deer', 'bird',
+  ];
+
+  const CAT_ALIAS = {
+    poaching: 'poaching', crime: 'poaching', smuggl: 'poaching', traffick: 'poaching', snare: 'poaching',
+    discovery: 'discovery', sighting: 'discovery',
+    conflict: 'conflict', attack: 'conflict',
+    research: 'research', census: 'research', study: 'research', survey: 'research',
+    conservation: 'conservation', policy: 'conservation',
+  };
+
+  function artMatches(a, kw) {
+    return (a.headline    || '').toLowerCase().includes(kw) ||
+           (a.place_name  || '').toLowerCase().includes(kw);
+  }
+
+  function aLink(a) {
+    return `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(a.headline)}</a>`;
+  }
+
+  function respond(raw) {
+    const q = raw.toLowerCase().trim();
+    if (!q) return;
+    addMsg('user', escapeHtml(raw));
+
+    const arts = allArticles;
+    if (!arts.length) { addBot('Articles are still loading — try again in a moment.'); return; }
+
+    const isCount  = /\bhow many\b|\bcount\b|\bnumber of\b|\btotal\b/.test(q);
+    const isLatest = /\blatest\b|\bmost recent\b|\bnewest\b|\blast\b/.test(q);
+    const isShow   = /\bshow\b|\bfind\b|\blist\b|\bdisplay\b|\bsee\b/.test(q);
+    const isTop    = /\bmost\b|\btop\b|\bwhich (place|state|location|area)\b|\bwhere (are|is) most\b/.test(q);
+    const isHelp   = /\bhelp\b|\bwhat can\b|\bwhat do you\b/.test(q);
+    const isStats  = /\bstats\b|\bsummary\b|\boverview\b/.test(q);
+
+    if (isHelp) {
+      addBot('I can answer:<ul>' +
+        '<li><em>How many tiger articles?</em></li>' +
+        '<li><em>Show me poaching news</em></li>' +
+        '<li><em>Latest elephant article</em></li>' +
+        '<li><em>Which place has most articles?</em></li>' +
+        '<li><em>Articles from Mongabay</em></li>' +
+        '<li><em>Stats / overview</em></li>' +
+        '</ul>');
+      return;
+    }
+
+    // detect subject
+    const species  = SPECIES.find(s => q.includes(s));
+    const catAlias = Object.keys(CAT_ALIAS).find(k => q.includes(k));
+    const cat      = catAlias ? CAT_ALIAS[catAlias] : null;
+    const source   = [...new Set(arts.map(a => a.source))].find(s => q.includes(s.toLowerCase()));
+
+    let filtered = arts;
+    let desc = 'all articles';
+    let mapKw = '';
+
+    if (species) {
+      filtered = arts.filter(a => artMatches(a, species));
+      desc = `${species} articles`;
+      mapKw = species;
+    } else if (cat) {
+      filtered = arts.filter(a => categorize(a.headline) === cat);
+      desc = `${CATEGORY_LABELS[cat]} articles`;
+      mapKw = catAlias;
+    } else if (source) {
+      filtered = arts.filter(a => a.source === source);
+      desc = `articles from ${source}`;
+    }
+
+    // stats or bare total count
+    if (isStats || (isCount && filtered === arts)) {
+      const byCat = {};
+      arts.forEach(a => { const c = categorize(a.headline); byCat[c] = (byCat[c] || 0) + 1; });
+      const lines = Object.entries(byCat)
+        .sort((a, b) => b[1] - a[1])
+        .map(([c, n]) => `<li>${escapeHtml(CATEGORY_LABELS[c])}: ${n}</li>`).join('');
+      addBot(`<strong>${arts.length} articles</strong> on the map, updated every 6 hours.<ul>${lines}</ul>`);
+      return;
+    }
+
+    // top places
+    if (isTop) {
+      const counts = {};
+      filtered.forEach(a => { counts[a.place_name] = (counts[a.place_name] || 0) + 1; });
+      const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 5);
+      if (!top.length) { addBot(`No ${desc} found.`); return; }
+      addBot(`Top locations for ${desc}:<ul>${top.map(([p, n]) => `<li>${escapeHtml(p)} — ${n}</li>`).join('')}</ul>`);
+      return;
+    }
+
+    // latest
+    if (isLatest) {
+      const sorted = [...filtered].sort((a, b) => new Date(b.published) - new Date(a.published)).slice(0, 3);
+      if (!sorted.length) { addBot(`No ${desc} found.`); return; }
+      addBot(`Latest ${desc}:<ul>${sorted.map(a =>
+        `<li>${aLink(a)} <span class="chat-meta">${escapeHtml(a.place_name)}, ${formatDate(a.published)}</span></li>`
+      ).join('')}</ul>`);
+      return;
+    }
+
+    // count
+    if (isCount) {
+      if (!filtered.length) { addBot(`No ${desc} found on the map right now.`); return; }
+      addBot(`There are <strong>${filtered.length}</strong> ${desc} on the map.`);
+      return;
+    }
+
+    // show / find — also updates the map search box
+    if (isShow) {
+      if (!filtered.length) { addBot(`No ${desc} found.`); return; }
+      if (mapKw) {
+        searchEl.value = mapKw;
+        clearBtn.style.display = 'flex';
+        applyFilters();
+      }
+      const preview = filtered.slice(0, 4).map(a =>
+        `<li>${aLink(a)} <span class="chat-meta">${escapeHtml(a.place_name)}</span></li>`
+      ).join('');
+      const more = filtered.length > 4
+        ? `<p style="margin-top:4px;color:var(--text-muted);font-size:10px">…and ${filtered.length - 4} more</p>`
+        : '';
+      addBot(`Found <strong>${filtered.length}</strong> ${desc}${mapKw ? ' — map updated' : ''}:<ul>${preview}</ul>${more}`);
+      return;
+    }
+
+    // subject detected but no specific intent — suggest
+    if (filtered !== arts && filtered.length > 0) {
+      addBot(`Found <strong>${filtered.length}</strong> ${desc}. Try:<ul>` +
+        `<li><em>Show me ${desc}</em></li>` +
+        `<li><em>Latest ${species || catAlias || ''} article</em></li>` +
+        `</ul>`);
+      return;
+    }
+
+    // fallback
+    addBot(`<strong>${arts.length}</strong> articles on the map. Try: <em>how many tiger articles?</em>, <em>show me poaching news</em>, or type <em>help</em>.`);
+  }
+
+  function send() {
+    const v = inp.value.trim();
+    if (!v) return;
+    inp.value = '';
+    respond(v);
+  }
+
+  sendBtn.addEventListener('click', send);
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
+}());
