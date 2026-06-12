@@ -298,9 +298,10 @@ KEYWORDS = [
 # incidentally mention an ecology keyword.
 EXCLUDE_KEYWORDS = [
     # Military / security
-    'militant', 'terrorist', 'encounter', 'ceasefire', 'army operation',
-    'security forces', 'paramilitary', 'naxal', 'maoist', 'insurgent',
+    'militant', 'militants', 'terrorist', 'terrorists', 'encounter', 'ceasefire',
+    'army operation', 'security forces', 'paramilitary', 'naxal', 'maoist', 'insurgent',
     'drone strike', 'airstrike', 'gunfight', 'firing', 'crpf', 'bsf',
+    'bunker', 'hideout', 'hideouts', 'smuggler', 'smugglers',
     # Politics / government
     'election', 'constituency', 'mla', 'mp ', ' mp,', 'cabinet approves',
     'union cabinet', 'lok sabha', 'rajya sabha', 'parliament',

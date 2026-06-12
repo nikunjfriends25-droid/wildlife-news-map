@@ -36,7 +36,7 @@ const map = L.map('map', {
   minZoom: 5,
   maxZoom: 15,
   zoomSnap: 0.25,            // allows fractional zoom so fitBounds fills India tightly
-  maxBounds: [[4, 66], [38, 99]],  // tight around India — prevents panning to surrounding countries
+  maxBounds: [[4, 65], [39, 100]],  // tight around India — prevents panning to surrounding countries
   maxBoundsViscosity: 1.0,   // hard boundary — no drag outside India area
   zoomControl: false,
 });
@@ -51,8 +51,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   maxZoom: 19,
 }).addTo(map);
 
-// Fit India tightly — no extra padding so fitBounds uses the highest zoom that still shows all of India
-map.fitBounds(INDIA_BOUNDS, { padding: [8, 8] });
+// Fit India — slightly expanded from INDIA_BOUNDS so J&K top and island chains aren't clipped
+map.fitBounds([[5.5, 67], [37.5, 98.5]], { padding: [8, 8] });
 
 // India official boundary overlay (follows India's claimed boundary incl. Arunachal Pradesh,
 // full J&K/PoK/Gilgit-Baltistan, and Aksai Chin). Non-interactive; sits above tile layer.
