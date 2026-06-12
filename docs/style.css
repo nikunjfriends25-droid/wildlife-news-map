@@ -25,10 +25,10 @@
   --accent-faint:rgba(255, 255, 255, 0.08);
 
   /* Text */
-  --text-primary:   #f2f2f2;
-  --text-secondary: #8a8a8a;
-  --text-muted:     #444444;
-  --text-faint:     #282828;
+  --text-primary:   #f0f0f0;
+  --text-secondary: #b8b8b8;
+  --text-muted:     #888888;
+  --text-faint:     #606060;
 
   /* Category colours — only splash of colour in the UI */
   --cat-poaching:     #ef4444;
@@ -715,7 +715,7 @@ input[type="date"]:focus {
 
 .driver-popover-description {
   font-size: 12px !important;
-  color: #888 !important;
+  color: #b8b8b8 !important;
   line-height: 1.65 !important;
   margin: 0 !important;
 }
@@ -729,7 +729,7 @@ input[type="date"]:focus {
 
 .driver-popover-progress-text {
   font-size: 10px !important;
-  color: #444 !important;
+  color: #888888 !important;
   letter-spacing: 0.04em !important;
   font-weight: 600 !important;
   font-family: var(--font) !important;
@@ -780,7 +780,7 @@ input[type="date"]:focus {
 }
 
 .driver-popover-close-btn {
-  color: #555 !important;
+  color: #888888 !important;
   background: none !important;
   border: none !important;
   font-size: 18px !important;
