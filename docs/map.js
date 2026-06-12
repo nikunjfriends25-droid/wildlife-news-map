@@ -425,6 +425,14 @@ function startTour() {
           side: 'left', align: 'center',
         },
       },
+      {
+        element: '#chat-fab',
+        popover: {
+          title:       'Ask WildLens',
+          description: 'Ask natural-language questions about the articles — try <em>how many tiger articles?</em>, <em>show me poaching news</em>, <em>articles from this week</em>, or <em>which place has most articles?</em>',
+          side: 'left', align: 'end',
+        },
+      },
     ],
   }).drive();
 }
