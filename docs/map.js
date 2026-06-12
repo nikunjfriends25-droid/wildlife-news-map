@@ -53,6 +53,18 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 // Fit India to fill the viewport — tight padding so India is prominent
 map.fitBounds(INDIA_BOUNDS, { padding: [10, 10] });
 
+// India official boundary overlay (follows India's claimed boundary incl. Arunachal Pradesh,
+// full J&K/PoK/Gilgit-Baltistan, and Aksai Chin). Non-interactive; sits above tile layer.
+fetch('india_boundary.geojson')
+  .then(r => r.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: { color: '#ffffff', weight: 1.5, opacity: 0.45, fill: false },
+      interactive: false,
+    }).addTo(map);
+  })
+  .catch(() => {}); // silently ignore if file missing (e.g. local dev without the file)
+
 // ── Cluster group ─────────────────────────────────────────────────────────────
 const clusters = L.markerClusterGroup({
   maxClusterRadius: 50,
