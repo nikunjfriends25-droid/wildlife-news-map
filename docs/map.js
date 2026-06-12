@@ -509,6 +509,36 @@ document.getElementById('tour-btn')?.addEventListener('click', startTour);
     return `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(a.headline)}</a>`;
   }
 
+  function parseChatDate(q) {
+    const now = new Date(); now.setHours(0, 0, 0, 0);
+    // Use local time — toISOString() converts to UTC and shifts day back in IST (+5:30)
+    const fmt = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+
+    if (/\btoday\b/.test(q))     return { from: fmt(now), to: fmt(now) };
+    if (/\byesterday\b/.test(q)) { const d = new Date(now); d.setDate(d.getDate()-1); return { from: fmt(d), to: fmt(d) }; }
+    if (/\blast\s+week\b|\bthis\s+week\b/.test(q)) { const d = new Date(now); d.setDate(d.getDate()-7); return { from: fmt(d), to: fmt(now) }; }
+    if (/\bthis\s+month\b/.test(q)) { const d = new Date(now.getFullYear(), now.getMonth(), 1); return { from: fmt(d), to: fmt(now) }; }
+
+    const MONTHS = { jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11,
+      january:0,february:1,march:2,april:3,june:5,july:6,august:7,september:8,october:9,november:10,december:11 };
+    const mk = Object.keys(MONTHS).find(m => new RegExp(`\\b${m}\\b`).test(q));
+    if (mk) {
+      const mi = MONTHS[mk];
+      const dm = q.match(/\b(\d{1,2})(?:st|nd|rd|th)?\b/);
+      if (dm) {
+        let d = new Date(now.getFullYear(), mi, parseInt(dm[1]));
+        if (d > now) d.setFullYear(d.getFullYear() - 1);
+        return { from: fmt(d), to: fmt(d) };
+      }
+      return { from: fmt(new Date(now.getFullYear(), mi, 1)), to: fmt(new Date(now.getFullYear(), mi+1, 0)) };
+    }
+
+    const iso = q.match(/\b(\d{4})-(\d{2})-(\d{2})\b/);
+    if (iso) { const d = new Date(+iso[1], +iso[2]-1, +iso[3]); return { from: fmt(d), to: fmt(d) }; }
+
+    return null;
+  }
+
   function respond(raw) {
     const q = raw.toLowerCase().trim();
     if (!q) return;
@@ -576,8 +606,24 @@ document.getElementById('tour-btn')?.addEventListener('click', startTour);
       }
     }
 
-    // stats or bare total count
-    if (isStats || (isCount && filtered === arts)) {
+    // date filter — stacks on top of any subject filter
+    const dateRange = parseChatDate(q);
+    const noSubject = filtered === arts;
+    if (dateRange) {
+      filtered = filtered.filter(a => a.published >= dateRange.from && a.published <= dateRange.to);
+      const sameDay = dateRange.from === dateRange.to;
+      const label = new Date(dateRange.from + 'T12:00:00').toLocaleDateString('en-IN',
+          sameDay ? { day: 'numeric', month: 'long', year: 'numeric' } : { day: 'numeric', month: 'short' }) +
+        (sameDay ? '' : ' – ' + new Date(dateRange.to + 'T12:00:00').toLocaleDateString('en-IN',
+          { day: 'numeric', month: 'short', year: 'numeric' }));
+      desc = noSubject ? `articles on ${label}` : `${desc} on ${label}`;
+    }
+
+    // date query without other intent → treat as show
+    const doShow = isShow || (dateRange && !isCount && !isLatest && !isTop && !isStats);
+
+    // stats / overview (only when truly no subject and no date)
+    if (isStats || (isCount && noSubject && !dateRange)) {
       const byCat = {};
       arts.forEach(a => { const c = categorize(a.headline); byCat[c] = (byCat[c] || 0) + 1; });
       const lines = Object.entries(byCat)
@@ -614,21 +660,37 @@ document.getElementById('tour-btn')?.addEventListener('click', startTour);
       return;
     }
 
-    // show / find — also updates the map search box
-    if (isShow) {
+    // show / find / date query — update the map to match
+    if (doShow) {
       if (!filtered.length) { addBot(`No ${desc} found.`); return; }
-      if (mapKw) {
+
+      if (cat) {
+        // category: toggle chips
+        const ALL_CATS = ['poaching', 'discovery', 'conflict', 'research', 'conservation'];
+        ALL_CATS.forEach(c => { if (c === cat) activeCats.add(c); else activeCats.delete(c); });
+        document.querySelectorAll('#cat-filters .filter-chip').forEach(chip => {
+          const on = chip.dataset.cat === cat;
+          chip.classList.toggle('active', on);
+          chip.setAttribute('aria-checked', on ? 'true' : 'false');
+        });
+      } else if (mapKw) {
+        // species / free-text: search box
         searchEl.value = mapKw;
         clearBtn.style.display = 'flex';
-        applyFilters();
       }
+      if (dateRange) {
+        document.getElementById('date-from').value = dateRange.from;
+        document.getElementById('date-to').value   = dateRange.to;
+      }
+      applyFilters();
+
       const preview = filtered.slice(0, 4).map(a =>
         `<li>${aLink(a)} <span class="chat-meta">${escapeHtml(a.place_name)}</span></li>`
       ).join('');
       const more = filtered.length > 4
         ? `<p style="margin-top:4px;color:var(--text-muted);font-size:10px">…and ${filtered.length - 4} more</p>`
         : '';
-      addBot(`Found <strong>${filtered.length}</strong> ${desc}${mapKw ? ' — map updated' : ''}:<ul>${preview}</ul>${more}`);
+      addBot(`Found <strong>${filtered.length}</strong> ${desc} — map updated:<ul>${preview}</ul>${more}`);
       return;
     }
 
@@ -642,7 +704,7 @@ document.getElementById('tour-btn')?.addEventListener('click', startTour);
     }
 
     // fallback
-    addBot(`<strong>${arts.length}</strong> articles on the map. Try: <em>how many tiger articles?</em>, <em>show me poaching news</em>, or type <em>help</em>.`);
+    addBot(`<strong>${arts.length}</strong> articles on the map. Try: <em>how many tiger articles?</em>, <em>show me poaching news</em>, or type <em>help</em>.</p>`);
   }
 
   function send() {
