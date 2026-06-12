@@ -1,5 +1,104 @@
 [
   {
+    "headline": "New blue-spotted damselfly discovered in the Andaman Islands",
+    "url": "https://researchmatters.in/news/new-blue-spotted-damselfly-discovered-andaman-islands",
+    "source": "Research Matters",
+    "published": "2026-06-12",
+    "place_name": "Andaman",
+    "lat": 11.7401,
+    "lon": 92.6586
+  },
+  {
+    "headline": "Tiger Takes Over Madhya Pradesh's Raisen Fort Hill, Tourist Entry Shut",
+    "url": "https://www.ndtv.com/india-news/tiger-takes-over-madhya-pradeshs-raisen-fort-hill-tourist-entry-shut-11627568#publisher=newsstand",
+    "source": "NDTV",
+    "published": "2026-06-12",
+    "place_name": "Madhya Pradesh",
+    "lat": 22.9734,
+    "lon": 78.6569
+  },
+  {
+    "headline": "4 sites on Nicobar west coast identified for coral translocation, says Zoological Survey of India",
+    "url": "https://indianexpress.com/article/india/great-nicobar-coral-translocation-galathea-bay-port-project-zsi-10735874/",
+    "source": "Indian Express",
+    "published": "2026-06-12",
+    "place_name": "Nicobar",
+    "lat": 8.0883,
+    "lon": 93.545
+  },
+  {
+    "headline": "Elephant dies after roaming villages in Thalavadi hills for four days",
+    "url": "https://www.thehindu.com/news/cities/Coimbatore/elephant-dies-after-roaming-villages-in-thalavadi-hills-for-four-days/article71092866.ece",
+    "source": "The Hindu",
+    "published": "2026-06-12",
+    "place_name": "Sathyamangalam Tiger Reserve",
+    "lat": 11.5,
+    "lon": 77.2333
+  },
+  {
+    "headline": "65-year-old farmer rescued after getting lost in Belagavi forest",
+    "url": "https://www.thehindu.com/news/national/karnataka/65-year-old-farmer-rescued-after-getting-lost-in-belagavi-forest/article71092867.ece",
+    "source": "The Hindu",
+    "published": "2026-06-12",
+    "place_name": "Belagavi",
+    "lat": 15.8497,
+    "lon": 74.4977
+  },
+  {
+    "headline": "Shigellosis cases rise to 16 in Kerala’s Wayanad; Health department steps up surveillance",
+    "url": "https://www.thehindu.com/news/national/kerala/seven-more-shigella-cases-confirmed-in-keralas-wayanad/article71092677.ece",
+    "source": "The Hindu",
+    "published": "2026-06-12",
+    "place_name": "Kerala",
+    "lat": 10.8505,
+    "lon": 76.2711
+  },
+  {
+    "headline": "Jammu student bags The Himalayan Avian’s first ‘Star medal’",
+    "url": "https://www.greaterkashmir.com/jammu/jammu-student-bags-the-himalayan-avians-first-star-medal-12029389",
+    "source": "Greater Kashmir",
+    "published": "2026-06-12",
+    "place_name": "Jammu",
+    "lat": 32.7266,
+    "lon": 74.857
+  },
+  {
+    "headline": "Dassal city forest damaged in flames",
+    "url": "https://www.greaterkashmir.com/pir-panjal/dassal-city-forest-damaged-in-flames-12029052",
+    "source": "Greater Kashmir",
+    "published": "2026-06-12",
+    "place_name": "Rajouri",
+    "lat": 33.3793,
+    "lon": 74.3105
+  },
+  {
+    "headline": "Forest fire continues on LoC ridges, locals save houses from flames",
+    "url": "https://www.greaterkashmir.com/pir-panjal/forest-fire-continues-on-loc-ridges-locals-save-houses-from-flames-12029051",
+    "source": "Greater Kashmir",
+    "published": "2026-06-12",
+    "place_name": "Rajouri",
+    "lat": 33.3793,
+    "lon": 74.3105
+  },
+  {
+    "headline": "Loss of wildlife feared, many animals rescued in Rajouri",
+    "url": "https://www.greaterkashmir.com/pir-panjal/loss-of-wildlife-feared-many-animals-rescued-in-rajouri-12029050",
+    "source": "Greater Kashmir",
+    "published": "2026-06-12",
+    "place_name": "Rajouri",
+    "lat": 33.3793,
+    "lon": 74.3105
+  },
+  {
+    "headline": "Tiger safari in UP extended by 15 days amid delayed monsoon",
+    "url": "https://www.hindustantimes.com/india-news/tiger-safari-in-up-extended-by-15-days-amid-delayed-monsoon-101781205456748.html",
+    "source": "Hindustan Times",
+    "published": "2026-06-12",
+    "place_name": "Uttar Pradesh",
+    "lat": 26.8467,
+    "lon": 80.9462
+  },
+  {
     "headline": "3 injured in two suspected elephant attacks in Kerala’s Palakkad",
     "url": "https://www.thehindu.com/news/national/kerala/3-injured-in-two-suspected-elephant-attacks-in-keralas-palakkad/article71087626.ece",
     "source": "The Hindu",
@@ -178,6 +277,15 @@
     "place_name": "Jammu and Kashmir",
     "lat": 33.7782,
     "lon": 76.5762
+  },
+  {
+    "headline": "Massive forest fires break out in J&K's Rajouri amid heatwave, dry spell",
+    "url": "https://risingkashmir.com/massive-forest-fires-break-out-in-jks-rajouri-amid-heatwave-dry-spell/",
+    "source": "Rising Kashmir",
+    "published": "2026-06-10",
+    "place_name": "Rajouri",
+    "lat": 33.3793,
+    "lon": 74.3105
   },
   {
     "headline": "Researchers describe a new fanged frog species that builds mud nests on the forest floor",
